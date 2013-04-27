@@ -5,3 +5,4 @@ deploy
 *.swo
 *.pyc
 .sass-cache
+*.vim.sess
