@@ -1,13 +1,14 @@
 #header {
-  background-color: #61473a;
+  background-color: #00b4ce;
   padding: 10px 20px;
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  border-bottom: 20px solid #008294; }
   #header a {
     text-decoration: none;
     color: white; }
   #header .title {
-    margin: 80px 20px 20px;
+    margin: 50px 20px 20px;
     font-size: 2.4em;
     font-weight: bold; }
   #header .nav-internal ul, #header .nav-external ul {

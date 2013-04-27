@@ -8,18 +8,30 @@
 
         .post {
             float: left;
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            min-height: 200px;
             /*border: 1px solid #999;*/
             margin-right: 20px;
             margin-bottom: 20px;
             box-shadow: 2px 2px 6px black;
             padding: 5px 10px;
             
-            .title {
+            h3.title {
                 font-weight: bold;
                 font-size: 1.1em;
                 margin-bottom: 5px;
+                margin-top: 0;
+                line-height: 1.5em;
+            }
+            time {
+                text-align: right;
+                color: $accent;
+                font-weight: bold;
+                font-size: .8em;
+                display:block;
+                margin-top: -10px;
+                margin-bottom: 5px;
+                float: right;
             }
         }
     }

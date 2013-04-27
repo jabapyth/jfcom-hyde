@@ -1,13 +1,10 @@
-{% extends "base.j2" %}
+{% extends "fluid-blocks.jade" %}
 {% from "macros.j2" import render_excerpt with context  %}
-{% block main %}
-{% block page_title %}<h1 class="title">{{ resource.meta.title }}</h1>{% endblock %}
+{% block main_content %}
 
-<ul class="listing clear">
 {% for res in resource.node.walk_resources_sorted_by_time() %}
-<li>
+<div class="post">
     {{ render_excerpt(res) }}
-</li>
+</div>
 {% endfor %}
-</ul>
 {% endblock %}
