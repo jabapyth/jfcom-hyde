@@ -1,0 +1,17 @@
+#header.clearfix
+    .title 
+        block content_title 
+            | Jared Forsyth
+    .nav-internal
+        block nav
+            ul.nav.nav-pills
+                li: a(href="/", class="active") home
+                li: a(href="/blog") blog
+                li: a(href="/projects") projects
+                li: a(href="/about") about
+    .nav-external
+        block nav_external
+            ul.nav.nav-pills
+                li: a(href="http://github.com/jabapyth") github
+                li: a(href="http://twitter.com/jabapyth") twitter
+                li: a(href="http://stackoverflow.com/users/290784/jared-forsyth") stackoverflow

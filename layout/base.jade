@@ -1,0 +1,11 @@
+!!!
+html
+    head
+        title
+            block head_title
+                | Jared | Forsyth
+        block head_css
+            link(rel='stylesheet', href='/media/bootstrap/css/bootstrap.css')
+        block head_js
+    body(class='{% block body_class %}{% endblock %}')
+        block body
