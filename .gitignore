@@ -4,3 +4,4 @@ deploy
 *.swp
 *.swo
 *.pyc
+.sass-cache
