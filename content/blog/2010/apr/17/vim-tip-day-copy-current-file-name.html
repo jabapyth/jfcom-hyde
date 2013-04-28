@@ -1,0 +1,33 @@
+---
+title: 'Vim tip of the day: copy current file name'
+slug: vim-tip-day-copy-current-file-name
+created: !!timestamp '2010-04-17 13:05:07'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+If you want to copy/paste the current filename, the magic register "%" is just what you need.
+{% endmark %}
+
+
+It's as simple as "%p (which means p[aste] from the register %)
+::
+
+    "%p
+
+Or if you're in insert mode, <C-r>% will do the same.
+
+Note: this will always be the filename of the current window/buffer. To save this in a regular register (for later use), try:
+::
+
+    O<C-r>%<Esc>"fdd
+
+that transfers it to the f register.
+
+roughly translated::
+
+   O      on a new line (go into insert mode)
+   <C-r>% paste the contents of %
+   <Esc>  exit insert mode
+   "fdd   then delete that line and put it into f

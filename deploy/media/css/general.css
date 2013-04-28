@@ -1,0 +1,9 @@
+ul.tags {
+  margin: -5px 0 5px;
+  min-height: 10px; }
+  ul.tags li {
+    list-style-type: none;
+    display: inline; }
+
+section {
+  margin: 20px; }

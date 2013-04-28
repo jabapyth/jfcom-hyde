@@ -1,0 +1,41 @@
+---
+title: 'Comparing parser generators in Python'
+slug: comparing-parser-generators-python
+created: !!timestamp '2010-07-17 08:42:45'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/uploads/battle.png
+{% endmark %}
+
+{% mark exerpt %}
+One of the `comments on reddit <http://www.reddit.com/r/Python/comments/cne57/announcing_codetalker/>`_ when I `announced codetalker <http://jaredforsyth.com/blog/2010/jul/8/announcing-codetalker/>`_ was "what's wrong with pyparsing?"
+{% endmark %}
+
+
+So I thought I'd run some comparisons, detailing why I felt the need to reinvent this particular wheel.
+
+My favorite entry-level parsing project is `JSON <http://www.json.org/>`_; it's about as simple as a grammar gets while still having a great deal of real world value. So I looked around for some examples of parsing JSON with `pyparsing <http://pyparsing.wikispaces.com/>`_, and thought I'd throw in `PLY <http://www.dabeaz.com/ply/>`_ for good measure.
+
+Implementations
+-----------------------------------------------
+
+- **PyParsing:** `source <http://jaredforsyth.com/media/uploads/ppjson.py>`_ (I had to modify the code from `these slides <http://www.ptmcg.com/geo/python/confs/TxUnconf2008Pyparsing.html>`_ slightly to output the correct results)
+- **CodeTalker:** `codetalker.contrib.json <http://github.com/jabapyth/codetalker/blob/master/codetalker/contrib/json.py>`_ taken from the contrib section of my `codetalker library <http://jaredforsyth.com/projects/codetalker/>`_
+- **PLY:** `json-ply <http://code.google.com/p/json-ply/>`_ available on google code
+
+*[of course, these represent one person's usage and are not the only possible implementations, but I think they are a good example of each library]*
+
+Anyway, here are the stats: `[live online graph] <http://jaredforsyth.com/media/uploads/parsing_json.html>`_
+
+.. image:: http://jaredforsyth.com/media/uploads/parsers_json_graph.jpeg
+
+If it's not clear, *lower is better*.
+
+And in addition to the raw stats, I think codetalker's way of defining grammars if more intuitive & has a better correlation to the traditional BNF style.
+
+Of course, to each their own -- just because codetalker is more intuitive to me doesn't mean it will be for you -- take a look at the code, and take your pick.
+
+What experience do you have with parser generators? Is there some killer library I left out? Feel free to tell me in the comments.

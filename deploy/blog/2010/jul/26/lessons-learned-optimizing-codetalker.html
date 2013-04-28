@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/26">Back to list</a>
+<a class="prev"
+    title="The Only CodeTalker Introduction You'll Ever Need"
+        href="/blog/2010/jul/26/only-codetalker-introduction-youll-ever-need.html">
+    Previous
+</a>
+
+<a class="next"
+    title="It's time for a better diff"
+        href="/blog/2010/jul/22/its-time-better-diff.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/26/lessons-learned-optimizing-codetalker.html">
+        Lessons learned; optimizing CodeTalker
+    </a>
+</h1>
+<time datetime="2010-07-26">
+    Posted: Mon, 26 Jul 2010
+</time>
+
+
+<div class="document">
+<p>As <a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/#comment-63681945">per request</a>,
+I&#8217;ve decided to write down what I&#8217;ve learned from my <a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/">optimization adventures</a>
+with <a class="reference external" href="http://jaredforsyth.com/projects/codetalker/">CodeTalker</a>.</p>
+<div class="section" id="intro">
+<h1>Intro</h1>
+<p>To start out, I&#8217;d like to lay a couple of baseline suggestions. <strong>(Unit)tests are
+your very best friend</strong>. Nothing is more satisfying than running your suite
+after an optimization and knowing that you <strong>a)</strong> didn&#8217;t break anything and <strong>b)</strong>
+made it run faster. And nothing is more terrible than trying out some example
+code (or worse, hearing from a user) and realizing that you <em>broke something</em>,
+but you don&#8217;t remember when or where. So you break out the old <tt class="docutils literal">hg bisect</tt>,
+but still, it&#8217;s a&nbsp;pain.</p>
+<p>Which reminds me — <em>you are using version control, right?</em> Because if you
+aren&#8217;t, you really should <strong>get some</strong>. Seriously. <a class="reference external" href="http://git-scm.com/">Git</a>,
+<a class="reference external" href="http://mercurial.selenic.com/">Mercurial</a>, <a class="reference external" href="http://bazaar.canonical.com/en/">Bazaar</a>&#8230;all good stuff. And really don&#8217;t try to
+code without it. Especially when optimizing, when there&#8217;s a better-than-average
+chance that you&#8217;ll totally break something&nbsp;:)</p>
+</div>
+<div class="section" id="btw-why-should-i-profile">
+<h1><span class="caps">BTW</span> (Why) Should I&nbsp;Profile?</h1>
+<p>I&#8217;ve heard several people throw out numbers like &#8220;90% of your time is spent in
+10% of your code — so to optimize, just find that 10%&#8221;. If that&#8217;s the case
+with you, this is probably <em>not the article you&#8217;re looking for</em>. You can jump
+down to the <a class="reference internal" href="#initial-optimizations">Initial Optimizations</a> section if you want, but most of my time
+I&#8217;ll be talking about data processing optimization. Which brings me to my next&nbsp;point:</p>
+<p><strong>Most programs don&#8217;t need to be fast</strong>. Sure, if your django app takes <em>15
+seconds to render</em> you should do some profiling, but in general speed is not
+something you need to worry about. The specific section of computing that I&#8217;ll
+be addressing is <strong>data processing</strong>, where it&#8217;s pretty much <em>all hard work
+all the time</em>, and a 10x speedup from 100 minutes to 10 minutes is a big deal
+(again, in your average normal program, that same speedup would be from 1sec
+to .1sec, which doesn&#8217;t make quite as much&nbsp;difference).</p>
+<p>Now, on&nbsp;to</p>
+</div>
+<div class="section" id="the-actual-optimizing-stuff">
+<h1>The actual optimizing&nbsp;stuff</h1>
+<div class="section" id="make-sure-you-know-what-to-optimize">
+<h2>Make sure you know what to&nbsp;optimize</h2>
+<p>Say you&#8217;ve got an example usage of your library/program that really puts it
+through its paces; let&#8217;s call it <tt class="docutils literal">examples/big.py</tt>.</p>
+<p>Here&#8217;s what I&nbsp;do:</p>
+<pre class="code bash literal-block">
+python -mcProfile -o big.prof examples/big.py
+runsnake big.prof
+</pre>
+<p>The first command you get out of the box w/ CPython (with some other python,
+try <tt class="docutils literal"><span class="pre">-mProfile</span></tt> instead of <tt class="docutils literal"><span class="pre">-mcProfile</span></tt>). It runs big.py, profiles the
+methods run, and saves the profiling output to&nbsp;big.prof.</p>
+<p>Now in order to understand the profiling output, I like to use a program
+called <a class="reference external" href="http://www.vrplumber.com/programming/runsnakerun/">RunSnakeRun</a>,
+which you can get through easy_install; <tt class="docutils literal">easy_install RunSnakeRun</tt>.</p>
+<p>Play around w/ the <span class="caps">GUI</span> a bit, and you should get an idea of what needs to be&nbsp;profiled.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">Profiling works best when your code is well modularized - if you have all
+the work in one function <tt class="docutils literal">do_heavy_stuff</tt> you won&#8217;t get as good a
+picture of exactly what needs to be&nbsp;modified.</p>
+</div>
+<p>Methods of&nbsp;optimization:</p>
+<ul class="simple">
+<li>don&#8217;t do stupid&nbsp;stuff</li>
+<li>use the right&nbsp;datatypes</li>
+<li>C &gt;&nbsp;python</li>
+<li>Caching</li>
+</ul>
+</div>
+<div class="section" id="initial-optimizations">
+<h2>Initial&nbsp;Optimizations</h2>
+<p><strong>Dont do stupid&nbsp;stuff</strong></p>
+<p>&#8230; like concatenate a <a class="reference external" href="http://jaredforsyth.com/blog/2010/jun/26/string-concatenation-kills-babies/">bunch of strings together</a>
+in cpython :). Or do things that aren&#8217;t loop-dependent inside of a loop.
+Sometimes it&#8217;s small <em>doh!</em> moments that give you some of your time&nbsp;back.</p>
+<p><strong>Use the right datatypes + don&#8217;t reinvent the&nbsp;wheel</strong></p>
+<p>This is another section that a lot of people talk about, so I won&#8217;t spend too
+much time. There are a number of problems (like searching, sorting), that
+people have spent a lot of time making fast, and there are some datatypes that
+are much faster to work with than&nbsp;others.</p>
+<p>For example, in python, list lookup is faster than dictionary lookup (for
+large&nbsp;datasets).</p>
+</div>
+<div class="section" id="the-real-stuff">
+<h2>The Real&nbsp;Stuff</h2>
+<p><strong>C &gt;&nbsp;Python</strong></p>
+<p>Sorry folks, but for straight data processing, C wins. But python is much
+easier + more fun to write/read/deal&nbsp;with&#8230;</p>
+<p>One of the best things I did for CodeTalker was to dive into <a class="reference external" href="http://cython.org/">Cython</a>, which made the python+c integration a&nbsp;breeze.</p>
+<p>Parts of CodeTalker in&nbsp;C:</p>
+<ul class="simple">
+<li>tokenization (when no custom tokens are&nbsp;used)</li>
+<li>parsing</li>
+</ul>
+<p>Parts of CodeTalker in&nbsp;Cython:</p>
+<ul class="simple">
+<li><span class="caps">AST</span> conversion (back to python&nbsp;objects)</li>
+</ul>
+<p>Parts of CodeTalker in&nbsp;Python:</p>
+<ul class="simple">
+<li>Final&nbsp;translation</li>
+</ul>
+<p>In the case of CodeTalker, tokenization was most expensive, followed by
+parsing, and then <span class="caps">AST</span> conversion. The final translation is specified by
+whoever is using CodeTalker, so it must be in&nbsp;python.</p>
+<p><strong>Caching is&nbsp;King</strong></p>
+<p>I was able to get several big speedups by just caching various objects (often
+when converting between python and C). On modern systems, memory is prolific,
+so feel free to use&nbsp;it.</p>
+</div>
+</div>
+<div class="section" id="some-specific-codetalker-notes">
+<h1>Some specific CodeTalker&nbsp;notes</h1>
+<p>Back when I had everything in python, I tried moving from a function-centric
+organization to a more <span class="caps">OO</span> friendly structure, and I took a big performance&nbsp;hit.</p>
+<p>moving from explicit Tokens to regex was <em>huge</em>. Moving from regex to
+hard-coded C was another&nbsp;huge</p>
+<div class="section" id="id1">
+<h2>Cython</h2>
+<p>For some reason, I trust myself more than I trust cython to write pure C.
+Maybe I&#8217;m unfounded in this, but I like to have control when I&#8217;m only
+working with C data types. When python exceptions/objects get involved, I
+owe everything to Cython. [one weird thing — cython&#8217;s &#8220;hello world&#8221; <tt class="docutils literal">print
+&#8220;hello world&#8221;</tt> is 1204 lines of C?? and the hello.so is&nbsp;26k??]</p>
+</div>
+</div>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "lessons-learned-optimizing-codetalker";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

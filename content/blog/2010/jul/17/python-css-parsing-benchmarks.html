@@ -1,0 +1,26 @@
+---
+title: 'Python css parsing benchmarks'
+slug: python-css-parsing-benchmarks
+created: !!timestamp '2010-07-17 20:24:54'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/uploads/battle.png
+{% endmark %}
+
+{% mark exerpt %}
+And I put together another graph, profiling the different libraries for parsing CSS with python.
+{% endmark %}
+
+
+- `cssutils <http://cthedot.de/cssutils/>`_
+- `css-py <http://code.google.com/p/css-py/>`_ (`ply <http://www.dabeaz.com/ply/>`_ based)
+- `python-css <http://jaredforsyth.com/projects/python-css/>`_ (`codetalker <http://jaredforsyth.com/projects/codetalker/>`_ based)
+
+aaand here are the results! (parsing a 22kb `real-world css file <https://assets0.github.com/stylesheets/bundle_common.css?bae2af7c4660bfb79be0705bf41a23f647a7e6f0>`_)
+
+`[live graph] <http://jaredforsyth.com/media/uploads/bench_css.html>`_
+
+.. image:: http://jaredforsyth.com/media/uploads/images/css_bench.jpeg

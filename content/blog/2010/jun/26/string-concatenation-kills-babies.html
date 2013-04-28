@@ -1,0 +1,14 @@
+---
+title: 'String concatenation kills babies'
+slug: string-concatenation-kills-babies
+created: !!timestamp '2010-06-26 18:16:03'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+Or at least your performance. I know I've heard a couple of times about the inefficiencies of CPython's string concatenation, but now I have real-world experience...
+{% endmark %}
+
+
+I just boosted my performance 20x, just by switching to a join() in `a project I'm developing <http://github.com/jabapyth/codetalker>`_...

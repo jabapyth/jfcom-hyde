@@ -1,6 +1,11 @@
 {% extends "with-header.jade" %}
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+{% endblock %}
 
 {% block content -%}
+<div id="content">
 <article class="post">
 <nav class="post_nav">
 <a class="backlink" href="{{ content_url(resource.node.url) }}">Back to list</a>
@@ -18,6 +23,7 @@
     Next
 </a>
 
+{#
 <br>
 <div id="twitter_share">
 <a href="http://twitter.com/share"
@@ -34,6 +40,7 @@
             style="border:none; overflow:hidden; width:450px; height:65px;"
             allowTransparency="true"></iframe>
 </div>
+#}
 </nav>
 <h1 class="title">
     <a href="{{ content_url(resource.url) }}">
@@ -55,11 +62,29 @@
 {% endfor %}
 </ul>
 {% endif %}
-{% filter markdown|typogrify -%}
-{% mark post -%}
-{% block post -%}{%- endblock %}
-{%- endmark %}
-{%- endfilter %}
+{% block post_content %}{% endblock %}
 </article>
 
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "{{ resource.meta.slug }}";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>
 {%- endblock %}

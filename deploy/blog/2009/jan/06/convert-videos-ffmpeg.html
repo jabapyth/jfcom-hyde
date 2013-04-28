@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2009/jan/06">Back to list</a>
+<a class="prev"
+    title="Songbird in Kubuntu"
+        href="/blog/2009/jan/13/songbird-kubuntu.html">
+    Previous
+</a>
+
+<a class="next disabled"
+    title=""
+    >
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2009/jan/06/convert-videos-ffmpeg.html">
+        Convert videos with ffmpeg
+    </a>
+</h1>
+<time datetime="2009-01-06">
+    Posted: Tue, 06 Jan 2009
+</time>
+
+
+<div class="document">
+<img alt="FFmpeg logo" src="http://ffmpeg.mplayerhq.hu/ffmpeg-logo.png" style="width: 306px; height: 84px;" />
+<p><a class="reference external" href="http://ffmpeg.mplayerhq.hu/">FFmpeg</a> is a wonderful   tool which every
+aspiring linux guru should get familiar with. The thing it does, just about
+better   than anything else, is handle media files. You can mux them, demux
+them, encode/decode, resize, compress  &#8230;..you name&nbsp;it.</p>
+<p>Unfortunately, all that versatility means that it can be somewhat confusing,
+if, say <em>all you want   to do is convert this one file</em>.</p>
+<p>Well, actually, most of the time, ffmpeg will play nice, and theres this one
+simple command that will   do&nbsp;you:</p>
+<pre class="code python literal-block">
+<span class="name">ffmpeg</span> <span class="operator">-</span><span class="name">i</span> <span class="literal string">&quot;infile.abc&quot;</span> <span class="literal string">&quot;outfile.cba&quot;</span>
+</pre>
+<p>In this manner, you can convert wav to mp3, wmv to avi, or flv to&nbsp;mpg.</p>
+<p>The problems start, of course, when ffmpeg starts spitting out errors. This
+happens when the settings   for your infile are incompatible woth the format of
+your outfile&#8230;so the solution is to manually set   those&nbsp;settings.</p>
+<p>if it complains about &#8220;timebase not supported by mpeg 4 standard&#8221;, try adding
+this parameter (before   the outfile&nbsp;param):</p>
+<pre class="code python literal-block">
+<span class="operator">-</span><span class="name">r</span> <span class="literal number integer">25</span>
+</pre>
+<p>this sets the framerate to the ffmpeg&nbsp;default</p>
+<p>Another error I got was &#8220;Sampling rate 11025 is not allowed in&nbsp;mp2&#8221;</p>
+<p>to fix that, just set the sampling rate to the default&nbsp;with</p>
+<pre class="code python literal-block">
+<span class="operator">-</span><span class="name">ar</span> <span class="literal number integer">44100</span>
+</pre>
+<p>Another handy option is the file size limit &#8212; great for compressing a video,
+when you dont want to   mess with bitrates and framerates and the like. The
+file size is specified in bytes,&nbsp;thus</p>
+<pre class="code python literal-block">
+<span class="name">ffmpeg</span> <span class="operator">-</span><span class="name">i</span> <span class="literal string">&quot;large.mov&quot;</span> <span class="operator">-</span><span class="name">fs</span> <span class="literal number integer">10000000</span> <span class="operator">-</span><span class="name">s</span> <span class="name">qvga</span> <span class="literal string">&quot;small.avi&quot;</span>
+</pre>
+<p>the &#8220;-s qvga&#8221; parameter resizes the video as well &#8212; down to&nbsp;320x240.</p>
+<p>For extensive technical documentation for ffmpeg, <a class="reference external" href="http://ffmpeg.mplayerhq.hu/ffmpeg-doc.html">go here</a>.</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "convert-videos-ffmpeg";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

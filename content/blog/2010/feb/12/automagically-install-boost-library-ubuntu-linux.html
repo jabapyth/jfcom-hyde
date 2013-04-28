@@ -1,0 +1,43 @@
+---
+title: 'automagically install boost library on Ubuntu linux'
+slug: automagically-install-boost-library-ubuntu-linux
+created: !!timestamp '2010-02-12 20:09:13'
+extends: blog-rst.j2
+status: draft
+
+---
+{% mark exerpt %}
+I wanted to install the "boost" library on ubuntu, but the problem is that the
+library is segmented into several different packages. Now, I could have gone
+through and installed each manually, or I could employ a little bash-fu to get
+it done for me. Here's the command I used:
+{% endmark %}
+
+
+.. code-block:: bash
+
+    sudo apt-get install `apt-cache search 'libboost'|grep '^libboost-'|sed -e's/ .*//'`
+
+    sudo apt-get install `dpkg -l "libboost*1.40-dev"|grep "^un"|sed -e 's/^..  *//' -e 's/ .*//'`
+
+So what does this do? the "sudo apt-get install" should look familiar to an
+ubuntu user, but what's the rest, and what in the *world* are those weird `
+backtick things?  So first, the backticks tell bash "execute what's inside of
+this, and insert the output as though I had typed it in myself". The command
+inside of them {dpkg -l "libboost*1.40-dev"|grep "^un"|sed -e 's/^.. *//' -e
+'s/ .*//'} does the helpful job of listing all currently uninstalled libboost
+dev packages.
+
+To break that up (because it's actually three different commands) I'll start
+with the first: dpkg -l "libboost*1.40-dev" You can find out more about this
+by typing "man dpkg" into a terminal, but basically this command lists all the
+packages that match the expression "libboost*1.40-dev" (the -l means *list*).
+
+Here's what the output of that command by itself looks like
+
+.. code-block:: bash
+
+    ummm isn't working right now...
+    owell
+
+fine

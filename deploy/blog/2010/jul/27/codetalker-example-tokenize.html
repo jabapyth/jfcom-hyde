@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/27">Back to list</a>
+<a class="prev"
+    title="CodeTalker by example: parse"
+        href="/blog/2010/jul/28/codetalker-example-parse.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Orphan Alert"
+        href="/blog/2010/jul/27/orphan-alert.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/27/codetalker-example-tokenize.html">
+        CodeTalker by example: tokenize
+    </a>
+</h1>
+<time datetime="2010-07-27">
+    Posted: Tue, 27 Jul 2010
+</time>
+
+
+<div class="document">
+<p>This is the first in a four-part series, in which I demonstrate how to build a
+<span class="caps">CSS</span> parser using <a class="reference external" href="http://jaredforsyth.com/projects/codetalker/">CodeTalker</a>:</p>
+<ul class="simple">
+<li><strong>tokenize</strong></li>
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/">parse</a></li>
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/">translate</a></li>
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/">test!</a></li>
+</ul>
+<p>To get the code for&nbsp;this:</p>
+<p><tt class="docutils literal">git clone</tt> <a class="reference external" href="http://github.com/jabapyth/css/">git://github.com/jabapyth/css.git</a></p>
+<div class="section" id="background-what-is-codetalker">
+<h1>(background) What is&nbsp;CodeTalker?</h1>
+<p><a class="reference external" href="http://jaredforsyth.com/projects/codetalker/">CodeTalker</a> might be described as a <a class="reference external" href="http://en.wikipedia.org/wiki/Compiler-compiler">compiler-compiler</a> although that doesn&#8217;t
+quite fit. I would probably call it a &#8220;compiler creation library&#8221;, written in
+python (with a healthy dose of C for performance). With CodeTalker, I have
+<a class="reference external" href="http://github.com/jabapyth/codetalker/blob/master/codetalker/contrib/json.py">written a <span class="caps">JSON</span> parser</a>
+in <strong>66 lines of code</strong> that <a class="reference external" href="http://jaredforsyth.com/media/uploads/new_json.html">beats most of the other python-based <span class="caps">JSON</span>
+parsers around</a>.</p>
+</div>
+<div class="section" id="tokenizing">
+<h1>Tokenizing</h1>
+<p>For reference I will be using the <span class="caps">CSS</span> specification at w3.org, although I will
+be deviating somewhat from their suggested <a class="reference external" href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#tokenization">tokenization</a>.</p>
+<p>Tokenization in CodeTalker is for the most part taken care of for you — as
+tokens don&#8217;t differ too much between languages — but there are some things
+that it is useful to&nbsp;customize.</p>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace">codetalker.pgm.tokens</span> <span class="keyword namespace">import</span> <span class="operator">*</span>
+<span class="keyword namespace">import</span> <span class="name namespace">constants</span>
+<span class="keyword namespace">import</span> <span class="name namespace">re</span>
+
+<span class="comment">## specified http://www.w3.org/<span class="caps">TR</span>/2008/<span class="caps">REC</span>-<span class="caps">CSS2</span>-20080411/syndata.html#tokenization</span>
+
+<span class="keyword">class</span> <span class="name class"><span class="caps">SYMBOL</span></span><span class="punctuation">(</span><span class="name">CharToken</span><span class="punctuation">):</span>
+    <span class="name">chars</span> <span class="operator">=</span> <span class="literal string">'&#64;#-%();{}[].:&gt;+,'</span>
+
+<span class="keyword">class</span> <span class="name class"><span class="caps">HTMLCOMMENT</span></span><span class="punctuation">(</span><span class="name">StringToken</span><span class="punctuation">):</span>
+    <span class="name">strings</span> <span class="operator">=</span> <span class="literal string">'&lt;!--'</span><span class="punctuation">,</span> <span class="literal string">'--&gt;'</span>
+
+<span class="keyword">class</span> <span class="name class"><span class="caps">UNIT</span></span><span class="punctuation">(</span><span class="name">IIdToken</span><span class="punctuation">):</span>
+    <span class="name">strings</span> <span class="operator">=</span> <span class="literal string">'em'</span><span class="punctuation">,</span> <span class="literal string">'px'</span><span class="punctuation">,</span> <span class="literal string">'pt'</span><span class="punctuation">,</span> <span class="literal string">'mm'</span><span class="punctuation">,</span> <span class="literal string">'cm'</span><span class="punctuation">,</span> <span class="literal string">'rad'</span><span class="punctuation">,</span> <span class="literal string">'deg'</span><span class="punctuation">,</span> <span class="literal string">'grad'</span><span class="punctuation">,</span> <span class="literal string">'in'</span>
+
+<span class="keyword">class</span> <span class="name class"><span class="caps">COLOR</span></span><span class="punctuation">(</span><span class="name">IIdToken</span><span class="punctuation">):</span>
+    <span class="name">strings</span> <span class="operator">=</span> <span class="name">constants</span><span class="operator">.</span><span class="name">colors</span>
+
+<span class="keyword">class</span> <span class="name class">NODE_NAME</span><span class="punctuation">(</span><span class="name">IIdToken</span><span class="punctuation">):</span>
+    <span class="name">strings</span> <span class="operator">=</span> <span class="name">constants</span><span class="operator">.</span><span class="name">tags</span>
+
+<span class="keyword">class</span> <span class="name class"><span class="caps">HEXCOLOR</span></span><span class="punctuation">(</span><span class="name">ReToken</span><span class="punctuation">):</span>
+    <span class="name">rx</span> <span class="operator">=</span> <span class="name">re</span><span class="operator">.</span><span class="name">compile</span><span class="punctuation">(</span><span class="literal string">r'#([\da-fA-F]{6}|[\da-fA-F]{3})'</span><span class="punctuation">)</span>
+
+<span class="name">the_tokens</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name"><span class="caps">NUMBER</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">HEXCOLOR</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">CMCOMMENT</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">HTMLCOMMENT</span></span><span class="punctuation">,</span>
+              <span class="name"><span class="caps">SYMBOL</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">UNIT</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">COLOR</span></span><span class="punctuation">,</span> <span class="name">NODE_NAME</span><span class="punctuation">,</span> <span class="name"><span class="caps">STRING</span></span><span class="punctuation">,</span>
+              <span class="name"><span class="caps">SSTRING</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">ID</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">WHITE</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">NEWLINE</span></span><span class="punctuation">,</span> <span class="name"><span class="caps">ANY</span></span><span class="punctuation">]</span>
+</pre>
+<p>In this case, I put the tokens in a saparate file from the main grammar, so
+I&#8217;ve made a <tt class="docutils literal">list</tt> of the tokens, <em>in the order I want them</em>, which can
+simply be&nbsp;imported.</p>
+<p>Note that the order of tokens is very important — tokens are matched and
+consumed strictly on a first-match basis. Therefore, if you put the &#8220;<span class="caps">ANY</span>&#8221;
+token first (which matches any character), none of the other tokens would be&nbsp;used.</p>
+<p>A quick refresher on the Base token&nbsp;types:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">CharToken:</th><td class="field-body">Match a single char, restricted to those in its <tt class="docutils literal">chars</tt> attribute.</td>
+</tr>
+<tr class="field"><th class="field-name">StringToken:</th><td class="field-body">Match one of the specified strings.</td>
+</tr>
+<tr class="field"><th class="field-name">IIdToken:</th><td class="field-body">Match one of the specified strings, case-insensitively, but <em>only</em> when
+that string is followed by a non-id character.</td>
+</tr>
+<tr class="field"><th class="field-name">ReToken:</th><td class="field-body">Use RegEx to match tokens.</td>
+</tr>
+</tbody>
+</table>
+<p>Like I said; not too much going on&nbsp;here.</p>
+</div>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "codetalker-example-tokenize";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

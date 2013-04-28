@@ -1,0 +1,78 @@
+---
+title: 'CodeTalker by example: translate'
+slug: codetalker-example-translate
+created: !!timestamp '2010-07-29 11:54:10'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+This is the third in a four-part series, in which I demonstrate how to build a
+CSS parser using CodeTalker_:
+{% endmark %}
+
+
+- tokenize_
+- parse_
+- **translate**
+- `test!`_
+
+.. _parse: http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/
+.. _tokenize: http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/
+.. _test!: http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/
+
+.. _CodeTalker: http://jaredforsyth.com/projects/codetalker/
+
+.. _compiler-compiler: http://en.wikipedia.org/wiki/Compiler-compiler
+
+To get the code for this:
+
+``git clone`` `git://github.com/jabapyth/css.git <http://github.com/jabapyth/css/>`_
+
+Translation
+===========
+
+*[for the impatient, here's the* `final code`_ *].*
+
+.. _final code: http://github.com/jabapyth/css/blob/master/css/translator.py#L1
+
+Like everything else in CodeTalker, translation is mean to be straightforward;
+you have an abstract syntax tree, which is cool, but what you really want
+is...in this case, an object which represents a stylesheet. So you have a
+``StyleSheet`` class and a ``RuleSet`` class, but how do you go from AST
+to that?
+
+In general, you'll create one translation rule for each grammar rule.  Here's
+the code for our ``stylesheet`` rule to refresh your memory.
+
+.. code-block:: python
+
+    def style_sheet(rule):                              
+        rule | ([charset], star(import_), star(section))
+        rule.astAttrs = {                               
+                'charset': charset,                     
+                'imports': [import_],                   
+                'sections': [section],                  
+            }
+
+And here's what it takes to translate it:
+
+.. code-block:: python
+
+    @t.translates(ast.StyleSheet)
+    def stylesheet(node):
+        ss = StyleSheet()
+        if node.charset is not None:
+            ss.charset = t.translate(node.charset)
+        ss.imports = list((imp.source, imp.media) for imp in node.imports)
+        ss.rules = []
+        for section in node.sections:
+            if isinstance(section, ast.Ruleset): # right now I'm not dealing
+                                                 # with other kinds of sections (media, page, font_face)
+                rule = t.translate(section)
+                if rule is not None:
+                    ss.rules.append(rule)
+        return ss
+
+Create the object, populate it with the AST node, and then return it. And
+register the function w/ the translator object.

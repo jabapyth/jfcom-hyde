@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/feb/12">Back to list</a>
+<a class="prev"
+    title="Songbird Global Hotkeys for Ubuntu Linux"
+        href="/blog/2010/feb/20/songbird-global-hotkeys-ubuntu-linux.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Event Bubbling example"
+        href="/blog/2009/dec/28/event-bubbling-example.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/feb/12/automagically-install-boost-library-ubuntu-linux.html">
+        automagically install boost library on Ubuntu linux
+    </a>
+</h1>
+<time datetime="2010-02-12">
+    Posted: Fri, 12 Feb 2010
+</time>
+
+
+<div class="document">
+<p>I wanted to install the &#8220;boost&#8221; library on ubuntu, but the problem is that the
+library is segmented into several different packages. Now, I could have gone
+through and installed each manually, or I could employ a little bash-fu to get
+it done for me. Here&#8217;s the command I&nbsp;used:</p>
+<pre class="code bash literal-block">
+sudo apt-get install <span class="literal string backtick">`</span>apt-cache search <span class="literal string single">'libboost'</span>|grep <span class="literal string single">'^libboost-'</span>|sed -e<span class="literal string single">'s/ .*//'</span><span class="literal string backtick">`</span>
+
+sudo apt-get install <span class="literal string backtick">`</span>dpkg -l <span class="literal string double">&quot;libboost*1.40-dev&quot;</span>|grep <span class="literal string double">&quot;^un&quot;</span>|sed -e <span class="literal string single">'s/^..  *//'</span> -e <span class="literal string single">'s/ .*//'</span><span class="literal string backtick">`</span>
+</pre>
+<p>So what does this do? the &#8220;sudo apt-get install&#8221; should look familiar to an
+ubuntu user, but what&#8217;s the rest, and what in the <em>world</em> are those weird `
+backtick things?  So first, the backticks tell bash &#8220;execute what&#8217;s inside of
+this, and insert the output as though I had typed it in myself&#8221;. The command
+inside of them {dpkg -l &#8220;libboost*1.40-dev&#8221;<a href="#id1"><span class="problematic" id="id2">|</span></a>grep &#8220;^un&#8221;<a href="#id3"><span class="problematic" id="id4">|</span></a>sed -e &#8216;s/^.. <em>//&#8217; -e
+&#8216;s/ .</em>//&#8217;} does the helpful job of listing all currently uninstalled libboost
+dev&nbsp;packages.</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">&lt;string&gt;</tt>, line 13); <em><a href="#id2">backlink</a></em></p>
+Inline substitution_reference start-string without end-string.</div>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: <span class="caps">WARNING</span>/2 (<tt class="docutils">&lt;string&gt;</tt>, line 13); <em><a href="#id4">backlink</a></em></p>
+Inline substitution_reference start-string without end-string.</div>
+<p>To break that up (because it&#8217;s actually three different commands) I&#8217;ll start
+with the first: dpkg -l &#8220;libboost*1.40-dev&#8221; You can find out more about this
+by typing &#8220;man dpkg&#8221; into a terminal, but basically this command lists all the
+packages that match the expression &#8220;libboost*1.40-dev&#8221; (the -l means <em>list</em>).</p>
+<p>Here&#8217;s what the output of that command by itself looks&nbsp;like</p>
+<pre class="code bash literal-block">
+ummm isn<span class="error">'</span>t working right now...
+owell
+</pre>
+<p>fine</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "automagically-install-boost-library-ubuntu-linux";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

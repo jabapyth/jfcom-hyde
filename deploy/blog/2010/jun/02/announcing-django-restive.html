@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jun/02">Back to list</a>
+<a class="prev"
+    title="What does setuptools "test" do?"
+        href="/blog/2010/jun/16/what-does-setuptools-test-do.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Pyjamas and PJS in depth"
+        href="/blog/2010/may/31/pyjamas-and-pjs-depth.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jun/02/announcing-django-restive.html">
+        Announcing: Django-RESTive
+    </a>
+</h1>
+<time datetime="2010-06-02">
+    Posted: Wed, 02 Jun 2010
+</time>
+
+
+<div class="document">
+<img alt="http://jaredforsyth.com/media/projects/djanfo-restive.png" src="http://jaredforsyth.com/media/projects/djanfo-restive.png" />
+<p><strong>res·tive</strong>: <em>marked by impatience or&nbsp;uneasiness</em></p>
+<p><a class="reference external" href="http://jaredforsyth.com/projects/django-restive/">django-restive</a> is a
+short and sweet library for setting up RESTful services in django - both the
+django backend and, if you want the javascript&nbsp;frontend.</p>
+<p>It was created for the <span class="caps">AJAX</span> webapp I&#8217;m currently devving &#8212; or rather, spun
+off of it. As with many apps, restive was originally built into another project (<a class="reference external" href="http://github.com/jabapyth/GameCC">GameCC</a>) until I realized it deserved an
+app of its&nbsp;own.</p>
+<p>A few items of&nbsp;interest:</p>
+<ul class="simple">
+<li>all communication is in <span class="caps">JSON</span><ul>
+<li>on the client side, <span class="caps">POST</span> to the url with the <tt class="docutils literal">data</tt> keyword holding a <span class="caps">JSON</span>
+serialized dictionary of <tt class="docutils literal">key, value</tt> pairs which will be passed to the
+function as keyword&nbsp;arguments.</li>
+<li>on the server side, return a dictionary which will be <span class="caps">JSON</span> serialized and
+output as&nbsp;text.</li>
+</ul>
+</li>
+<li>passing Django models is also supported. From the server side, if the
+returned dictionary has_key <tt class="docutils literal">_models</tt>, they will be serialized using
+Django&#8217;s built-in <span class="caps">JSON</span>&nbsp;serializer.</li>
+<li>I plan to support <span class="caps">CSRF</span> token&nbsp;checking.</li>
+</ul>
+<p>The aim of <em>restive</em> is to get in the way as little as possible&nbsp;=).</p>
+<p><strong>Here&#8217;s a short sample:</strong> <tt class="docutils literal">my_app/rest.py</tt></p>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace">restive</span> <span class="keyword namespace">import</span> <span class="name">Service</span>
+
+<span class="name">service</span> <span class="operator">=</span> <span class="name">Service</span><span class="punctuation">()</span>
+
+<span class="name decorator">&#64;service.add</span>
+<span class="keyword">def</span> <span class="name function">hello</span><span class="punctuation">(</span><span class="name">request</span><span class="punctuation">,</span> <span class="name">name</span><span class="operator">=</span><span class="literal string">'Jimmy'</span><span class="punctuation">):</span>
+    <span class="keyword">return</span> <span class="punctuation">{</span><span class="literal string">'message'</span><span class="punctuation">:</span> <span class="literal string">'Hello </span><span class="literal string interpol">%s</span><span class="literal string">!'</span> <span class="operator">%</span> <span class="name">name</span><span class="punctuation">}</span>
+
+<span class="name">urlpatterns</span> <span class="operator">=</span> <span class="name">service</span><span class="operator">.</span><span class="name">urls</span><span class="punctuation">()</span>
+</pre>
+<p>and in <tt class="docutils literal">my_project/urls.py</tt> just&nbsp;do</p>
+<pre class="code python literal-block">
+<span class="name">urlpatterns</span> <span class="operator">=</span> <span class="name">patterns</span><span class="punctuation">(</span><span class="literal string">''</span><span class="punctuation">,</span>
+    <span class="punctuation">(</span><span class="literal string">'^myapp/'</span><span class="punctuation">,</span> <span class="name">include</span><span class="punctuation">(</span><span class="literal string">'my_app.rest'</span><span class="punctuation">))</span>
+<span class="punctuation">)</span>
+</pre>
+<p>It&#8217;s as simple as that! Now <tt class="docutils literal"><span class="pre">http://example.com/myapp/hello/</span></tt> is live and&nbsp;kicking.</p>
+<p><em>django-restive <span class="caps">II</span>: return of the client-side</em> coming&nbsp;soon.</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "announcing-django-restive";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

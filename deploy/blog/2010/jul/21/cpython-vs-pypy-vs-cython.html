@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/21">Back to list</a>
+<a class="prev"
+    title="setup.py test with distutils (+py.test)"
+        href="/blog/2010/jul/21/setuppy-test-distutils-pytest.html">
+    Previous
+</a>
+
+<a class="next"
+    title="CodeTalker doubles in speed"
+        href="/blog/2010/jul/21/codetalker-doubles-in-speed.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/21/cpython-vs-pypy-vs-cython.html">
+        CPython vs PyPy vs Cython 
+    </a>
+</h1>
+<time datetime="2010-07-21">
+    Posted: Wed, 21 Jul 2010
+</time>
+
+
+<div class="document">
+<img alt="http://jaredforsyth.com/media/uploads/images/cy_py_py.png" src="http://jaredforsyth.com/media/uploads/images/cy_py_py.png" />
+<p>One problem that I needed to solve while making <a class="reference external" href="http://jaredforsyth.com/projects/codetalker/">CodeTalker</a> was fast tokenization &#8212; so I benchmarked several implementations of matching the <span class="caps">WHITE</span> and <span class="caps">ID</span>&nbsp;tokens.</p>
+<p>Here&#8217;s the python implementation, so you understand what&#8217;s going&nbsp;on:</p>
+<pre class="code python literal-block">
+<span class="keyword">def</span> <span class="name function">white</span><span class="punctuation">(</span><span class="name">at</span><span class="punctuation">,</span> <span class="name">st</span><span class="punctuation">,</span> <span class="name">ln</span><span class="punctuation">):</span>
+    <span class="name">i</span> <span class="operator">=</span> <span class="name">at</span>
+    <span class="keyword">while</span> <span class="name">i</span><span class="operator">&lt;</span><span class="name">ln</span> <span class="operator word">and</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="literal string">' '</span><span class="punctuation">:</span>
+        <span class="name">i</span><span class="operator">+=</span><span class="literal number integer">1</span>
+    <span class="keyword">return</span> <span class="name">i</span> <span class="operator">-</span> <span class="name">at</span>
+
+<span class="keyword">def</span> <span class="name function">id</span><span class="punctuation">(</span><span class="name">at</span><span class="punctuation">,</span> <span class="name">st</span><span class="punctuation">,</span> <span class="name">ln</span><span class="punctuation">):</span>
+    <span class="name">i</span> <span class="operator">=</span> <span class="name">at</span>
+    <span class="keyword">if</span> <span class="name">i</span> <span class="operator">&lt;</span> <span class="name">ln</span> <span class="operator word">and</span> <span class="punctuation">(</span><span class="literal string">'a'</span> <span class="operator">&lt;=</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">&lt;=</span> <span class="literal string">'z'</span> <span class="operator word">or</span> <span class="literal string">'A'</span> <span class="operator">&lt;=</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">&lt;=</span> <span class="literal string">'Z'</span> <span class="operator word">or</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="literal string">'_'</span><span class="punctuation">):</span>
+        <span class="name">i</span> <span class="operator">+=</span> <span class="literal number integer">1</span>
+        <span class="keyword">while</span> <span class="name">i</span> <span class="operator">&lt;</span> <span class="name">ln</span> <span class="operator word">and</span>  <span class="punctuation">(</span><span class="literal string">'a'</span> <span class="operator">&lt;=</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">&lt;=</span> <span class="literal string">'z'</span> <span class="operator word">or</span> <span class="literal string">'A'</span> <span class="operator">&lt;=</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">&lt;=</span> <span class="literal string">'Z'</span> <span class="operator word">or</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">==</span> <span class="literal string">'_'</span> <span class="operator word">or</span> <span class="literal string">'0'</span> <span class="operator">&lt;=</span> <span class="name">st</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span> <span class="operator">&lt;=</span> <span class="literal string">'9'</span><span class="punctuation">):</span>
+            <span class="name">i</span> <span class="operator">+=</span> <span class="literal number integer">1</span>
+    <span class="keyword">return</span> <span class="name">i</span> <span class="operator">-</span> <span class="name">at</span>
+</pre>
+<p>The pypy is of course no different, and for cython I only changed the first two lines of each.&nbsp;e.g.</p>
+<pre class="code cython literal-block">
+<span class="keyword">cpdef</span> <span class="name function">white</span><span class="punctuation">(</span><span class="name builtin">int</span> <span class="name">at</span><span class="punctuation">,</span> <span class="name">char</span><span class="operator">*</span> <span class="name">st</span><span class="punctuation">,</span> <span class="name builtin">int</span> <span class="name">ln</span><span class="punctuation">):</span>
+    <span class="keyword">cdef</span> <span class="keyword type">int</span> <span class="name function">i</span> <span class="operator">=</span> <span class="name">at</span>
+</pre>
+<p>I also checked Regex to see if that would be any&nbsp;faster.</p>
+<p>Anyway, the raw results are below, but here&#8217;s a&nbsp;summary:</p>
+<p><strong>cython wins</strong> by about a factor of 10 each time. pypy is about par w/ regex, which is 10x faster than straight&nbsp;python.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">I&#8217;m using most recent stable release of pypy:&nbsp;1.3</p>
+</div>
+<pre class="literal-block">
+pypy
+
+2.82211303711e-05 at 0
+4.7474861145e-05 at 2
+3.19180488586e-05 at 500
+5.06615638733e-06 at 1007
+5.14602661133e-06 at 1014
+for IDS
+0.00018682718277 at 0
+7.82380104065e-05 at 10
+2.23803520203e-06 at 1025
+2.27212905884e-06 at 1028
+
+cpython
+
+0.000272939920425 at 0
+0.000285755872726 at 2
+0.000156256914139 at 500
+6.81185722351e-06 at 1007
+2.60829925537e-07 at 1014
+for IDS
+0.00100137805939 at 0
+0.000964962005615 at 10
+8.36133956909e-07 at 1025
+3.35931777954e-07 at 1028
+
+cython
+
+9.29117202759e-07 at 0
+9.21964645386e-07 at 2
+5.56945800781e-07 at 500
+1.21116638184e-07 at 1007
+1.23023986816e-07 at 1014
+for IDS
+1.86841487885e-05 at 0
+8.15391540527e-06 at 10
+1.25169754028e-07 at 1025
+1.23023986816e-07 at 1028
+
+cpython + regex
+
+2.03487873077e-05 at 0
+3.93490791321e-05 at 2
+1.27689838409e-05 at 500
+1.77097320557e-06 at 1007
+1.10411643982e-06 at 1014
+for IDS
+1.30689144135e-05 at 0
+1.26049518585e-05 at 10
+1.98006629944e-06 at 1025
+9.75847244263e-07 at 1028
+
+pypy + regex
+
+0.000184435129166 at 0
+4.27179336548e-05 at 2
+5.02660274506e-05 at 500
+3.67810726166e-05 at 1007
+1.60229206085e-05 at 1014
+for IDS
+5.36160469055e-05 at 0
+7.2783946991e-05 at 10
+1.04148387909e-05 at 1025
+1.33678913116e-05 at 1028
+</pre>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "cpython-vs-pypy-vs-cython";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

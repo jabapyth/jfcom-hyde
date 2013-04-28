@@ -1,0 +1,122 @@
+---
+title: 'Announcing: Codetalker'
+slug: announcing-codetalker
+created: !!timestamp '2010-07-08 01:38:08'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/projects/navajo.gif
+{% endmark %}
+
+{% mark exerpt %}
+Introduction
+============
+{% endmark %}
+
+
+Well, I've done it again. I've put off blogging about a project for so long that it is impossible for me to do justice to all the cool things that have been going on; so I'll skip most of it.
+
+**Codetalker** is a project that has actually been bubbling away on my back burner for probably over a year now, and which has seen its share of complete overhauls, but which I think is now ready to come into the light.
+
+`Codetalker <http://jaredforsyth.com/projects/codetalker/>`_ takes much of its design inspiration from the excellent documentation python has of its `Official Grammar <http://docs.python.org/reference/grammar.html>`_ and the `"Abstract Grammar" <http://docs.python.org/library/ast.html#abstract-grammar>`_ defined in the AST module. While creating Codetalker, I looked at those two documents and thought "there's no reason why defining a parser should be any harder than this."
+
+Of course, I am well aware that This Has Been Done Before. I've looked at many solutions, and been unsatisfied with all (obviously, as I've decided to make my own).
+
+One problem with many existing solutions is that they are limited in power and flexibility by a reliance on a `DSL <http://en.wikipedia.org/wiki/Domain-specific_language>`_ (often `BNF-like <http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form>`_) for grammar definition. This is where codetalker started as well, but one of the chief things that bugged me was the fact that whichever system I used, it was both rigid and arbitrary. I wrote grammar-parsers for several different forms before deciding that *there had to be a better way*.
+
+And there was. "Who am I to reinvent the wheel?" I asked (conveniently forgetting that I have, on many occasions, done just that). So I went back to python. Flexible? Totally. Powerful? Definitely. Capable? Of course. And doing everything in python allowed me to avoid the kind of frankinsteined mashups that are ANTLR grammar definitions.
+
+Parsing
+===========
+
+To whet your palate, here's what a JSON parser looks like:
+
+Example
+----------
+
+.. code-block:: python
+
+    # rules (value is the start rule)
+    def value(rule):
+        rule | dict_ | list_ | STRING | TFN | NUMBER
+        rule.pass_single = True
+
+    def dict_(rule):
+        rule | ('{', [commas((STRING, ':', value))], '}')
+        rule.astAttrs = {'keys': STRING, 'values': value}
+    dict_.astName = 'Dict'
+
+    def list_(rule):
+        rule | ('[', [commas(value)], ']')
+        rule.astAttrs = {'values': value}
+    list_.astName = 'List'
+
+    grammar = Grammar(start=value,
+             tokens=[STRING, NUMBER, NEWLINE, WHITE, SYMBOL, TFN],
+             ignore=[WHITE, NEWLINE],
+             ast_tokens=[STRING, TFN, NUMBER])
+
+And yes, that is a complete parser in 12 lines of code. [for the full json parser + translator, `check this out <http://github.com/jabapyth/codetalker/blob/master/codetalker/contrib/json.py>`_]
+
+First off, the one possibly evil thing that codetalker does is modification through the bitwise OR operator... Yes, traditionally one should not modify an object using infix operators, but I considered many other options and this seemed the most intuitive while mainatining brevity. [You can still do rule.add_option(...) if you like].
+
+Grammar sugar
+--------------------
+
+Some of the sugar in there is the fact that a list ``[stuff]`` denotes *optional* (for similarity with some BNF styles). For other fancy regular expression sugar, you have the special functions ``_or(...)``, ``star(...)``, and ``plus(...)`` which apply to ``foo | baz``, ``foo*`` and ``foo+``.
+
+The final piece of the definition that might look a bit strange is the ``commas`` function calls. Is this special? Not really. It's actually just a factory function -- very straightforward:
+
+.. code-block:: python
+
+    def commas(item):
+        return (item, star(',', item), [','])
+
+Here's where you can see the real power of skipping the BNF and defining the grammar straight in python. Another, more complex factory function is ``binop``, used in the `math.py example grammar <http://github.com/jabapyth/codetalker/blob/master/codetalker/contrib/math.py>`_. (both ``binop`` and ``commas`` are defined in `codetalker/pgm/special.py <http://github.com/jabapyth/codetalker/blob/master/codetalker/pgm/special.py>`_)
+
+The **entire parser** for mathematical expressions is 2 lines long, thanks to ``binop``:
+
+.. code-block:: python
+
+    expression = binop(list('-+'), list('*/%'),
+              ['**'], value=NUMBER, ops_token=OP,
+              name='BinOp', paren=True)
+    grammar = pgm.Grammar(start=expression,
+              tokens = [OP, NUMBER, SYMBOL, WHITE, NEWLINE],
+              ignore = [WHITE, NEWLINE], ast_tokens=[NUMBER])
+
+The ``binop`` function actually generates a grammar function as opposed to just a grammar tuple, which function is essentially:
+
+.. code-block:: python
+
+    def meta(rule):
+        rule | (value, star(_or(*ops), value))
+
+Where ``value`` is the next rule down the precedence line, and ``ops`` is the list of operators at that precedence level (``['+','-']`` for the topmost rule).
+
+Abstract Syntax Tree
+====================
+
+As any good compiler knows, parsing is nice, but not nice enough -- one must take the raw parse tree (which retains all the non-essential things like spaces and comments) and generate an `Abstract Syntax Tree <http://en.wikipedia.org/wiki/Abstract_syntax_tree>`_.
+
+With Codetalker, you get this almost for free (along with...most everything else). For an example, let's take the ``Dict`` ast node from the above json parser.
+
+.. code-block:: python
+
+    def dict_(rule):
+        rule | ('{', [commas((STRING, ':', value))], '}')
+        rule.astAttrs = {'keys': STRING, 'values': value}
+    dict_.astName = 'Dict'
+
+The ``astAttrs`` attribute defines...the attributes you want collected in the AST. ``func.astName`` defaults to the function name, and is used as the name for the resulting AST Class name.
+
+As far as AST attributes go, this is about as simple as it gets: if you put a function or token as the value, it automatically collects all children matching that type for you. Otherwise, it looks for a dictionary on the other side, with the following keys:
+
+    :type: rule or token *this is the only required parameter*
+    :single: bool; *grab only the first child of that type (default:* ``False`` *)*
+    :start: int 
+    :end: int; *start and end are for slicing -- e.g. only grab the first three IDs. start can also be used in conjunction with* ``single:True`` *to get a child other than the first.*
+
+And... that's all I'll put down. Be back soon to preview the actual translation process.

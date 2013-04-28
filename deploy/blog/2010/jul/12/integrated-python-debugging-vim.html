@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/12">Back to list</a>
+<a class="prev"
+    title="Why it would be hard for me to give up git for mercurial"
+        href="/blog/2010/jul/13/why-it-would-be-hard-me-give-git-mercurial.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Python Registrar"
+        href="/blog/2010/jul/10/python-registrar.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/12/integrated-python-debugging-vim.html">
+        Integrated python debugging in VIM
+    </a>
+</h1>
+<time datetime="2010-07-12">
+    Posted: Mon, 12 Jul 2010
+</time>
+
+
+<div class="document">
+<img alt="http://jaredforsyth.com/media/projects/logo__.png" src="http://jaredforsyth.com/media/projects/logo__.png" />
+<p>A few days ago, I posted that I was taking over <a class="reference external" href="http://jaredforsyth.com/projects/vim-debug/">a project</a> which provides a debugging environment in <span class="caps">VIM</span>, specifically geared toward <span class="caps">PHP</span>. Soon after a guy w/ the handle Epeli asked (perhaps not very grammatically), &#8220;I can we debug Python like this with&nbsp;Vim?&#8221;</p>
+<p>but we&#8217;ll forgive the grammar because he&#8217;s from Finland, and I can&#8217;t pronounce <a class="reference external" href="http://esa-matti.suuronen.org/">the name of his home town</a>&#8230;</p>
+<p>But it was an awesome question! I thought, well why not? The debugger is really just interfacing with a server which conforms to the <a class="reference external" href="http://www.xdebug.org/docs-dbgp.php">DBGp specification</a>, and after looking around I was happy to find that <a class="reference external" href="http://downloads.activestate.com/Komodo/releases/6.0.0b1/remotedebugging/">ActiveState had done most of the legwork for me</a>. Unfortunately, there were a few show-stopping bugs in their code, and I couldn&#8217;t find it anywhere on version control (though it is open source), so I took the liberty of throwing it <a class="reference external" href="http://github.com/jabapyth/pydbgp">up on github</a> and added my patches &#8212; so now it&#8217;s ready to&nbsp;use!</p>
+<p><em>[btw if it is on a <span class="caps">VCS</span> somewhere and I missed it, let me know so I can send my fixes&nbsp;upstream]</em></p>
+<p>That&#8217;s right; we now have integrated debugging in your favorite power tool (well, mine anyway):&nbsp;<span class="caps">VIM</span>.</p>
+<p>Here&#8217;s an <a class="reference external" href="http://jaredforsyth.com/media/uploads/images/vim_debug.jpeg">annotated screenshot</a> of an active session,&nbsp;showcasing:</p>
+<ul class="simple">
+<li>breakpoints</li>
+<li>watch&nbsp;expressions</li>
+<li>execution stack&nbsp;view</li>
+<li>current&nbsp;scope</li>
+<li>output stream&nbsp;copying</li>
+</ul>
+<p>On the <a class="reference external" href="http://jabapyth.github.com/pydbgp/">github project page</a>, you can find <strong>install instructions</strong> for the python server. I&#8217;ll soon put together install instructions for&nbsp;vim-debug.</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "integrated-python-debugging-vim";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

@@ -1,0 +1,52 @@
+---
+title: 'AccessInit: hash collision: 3 for both 1 and 1'
+slug: accessinit-hash-collision-3-both-1-and-1
+created: !!timestamp '2010-04-28 11:43:54'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+I recently ran into a problem, which didn't immediately make itself clear (this is one of the troubles that django causes me -- too often the error reporting is just *not there*, and forces me to do a good deal of debugging to even determine where the error is occurring).
+{% endmark %}
+
+
+
+After facing several unpromising "500" errors (well, they were really 404's "page 500.shtml not found..."), I broke down, tunneled in and started the devel server. At this point, the error was made plain; python was all-out *dying*, with the cryptic message ``AccessInit: hash collision: 3 for both 1 and 1``.
+
+[for the impatient, you can jump down to `The Solution`_ ]
+
+A good deal of googling later found no satisfactory answers, but `several <http://aspn.activestate.com/ASPN/Mail/Message/image-sig/3841039>`_ `unanswered <http://groups.google.com/group/satchmo-users/browse_thread/thread/b763986876a131cf/f0d9759524270000?hl=en&lnk=gst&q=Daniel+Hirsch#f0d9759524270000>`_ `questions <http://www.mail-archive.com/image-sig@python.org/msg03083.html>`_ (hence this post).
+
+What I got from these posts was that **somehow, PIL was getting imported twice**, or something, and was **choking because of it**. But the question remained as to *how* this could happen.
+
+So, I dove into the source code, and several unscrupulous `print statements <http://en.wikipedia.org/wiki/Debugging#Various_debugging_techniques>`_ later, I traced the problem down to my use of the "Pygments" module, which in turn uses PIL.
+
+The Problem
+----------------
+
+The offending statement is in pygments/formatters/img.py, line 21
+
+.. code-block:: python
+
+    # Import this carefully
+    try:
+        import Image, ImageDraw, ImageFont
+        pil_available = True
+
+The problem is, that in Django, PIL is imported thus
+
+.. code-block:: python
+
+    from PIL import Image, ...
+
+The Solution
+--------------
+
+This is confusing to python, which thinks that these two "Image" modules are different, when they are in fact the same. (I found several people on the internet bemoaning this double-standard of PIL usage). I fixed this by changing the Pygments module to use the ``from PIL import`` syntax.
+
+Unfortunately, this wasn't the end of my problems; I also use the docutils module, which again tries to "import Image", causing the hash collision. Luckily, it wasn't to difficult to track those instances down and kill them...I mean fix them. Anyway, I ended up with the following two patches, which restored my system to working order.
+
+`pygments patch <http://jaredforsyth.com/media/uploads/PIL_fix.pygments.patch>`_
+
+`docutils patch <http://jaredforsyth.com/media/uploads/PIL_fix.docutils.patch>`_

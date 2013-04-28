@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/apr/28">Back to list</a>
+<a class="prev"
+    title="Django to UML"
+        href="/blog/2010/apr/29/django-uml.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Vim tip of the day: copy current file name"
+        href="/blog/2010/apr/17/vim-tip-day-copy-current-file-name.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/apr/28/accessinit-hash-collision-3-both-1-and-1.html">
+        AccessInit: hash collision: 3 for both 1 and 1
+    </a>
+</h1>
+<time datetime="2010-04-28">
+    Posted: Wed, 28 Apr 2010
+</time>
+
+
+<div class="document">
+<p>I recently ran into a problem, which didn&#8217;t immediately make itself clear (this is one of the troubles that django causes me &#8212; too often the error reporting is just <em>not there</em>, and forces me to do a good deal of debugging to even determine where the error is&nbsp;occurring).</p>
+<p>After facing several unpromising &#8220;500&#8221; errors (well, they were really 404&#8217;s &#8220;page 500.shtml not found&#8230;&#8221;), I broke down, tunneled in and started the devel server. At this point, the error was made plain; python was all-out <em>dying</em>, with the cryptic message <tt class="docutils literal">AccessInit: hash collision: 3 for both 1 and 1</tt>.</p>
+<p>[for the impatient, you can jump down to <a class="reference internal" href="#the-solution">The Solution</a>&nbsp;]</p>
+<p>A good deal of googling later found no satisfactory answers, but <a class="reference external" href="http://aspn.activestate.com/ASPN/Mail/Message/image-sig/3841039">several</a> <a class="reference external" href="http://groups.google.com/group/satchmo-users/browse_thread/thread/b763986876a131cf/f0d9759524270000?hl=en&amp;lnk=gst&amp;q=Daniel+Hirsch#f0d9759524270000">unanswered</a> <a class="reference external" href="http://www.mail-archive.com/image-sig&#64;python.org/msg03083.html">questions</a> (hence this&nbsp;post).</p>
+<p>What I got from these posts was that <strong>somehow, <span class="caps">PIL</span> was getting imported twice</strong>, or something, and was <strong>choking because of it</strong>. But the question remained as to <em>how</em> this could&nbsp;happen.</p>
+<p>So, I dove into the source code, and several unscrupulous <a class="reference external" href="http://en.wikipedia.org/wiki/Debugging#Various_debugging_techniques">print statements</a> later, I traced the problem down to my use of the &#8220;Pygments&#8221; module, which in turn uses&nbsp;<span class="caps">PIL</span>.</p>
+<div class="section" id="the-problem">
+<h1>The&nbsp;Problem</h1>
+<p>The offending statement is in pygments/formatters/img.py, line&nbsp;21</p>
+<pre class="code python literal-block">
+<span class="comment"># Import this carefully</span>
+<span class="keyword">try</span><span class="punctuation">:</span>
+    <span class="keyword namespace">import</span> <span class="name namespace">Image</span><span class="operator">,</span> <span class="name namespace">ImageDraw</span><span class="operator">,</span> <span class="name namespace">ImageFont</span>
+    <span class="name">pil_available</span> <span class="operator">=</span> <span class="name builtin pseudo">True</span>
+</pre>
+<p>The problem is, that in Django, <span class="caps">PIL</span> is imported&nbsp;thus</p>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace"><span class="caps">PIL</span></span> <span class="keyword namespace">import</span> <span class="name">Image</span><span class="punctuation">,</span> <span class="operator">...</span>
+</pre>
+</div>
+<div class="section" id="the-solution">
+<h1>The&nbsp;Solution</h1>
+<p>This is confusing to python, which thinks that these two &#8220;Image&#8221; modules are different, when they are in fact the same. (I found several people on the internet bemoaning this double-standard of <span class="caps">PIL</span> usage). I fixed this by changing the Pygments module to use the <tt class="docutils literal">from <span class="caps">PIL</span> import</tt> syntax.</p>
+<p>Unfortunately, this wasn&#8217;t the end of my problems; I also use the docutils module, which again tries to &#8220;import Image&#8221;, causing the hash collision. Luckily, it wasn&#8217;t to difficult to track those instances down and kill them&#8230;I mean fix them. Anyway, I ended up with the following two patches, which restored my system to working&nbsp;order.</p>
+<p><a class="reference external" href="http://jaredforsyth.com/media/uploads/PIL_fix.pygments.patch">pygments&nbsp;patch</a></p>
+<p><a class="reference external" href="http://jaredforsyth.com/media/uploads/PIL_fix.docutils.patch">docutils&nbsp;patch</a></p>
+</div>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "accessinit-hash-collision-3-both-1-and-1";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

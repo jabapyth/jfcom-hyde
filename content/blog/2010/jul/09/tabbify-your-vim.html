@@ -1,0 +1,26 @@
+---
+title: 'Tabbify your vim'
+slug: tabbify-your-vim
+created: !!timestamp '2010-07-09 20:00:00'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+I've just [re]discovered Vim's tabs. Which are awesome. What isn't so awesome is the movement between tabs... ``:tabnew`` ``:tabn`` ``:tabp``. Of course, the beauty of vim is customization -- it's trivial to make your own keybindings.
+{% endmark %}
+
+
+I chose:
+
+  :new: \tn
+  :prev: <Control> Left
+  :next: <Control> Right
+
+Unfortunately, the normal <C-%> notation doesn't work for "left" and "right" (maybe it's just my keyboard; idk) Anyway, here's what I had to enter (in my .vimrc)::
+
+    map ^[[1;5D :tabp<cr>
+    map ^[[1;5C :tabn<cr>
+    map <Leader>tn :tabnew<cr>
+
+Yeah; ``^[[1;5D`` = <C-Left>. Don't ask me why.

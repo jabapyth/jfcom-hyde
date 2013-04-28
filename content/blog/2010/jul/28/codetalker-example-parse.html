@@ -1,0 +1,152 @@
+---
+title: 'CodeTalker by example: parse'
+slug: codetalker-example-parse
+created: !!timestamp '2010-07-28 09:41:59'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+This is the second in a four-part series, in which I demonstrate how to build a
+CSS parser using CodeTalker_:
+{% endmark %}
+
+
+- tokenize_
+- **parse**
+- translate_
+- `test!`_
+
+.. _tokenize: http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/
+.. _translate: http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/
+.. _test!: http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/
+
+.. _CodeTalker: http://jaredforsyth.com/projects/codetalker/
+
+.. _compiler-compiler: http://en.wikipedia.org/wiki/Compiler-compiler
+
+To get the code for this:
+
+``git clone`` `git://github.com/jabapyth/css.git <http://github.com/jabapyth/css/>`_
+
+Parsing
+=======
+
+In this section we actually define the grammar and the AST attributes.
+Fortunately for someone has already gone to the trouble of specifying CSS2 as
+a CFG, and the process of transforming their EBNF to CodeTalker is relatively
+straight-forward.
+
+*[for the impatient, you can just look at the* `final code`_ *].*
+
+.. _final code: http://github.com/jabapyth/css/blob/master/css/grammar.py
+
+I should mention that **CSS is an interesting case, as far as grammars go**.
+With its case-insensitivity, ambiguous tokens (``#FFF`` could either be a
+color or a node id depending on the placement), and permissive error handling
+(you're supposed to "just ignore anything you don't understand"), it proves
+an interesting challange for a world which usually avoids ambiguity and spits
+out a "Syntax Error" at the first sign of trouble.
+
+Confession
+----------
+
+*But* before we begin the main grammar, I have to address an aspect of CSS that I
+conveniently failed to mention during the tokenization stage; CSS identifiers
+**can contain a hyphen**, and therefore aren't fully covered by the baked-in
+ID token.
+
+It can't even be fixed by using the ``idchars`` option, because then a single
+hyphen could be considered an ID, which wouldn't work out.
+
+Now, in my first version of this code, I just used a regexp 
+
+    ``(-\w+)+|\w+(-\w+)*`` 
+
+but for performance reasons, I chose to handle this
+special aspect of IDs in a grammar rule. So here it is:
+
+.. code-block:: python
+
+    def cssid(rule):
+        ids = ID, COLOR, NODE_NAME, UNIT
+        rule | plus('-', _or(*ids)) | (_or(*ids), star('-', _or(*ids)))
+        rule.dont_ignore = True
+        rule.astAttrs = {'parts': (SYMBOL, ) + ids}
+
+.. yeah*
+
+The ``ids`` variable is a list of all tokens that could concievably match
+*part* of a token; e.g. ``green-div-baz`` would be tokenized ``[COLOR, SYMBOL,
+NODE_NAME, SYMBOL, ID]``
+
+Also of note is the ``dont_ignore`` flag; normally, whitespace, newlines, and
+comments are ignored while parsing grammar rules (for this grammar, anyway),
+which is the behavior you'd expect. For this one rule, however, we don't want
+to.
+
+Grammar Rules
+-------------
+
+Aaaand on to the normal stuff. Here's the ``stylesheet`` rule (which will be
+our starting rule):
+
+.. code-block:: python
+
+    def style_sheet(rule):
+        rule | ([charset], star(import_), star(section))
+        rule.astAttrs = {
+                'charset': charset,
+                'imports': [import_],
+                'sections': [section],
+            }
+
+Pretty normal. (if this looks confusing to you, take a look at the `CodeTalker
+reference`_)
+
+.. _CodeTalker reference: http://jaredforsyth.com/blog/2010/jul/26/only-codetalker-introduction-youll-ever-need/
+
+But I won't bore you with the details — you could just look at `the code`__ for
+that.
+
+__ `final code`_
+
+Here are some highlights:
+
+.. code-block:: python
+
+    def charset(rule):
+        rule | (no_ignore('@', 'charset'), _or(STRING, SSTRING), ';')
+        rule.astAttrs = {
+            'charset':{'type':[STRING, SSTRING], 'single':True}
+        }
+
+The ``no_ignore`` function indicates that, during the parsing of this
+sequence no tokens should be ignored. It's like the ``dont_ignore`` rule flag,
+but for a sequence.
+
+Permissive Syntax
+-----------------
+
+In order to address the **just ignore any syntax errors, and do your best**
+`rule of CSS parsing
+<http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#parsing-errors>`_, I
+made an addition to the ``declaration`` rule.
+
+.. code-block:: python
+
+    def declaration(rule):
+        rule | (cssid, ':', plus(value), [important], ';')
+        rule | (plus(_not(_or(';', '}'))), ';')
+        rule.astAttrs = {
+            'property':cssid,
+            'values':[value],
+            'important':important,
+        }
+
+Essentially, "first try to make some sense of it, and if that fails, consume
+tokens up to the next ';' or '}'". In the second case, the AST attributes will
+be None/empty.
+
+Anyway, I think that pretty much sums up what I wanted to focus on. Any
+questions? comments? Shakespeare quotations?

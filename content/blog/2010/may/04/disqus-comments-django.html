@@ -1,0 +1,45 @@
+---
+title: 'Disqus comments in Django'
+slug: disqus-comments-django
+created: !!timestamp '2010-05-04 21:41:29'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg
+   :class: first
+   :width: 190px
+{% endmark %}
+
+{% mark exerpt %}
+Recently I finally got around to adding comments to this blog; `disqus
+<http://disqus.com>`_ made it so easy that I didn't really have an excuse to
+keep putting it off ;)
+{% endmark %}
+
+
+When I first made this blog...a few months ago, I was simultaneously
+discovering `django <http://djangoproject.com>`_ (they say the way to learn
+the ropes in django is to create a blogging engine) and wasn't quite satisfied
+with the readily available comments solutions. 
+
+I heard from several places that django.contrib.comments has a problem with
+taking you out of context if the form needs errors corrected, which really
+isn't acceptible. Looking around further, I saw a presentation at djangocon 08
+(iirc) about pluggable apps, which looked like a solution, but I really didn't
+want to go to the trouble; it was easier to just postpone the comments
+question, at least for a time.
+
+As I looked around at the blogs of people talking about django, I kept seeing
+"powered by disqus" at the bottom, so I went `over to investigate
+<http://disqus.com>`_, and was very satisfied by their offering. Of course, it
+helps that it's free, and that **the only installation was adding 10 lines of
+HTML to the bottom of my blog_post template**.
+
+The real clincher for me though was integration; disqus enables people reading
+my blog to use OpenID, facebook, twitter, or general disqus authorization.
+People who might not have commented had they been required to sign up for my
+site alone would have far fewer qualms.
+
+Cheers

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/21">Back to list</a>
+<a class="prev"
+    title="CPython vs PyPy vs Cython "
+        href="/blog/2010/jul/21/cpython-vs-pypy-vs-cython.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Python css parsing benchmarks"
+        href="/blog/2010/jul/17/python-css-parsing-benchmarks.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/21/codetalker-doubles-in-speed.html">
+        CodeTalker doubles in speed
+    </a>
+</h1>
+<time datetime="2010-07-21">
+    Posted: Wed, 21 Jul 2010
+</time>
+
+
+<div class="document">
+<img alt="http://jaredforsyth.com/media/projects/logo_codetalker.png" src="http://jaredforsyth.com/media/projects/logo_codetalker.png" />
+<p>Just when you though codetalker <a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/17/python-css-parsing-benchmarks/">couldn&#8217;t get</a> <a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/17/comparing-parser-generators-python/">any faster</a>, I managed to <em>double its speed</em>.</p>
+<p><em>in case anyone&#8217;s wondering, the binary around the logo corresponds to the ascii string&nbsp;&#8220;codetalker&#8221;</em></p>
+<p>I&#8217;ve put together some updated graphs, for <span class="caps">JSON</span> and <span class="caps">CSS</span>&nbsp;parsing&#8230;</p>
+<img alt="http://jaredforsyth.com/media/uploads/images/new_json_bench.jpeg" src="http://jaredforsyth.com/media/uploads/images/new_json_bench.jpeg" />
+<p><a class="reference external" href="http://jaredforsyth.com/media/uploads/new_json.html">[live&nbsp;graph]</a></p>
+<p>Ad-hoc json&nbsp;parsing:</p>
+<ul class="simple">
+<li>stdlib.json</li>
+<li>python-json</li>
+<li>cjson</li>
+</ul>
+<p>Parser-generator&nbsp;parsing:</p>
+<ul class="simple">
+<li>codetalker</li>
+<li>ply</li>
+<li>pyparsing</li>
+<li>funcparserlib</li>
+</ul>
+<p>As you can see, codetalker is now <strong>beating python&#8217;s stdlib.json</strong>, and is way ahead of the other &#8216;parser generator&#8217; solutions. And for lines of code (and maintainability, and speed of coding, etc.) codetalker is really the way to go (especially when speed is thrown into the&nbsp;mix).</p>
+<img alt="http://jaredforsyth.com/media/uploads/images/new_css_bench.jpeg" src="http://jaredforsyth.com/media/uploads/images/new_css_bench.jpeg" />
+<p><a class="reference external" href="http://jaredforsyth.com/media/uploads/bench_css.html">[live&nbsp;graph].</a></p>
+<p>Not that there was much competition in the first place, but codetalker is now <em>10x faster</em> than cssutils and <em>7x faster</em> than&nbsp;css_py.</p>
+<p>I think I&#8217;m done optimizing for now&nbsp;=)</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "codetalker-doubles-in-speed";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

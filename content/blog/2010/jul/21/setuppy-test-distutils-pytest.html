@@ -1,0 +1,60 @@
+---
+title: 'setup.py test with distutils (+py.test)'
+slug: setuppy-test-distutils-pytest
+created: !!timestamp '2010-07-21 12:14:34'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+One thing that has bothered me about distutils is its lack of a "test" command -- it seems strange to me that setuptools has it but distutils does not...
+{% endmark %}
+
+
+Anyway I `looked around <http://www.eggheadcafe.com/software/aspnet/36151038/does-distutils-support-python-setuppy-test.aspx>`_ to `make sure <http://da44en.wordpress.com/2002/11/22/using-distutils/>`_ it `really wasn't there <http://mail.python.org/pipermail/distutils-sig/2000-September/001528.html>`_ (I couldn't believe it at first), but finally, convinced, `I wrote my own <http://github.com/jabapyth/disttest>`_.
+
+**What's cool about this:**
+
+- it's extensible -- designed from the start to allow for many different style tests (using different testing libraries)
+- includes 2 test types:
+
+  - unittest
+  - py.test *(degrades gracefully to unittest if the py module is not present)*
+
+Here's the code used to add unittest support:
+
+.. code-block:: python
+
+    def validate_unittest(tester):
+        if tester.test_suite is None:
+            if tester.test_modules is None:
+                raise DistutilsOptionError(
+                    "You must specify a module or a suite"
+                )
+            tester.test_suite = self.test_module+".test_suite"
+        elif tester.test_module:
+            raise DistutilsOptionError(
+                "You may specify a module or a suite, but not both"
+            )
+
+    @test.add_type('unittest', options=(
+            ('test-module=','m', "Run 'test_suite' in specified module"),
+            ('test-suite=','s',
+                "Test suite to run (e.g. 'some_module.test_suite')"),
+        ), validate=validate_unittest)
+    def run_unittest(tester):
+        import unittest
+        unittest.main(
+            None, None, [unittest.__file__, tester.test_suite],
+            testLoader = unittest.TestLoader()
+        )
+
+
+
+Anyway, I'm calling it "disttest"...
+
+I don't know whether to put it up on pypi or what...it would kindof be a drag to have to install another package in order to run tests...
+
+Then again, it is only one file, so it's feasible to just package it in w/ your other code (**grab the file** `here <http://github.com/jabapyth/disttest/blob/master/disttest.py>`_). That's what I've `done with codetalker <http://github.com/jabapyth/codetalker/blob/master/test_cmd.py>`_...
+
+Thoughts? Suggestions? Complaints?

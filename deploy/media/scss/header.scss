@@ -1,0 +1,39 @@
+
+@import "colors";
+
+#header {
+    background-color: $base;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 20px solid $darker;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .title {
+        margin: 50px 20px 20px;
+        font-size: 2.4em;
+        font-weight: bold;
+    }
+    .nav-internal, .nav-external {
+        ul {
+            margin-bottom: 0;
+            li a:hover, li a.active {
+                background-color: transparent;
+                border-radius: 0;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+    .nav-internal {
+        float: left;
+        margin-left: 10px;
+    }
+    .nav-external {
+        float: right;
+    }
+}
+

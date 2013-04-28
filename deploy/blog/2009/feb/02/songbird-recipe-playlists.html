@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2009/feb/02">Back to list</a>
+<a class="prev"
+    title="WA haxxz"
+        href="/blog/2009/apr/02/wa-haxxz.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Install Python 2.6 in Ubuntu"
+        href="/blog/2009/jan/20/install-python-26-ubuntu.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2009/feb/02/songbird-recipe-playlists.html">
+        Songbird Recipe: Playlists
+    </a>
+</h1>
+<time datetime="2009-02-02">
+    Posted: Mon, 02 Feb 2009
+</time>
+
+
+<div class="document">
+<p>Here&#8217;s a quick javascript+<span class="caps">XPCOM</span> recipe on how to get a list of the user&#8217;s
+playlists in a songbird&nbsp;extension.</p>
+<pre class="code python literal-block">
+<span class="name">function</span> <span class="name">getUserPlaylists</span><span class="punctuation">()</span> <span class="punctuation">{</span>
+    <span class="name">var</span> <span class="name">sLM</span> <span class="operator">=</span> <span class="name">Components</span><span class="operator">.</span><span class="name">classes</span><span class="punctuation">[</span><span class="literal string">&quot;&#64;songbirdnest.com/Songbird/library/Manager;1&quot;</span><span class="punctuation">]</span>
+                <span class="operator">.</span><span class="name">getService</span><span class="punctuation">(</span><span class="name">Components</span><span class="operator">.</span><span class="name">interfaces</span><span class="operator">.</span><span class="name">sbILibraryManager</span><span class="punctuation">);</span>
+    <span class="name">var</span> <span class="name">aLib</span> <span class="operator">=</span> <span class="name">sLM</span><span class="operator">.</span><span class="name">mainLibrary</span><span class="punctuation">;</span>
+    <span class="name">var</span> <span class="name">playlists</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">aLib</span><span class="punctuation">];</span>
+    <span class="name">var</span> <span class="name">pnames</span> <span class="operator">=</span> <span class="punctuation">[];</span>
+    <span class="name">var</span> <span class="name">listener</span> <span class="operator">=</span> <span class="punctuation">{</span>
+        <span class="name">onEnumerationBegin</span><span class="punctuation">:</span> <span class="name">function</span><span class="punctuation">()</span> <span class="punctuation">{</span> <span class="punctuation">},</span>
+        <span class="name">onEnumerationEnd</span><span class="punctuation">:</span> <span class="name">function</span><span class="punctuation">()</span> <span class="punctuation">{</span> <span class="punctuation">},</span>
+        <span class="name">onEnumeratedItem</span><span class="punctuation">:</span> <span class="name">function</span><span class="punctuation">(</span><span class="name builtin">list</span><span class="punctuation">,</span> <span class="name">item</span><span class="punctuation">)</span> <span class="punctuation">{</span>
+            <span class="keyword">if</span> <span class="punctuation">(</span><span class="name">pnames</span><span class="operator">.</span><span class="name">indexOf</span><span class="punctuation">(</span><span class="name">item</span><span class="operator">.</span><span class="name">name</span><span class="punctuation">)</span><span class="operator">==-</span><span class="literal number integer">1</span><span class="punctuation">){</span> <span class="operator">//</span> <span class="name">sometimes</span> <span class="name">we</span> <span class="name">get</span> <span class="name">smart</span> <span class="name">playlists</span> <span class="name">multiple</span> <span class="name">times</span>
+                <span class="name">playlists</span><span class="operator">.</span><span class="name">push</span><span class="punctuation">(</span><span class="name">item</span><span class="punctuation">);</span>
+                <span class="name">pnames</span><span class="operator">.</span><span class="name">push</span><span class="punctuation">(</span><span class="name">item</span><span class="operator">.</span><span class="name">name</span><span class="punctuation">);</span>
+            <span class="punctuation">}</span>
+            <span class="keyword">return</span> <span class="name">Components</span><span class="operator">.</span><span class="name">interfaces</span><span class="operator">.</span><span class="name">sbIMediaListEnumerationListener</span><span class="operator">.</span><span class="name"><span class="caps">CONTINUE</span></span><span class="punctuation">;</span>
+        <span class="punctuation">}</span>
+    <span class="punctuation">};</span>
+    <span class="name">aLib</span><span class="operator">.</span><span class="name">enumerateItemsByProperty</span><span class="punctuation">(</span><span class="literal string">&quot;http://songbirdnest.com/data/1.0#isList&quot;</span><span class="punctuation">,</span> <span class="literal string">&quot;1&quot;</span><span class="punctuation">,</span> <span class="name">listener</span> <span class="punctuation">);</span>
+    <span class="keyword">return</span> <span class="name">playlists</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+<span class="name">function</span> <span class="name">playPlaylist</span><span class="punctuation">(</span><span class="name">plist</span><span class="punctuation">,</span><span class="name">i</span><span class="punctuation">){</span> <span class="operator">//</span> <span class="name">i</span> <span class="operator">==</span> <span class="name">index</span> <span class="name">of</span> <span class="name">the</span> <span class="name">song</span> <span class="name">you</span> <span class="name">want</span> <span class="name">to</span> <span class="name">play</span>
+    <span class="name">var</span> <span class="name">gMM</span> <span class="operator">=</span> <span class="name">Components</span><span class="operator">.</span><span class="name">classes</span><span class="punctuation">[</span><span class="literal string">&quot;&#64;songbirdnest.com/Songbird/Mediacore/Manager;1&quot;</span><span class="punctuation">]</span>
+                    <span class="operator">.</span><span class="name">getService</span><span class="punctuation">(</span><span class="name">Components</span><span class="operator">.</span><span class="name">interfaces</span><span class="operator">.</span><span class="name">sbIMediacoreManager</span><span class="punctuation">);</span>
+    <span class="name">gMM</span><span class="operator">.</span><span class="name">sequencer</span><span class="operator">.</span><span class="name">playView</span><span class="punctuation">(</span><span class="name">plist</span><span class="operator">.</span><span class="name">createView</span><span class="punctuation">(),</span><span class="name">i</span><span class="punctuation">);</span>
+<span class="punctuation">}</span>
+</pre>
+<p>Once you get your lists of playlists, you can start one playing with
+playPlaylist(plist,index) or check the user-visible names with&nbsp;plist.name.</p>
+<p>For more info on the songbird extension <span class="caps">API</span>, hit <a class="reference external" href="http://developer.songbirdnest.com/add-on-api/docs/trunk/">the docs</a> or mozilla&#8217;s
+<a class="reference external" href="irc://irc.mozilla.org/#songbird">songbird irc channel</a>.</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "songbird-recipe-playlists";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

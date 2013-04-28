@@ -1,0 +1,37 @@
+---
+title: 'Announcing: vim-phpdebug'
+slug: announcing-vim-phpdebug
+created: !!timestamp '2010-07-09 09:49:05'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/projects/logo.png
+{% endmark %}
+
+{% mark exerpt %}
+I've just taken over maintenance of a `really sweet plugin <http://jaredforsyth.com/projects/vim-phpdebug/>`_ for integrated PHP debugging in VIM (written in python!). It's `been dead for 3 years <http://www.vim.org/scripts/script.php?script_id=1929>`_, so I figure the air is clear...
+{% endmark %}
+
+
+anyway, the code is `up on github <http://github.com/jabapyth/vim-phpdebug>`_, and I've got some features I know I want to add, but even more I'd like to hear what the community wants. [the plugin is really an interface with `xdebug <http://www.xdebug.org/>`_, but the most common usage of this that I've seen is PHP.]
+
+Features:
+
+- integration with xdebug
+- step (into/over/out)
+- live stack view
+- breakpoint set/remove
+
+Planned:
+
+- live interaction console
+- conditional breakpoints
+- watch expressions
+- live scope view
+
+And here's a screenshot: `[full size] <http://jaredforsyth.com/media/uploads/Terminal_019.jpeg>`_
+
+.. image:: http://jaredforsyth.com/media/uploads/Terminal_019.jpeg
+    :width: 450

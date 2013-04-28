@@ -1,0 +1,35 @@
+---
+title: 'Python operator magic'
+slug: python-operator-magic
+created: !!timestamp '2010-05-21 07:20:45'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+Take a look at the following boolean expression:
+{% endmark %}
+
+
+.. code-block:: python
+
+    100 < x < 0
+
+never gonna happen, right? math is pretty unequivocal on these things.
+
+but you forget; with `python <http://python.org>`_, anything is possible ;)
+
+.. code-block:: python
+
+    class Faker:
+        def __lt__(self, other):
+            return True
+        def __gt__(self, other):
+            return True
+
+    x = Faker()
+
+    if 100 < x < 0:
+        print "Universal laws successfully violated!"
+
+Cheers.

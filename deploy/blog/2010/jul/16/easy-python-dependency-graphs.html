@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/16">Back to list</a>
+<a class="prev"
+    title="Comparing parser generators in Python"
+        href="/blog/2010/jul/17/comparing-parser-generators-python.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Installing Vim Debug"
+        href="/blog/2010/jul/16/installing-vim-debug.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/16/easy-python-dependency-graphs.html">
+        Easy python dependency graphs
+    </a>
+</h1>
+<time datetime="2010-07-16">
+    Posted: Fri, 16 Jul 2010
+</time>
+
+
+<div class="document">
+<img alt="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/200px-Directed.svg.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/200px-Directed.svg.png" />
+<p>I was looking around for ways to get a look at a python dependency graph, and found <a class="reference external" href="http://www.tarind.com/depgraph.html">this site</a> which actually does a pretty good job. The only gripe I have regards the command you must&nbsp;use:</p>
+<pre class="code bash literal-block">
+python py2depgraph.py path/to/my/script.py | python depgraph2dot.py | dot -T png -o depgraph.png
+</pre>
+<p>Couldn&#8217;t be easier, right?&nbsp;&#8230;</p>
+<p>Anyway, I added a bit of sugar on top of&nbsp;it.</p>
+<p>First I put the two files they provided in&nbsp;~/clone/modgraph</p>
+<pre class="code bash literal-block">
+mkdir ~/clone/modgraph
+<span class="name builtin">cd</span> ~/clone/modgraph
+wget http://www.tarind.com/py2depgraph.py
+wget http://www.tarind.com/depgraph2dot.py
+touch ~/bin/modgraph
+chmod +x ~/bin/modgraph
+</pre>
+<p>and then in&nbsp;~/bin/modgraph</p>
+<pre class="code bash literal-block">
+<span class="keyword">if</span> <span class="operator">[</span> -z <span class="literal string double">&quot;$2&quot;</span> <span class="operator">]</span>
+<span class="keyword">then
+    </span><span class="name builtin">echo</span> <span class="literal string double">&quot;usage: modgraph somepythonfile.py out.png&quot;</span>
+    <span class="name builtin">exit
+</span><span class="keyword">fi
+</span>python ~/clone/modgraph/py2depgraph.py <span class="name variable">$1</span> | python ~/clone/modgraph/depgraph2dot.py | dot -T png -o <span class="name variable">$2</span>
+</pre>
+<p>And of course to use&nbsp;it:</p>
+<pre class="code bash literal-block">
+modgraph myfile.py outfile.png
+</pre>
+<p>Is there another module that does this better? Should I package this up and throw it on&nbsp;pypi?</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "easy-python-dependency-graphs";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

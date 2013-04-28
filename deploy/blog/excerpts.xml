@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>
+        BASIC blog excerpts feed    </title>
+        <link href="/blog/excerpts.xml" rel="self" />
+    
+        <link href="/"/>
+    
+        
+    <updated>2013-04-28T00:35:25Z</updated>
+
+    <id>/blog/excerpts.xml/</id>
+
+            <entry>
+            <title type="html">ProtoClipper - clip web pages for rapid prototyping</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/apr/25/protoclipper-clip-web-pages-rapid-prototyping.html"/>
+            <updated>2013-04-25T20:00:38Z</updated>
+            <published>2013-04-25T20:00:38Z</published>
+            <id>/blog/2013/apr/25/protoclipper-clip-web-pages-rapid-prototyping.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">The Internet of Things</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/apr/11/internet-things.html"/>
+            <updated>2013-04-11T11:00:00Z</updated>
+            <published>2013-04-11T11:00:00Z</published>
+            <id>/blog/2013/apr/11/internet-things.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Social Conference</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/apr/09/social-conference.html"/>
+            <updated>2013-04-09T21:18:00Z</updated>
+            <published>2013-04-09T21:18:00Z</published>
+            <id>/blog/2013/apr/09/social-conference.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">If I can&#39;t see you</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/apr/04/if-i-cant-see-you.html"/>
+            <updated>2013-04-04T00:04:39Z</updated>
+            <published>2013-04-04T00:04:39Z</published>
+            <id>/blog/2013/apr/04/if-i-cant-see-you.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Software Patents</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/apr/02/software-patents.html"/>
+            <updated>2013-04-02T21:59:48Z</updated>
+            <published>2013-04-02T21:59:48Z</published>
+            <id>/blog/2013/apr/02/software-patents.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Creative Education</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/mar/28/creative-education.html"/>
+            <updated>2013-03-28T11:43:01Z</updated>
+            <published>2013-03-28T11:43:01Z</published>
+            <id>/blog/2013/mar/28/creative-education.html</id>
+                        <category   scheme="/blog/tags"
+                        term="education"
+                        label="Education" />
+                        <category   scheme="/blog/tags"
+                        term="reform"
+                        label="Reform" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">You know, we all want to change the world</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/mar/26/you-know-we-all-want-change-world.html"/>
+            <updated>2013-03-26T11:31:25Z</updated>
+            <published>2013-03-26T11:31:25Z</published>
+            <id>/blog/2013/mar/26/you-know-we-all-want-change-world.html</id>
+                        <category   scheme="/blog/tags"
+                        term="ict4d"
+                        label="Ict4D" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Communist Software</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/mar/19/communist-software.html"/>
+            <updated>2013-03-19T11:30:52Z</updated>
+            <published>2013-03-19T11:30:52Z</published>
+            <id>/blog/2013/mar/19/communist-software.html</id>
+                        <category   scheme="/blog/tags"
+                        term="communism"
+                        label="Communism" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Grandpa&#39;s got an iPad</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/mar/14/grandpas-got-ipad.html"/>
+            <updated>2013-03-14T11:49:36Z</updated>
+            <published>2013-03-14T11:49:36Z</published>
+            <id>/blog/2013/mar/14/grandpas-got-ipad.html</id>
+                        <category   scheme="/blog/tags"
+                        term="genealogy"
+                        label="Genealogy" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Software Wars</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/mar/07/software-wars.html"/>
+            <updated>2013-03-07T11:19:16Z</updated>
+            <published>2013-03-07T11:19:16Z</published>
+            <id>/blog/2013/mar/07/software-wars.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">The Sleeping Giant</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/feb/22/sleeping-giant.html"/>
+            <updated>2013-02-22T00:54:13Z</updated>
+            <published>2013-02-22T00:54:13Z</published>
+            <id>/blog/2013/feb/22/sleeping-giant.html</id>
+                        <category   scheme="/blog/tags"
+                        term="microsoft"
+                        label="Microsoft" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Security is for the paranoid</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/feb/14/security-paranoid.html"/>
+            <updated>2013-02-14T11:33:58Z</updated>
+            <published>2013-02-14T11:33:58Z</published>
+            <id>/blog/2013/feb/14/security-paranoid.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">What if Computer Science had been invented by Women?</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/feb/07/what-if-computer-science-had-been-invented-women.html"/>
+            <updated>2013-02-07T11:36:49Z</updated>
+            <published>2013-02-07T11:36:49Z</published>
+            <id>/blog/2013/feb/07/what-if-computer-science-had-been-invented-women.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Facebook knows where you live</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/feb/05/facebook-knows-where-you-live.html"/>
+            <updated>2013-02-05T11:36:57Z</updated>
+            <published>2013-02-05T11:36:57Z</published>
+            <id>/blog/2013/feb/05/facebook-knows-where-you-live.html</id>
+                        <category   scheme="/blog/tags"
+                        term="facebook"
+                        label="Facebook" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">North Korea Penetrated by Crowd Sourcing</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/jan/29/north-korea-penetrated-crowd-sourcing.html"/>
+            <updated>2013-01-29T21:29:12Z</updated>
+            <published>2013-01-29T21:29:12Z</published>
+            <id>/blog/2013/jan/29/north-korea-penetrated-crowd-sourcing.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">The Information Age is Killing Original Thought</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/jan/17/information-age-killing-original-thought.html"/>
+            <updated>2013-01-17T23:36:08Z</updated>
+            <published>2013-01-17T23:36:08Z</published>
+            <id>/blog/2013/jan/17/information-age-killing-original-thought.html</id>
+                        <category   scheme="/blog/tags"
+                        term="creativity"
+                        label="Creativity" />
+                        <category   scheme="/blog/tags"
+                        term="big data"
+                        label="Big Data" />
+                        <category   scheme="/blog/tags"
+                        term="information age"
+                        label="Information Age" />
+                        <category   scheme="/blog/tags"
+                        term="thought"
+                        label="Thought" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Data &lt; Information &lt; Knowledge &lt; Wisdom</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2013/jan/17/data-information-knowledge-wisdom.html"/>
+            <updated>2013-01-17T02:13:30Z</updated>
+            <published>2013-01-17T02:13:30Z</published>
+            <id>/blog/2013/jan/17/data-information-knowledge-wisdom.html</id>
+                        <category   scheme="/blog/tags"
+                        term="knowledge"
+                        label="Knowledge" />
+                        <category   scheme="/blog/tags"
+                        term="learning"
+                        label="Learning" />
+                        <category   scheme="/blog/tags"
+                        term="philosophy"
+                        label="Philosophy" />
+                        <category   scheme="/blog/tags"
+                        term="enlightenment"
+                        label="Enlightenment" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Vanilla Android Music Player</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2012/aug/11/vanilla-android-music-player.html"/>
+            <updated>2012-08-11T14:49:10Z</updated>
+            <published>2012-08-11T14:49:10Z</published>
+            <id>/blog/2012/aug/11/vanilla-android-music-player.html</id>
+                        <category   scheme="/blog/tags"
+                        term="android"
+                        label="Android" />
+                        <category   scheme="/blog/tags"
+                        term="vanilla"
+                        label="Vanilla" />
+                        <category   scheme="/blog/tags"
+                        term="app"
+                        label="App" />
+                        <category   scheme="/blog/tags"
+                        term="open-source"
+                        label="Open-Source" />
+            
+            <content type="html">
+                &lt;p&gt;.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying_h.png
+   :width:&amp;nbsp;40%&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">A Happy Post</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/happy-post.html"/>
+            <updated>2011-02-01T10:00:00Z</updated>
+            <published>2011-02-01T10:00:00Z</published>
+            <id>/blog/happy-post.html</id>
+                        <category   scheme="/blog/tags"
+                        term="happy"
+                        label="Happy" />
+                        <category   scheme="/blog/tags"
+                        term="thoughts"
+                        label="Thoughts" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;Airport&#34; src=&#34;/media/images/airport.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;Lady Malvern was a hearty, happy, healthy, overpowering sort of dashed female,
+not so very tall but making up for it by measuring about six feet from the
+&lt;span class=&#34;caps&#34;&gt;O.P.&lt;/span&gt; to the Prompt&amp;nbsp;Side.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">An Angry Post</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/angry-post.html"/>
+            <updated>2011-01-01T10:00:00Z</updated>
+            <published>2011-01-01T10:00:00Z</published>
+            <id>/blog/angry-post.html</id>
+                        <category   scheme="/blog/tags"
+                        term="angry"
+                        label="Angry" />
+                        <category   scheme="/blog/tags"
+                        term="thoughts"
+                        label="Thoughts" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;Airport&#34; src=&#34;/media/images/airport.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;To complete the character-study of Mr. Worple, he was a man of extremely
+uncertain temper, and his general tendency was to think that Corky was a poor
+chump and that whatever step he took in any direction on his own account, was
+just another proof of his innate idiocy. I should imagine Jeeves feels very
+much the same about&amp;nbsp;me.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">A Sad Post</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/sad-post.html"/>
+            <updated>2010-12-01T10:00:00Z</updated>
+            <published>2010-12-01T10:00:00Z</published>
+            <id>/blog/sad-post.html</id>
+                        <category   scheme="/blog/tags"
+                        term="sad"
+                        label="Sad" />
+                        <category   scheme="/blog/tags"
+                        term="thoughts"
+                        label="Thoughts" />
+            
+            <content type="html">
+                &lt;p&gt;&lt;img alt=&#34;A Dark Image&#34; src=&#34;/media/images/dark.png&#34; /&gt;&lt;/p&gt;
+                &lt;p&gt;I went and dressed sadly. It will show you pretty well how pipped I was when I
+tell you that I near as a toucher put on a white tie with a dinner-jacket. I
+sallied out for a bit of food more to pass the time than because I wanted it.
+It seemed brutal to be wading into the bill of fare with poor old Bicky headed
+for the&amp;nbsp;breadline.&lt;/p&gt;            </content>
+        </entry>
+            <entry>
+            <title type="html">CodeTalker by example: test!</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/29/codetalker-example-test.html"/>
+            <updated>2010-07-29T14:08:10Z</updated>
+            <published>2010-07-29T14:08:10Z</published>
+            <id>/blog/2010/jul/29/codetalker-example-test.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">CodeTalker by example: translate</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/29/codetalker-example-translate.html"/>
+            <updated>2010-07-29T11:54:10Z</updated>
+            <published>2010-07-29T11:54:10Z</published>
+            <id>/blog/2010/jul/29/codetalker-example-translate.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">CodeTalker by example: parse</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/28/codetalker-example-parse.html"/>
+            <updated>2010-07-28T09:41:59Z</updated>
+            <published>2010-07-28T09:41:59Z</published>
+            <id>/blog/2010/jul/28/codetalker-example-parse.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">CodeTalker by example: tokenize</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/27/codetalker-example-tokenize.html"/>
+            <updated>2010-07-27T16:33:48Z</updated>
+            <published>2010-07-27T16:33:48Z</published>
+            <id>/blog/2010/jul/27/codetalker-example-tokenize.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Orphan Alert</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/27/orphan-alert.html"/>
+            <updated>2010-07-27T15:36:59Z</updated>
+            <published>2010-07-27T15:36:59Z</published>
+            <id>/blog/2010/jul/27/orphan-alert.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">The Only CodeTalker Introduction You&#39;ll Ever Need</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/26/only-codetalker-introduction-youll-ever-need.html"/>
+            <updated>2010-07-26T17:35:38Z</updated>
+            <published>2010-07-26T17:35:38Z</published>
+            <id>/blog/2010/jul/26/only-codetalker-introduction-youll-ever-need.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Lessons learned; optimizing CodeTalker</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/26/lessons-learned-optimizing-codetalker.html"/>
+            <updated>2010-07-26T12:00:00Z</updated>
+            <published>2010-07-26T12:00:00Z</published>
+            <id>/blog/2010/jul/26/lessons-learned-optimizing-codetalker.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">It&#39;s time for a better diff</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/22/its-time-better-diff.html"/>
+            <updated>2010-07-22T10:23:24Z</updated>
+            <published>2010-07-22T10:23:24Z</published>
+            <id>/blog/2010/jul/22/its-time-better-diff.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">setup.py test with distutils (+py.test)</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/21/setuppy-test-distutils-pytest.html"/>
+            <updated>2010-07-21T12:14:34Z</updated>
+            <published>2010-07-21T12:14:34Z</published>
+            <id>/blog/2010/jul/21/setuppy-test-distutils-pytest.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">CPython vs PyPy vs Cython </title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/21/cpython-vs-pypy-vs-cython.html"/>
+            <updated>2010-07-21T10:23:29Z</updated>
+            <published>2010-07-21T10:23:29Z</published>
+            <id>/blog/2010/jul/21/cpython-vs-pypy-vs-cython.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/uploads/images/cy_py_py.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">CodeTalker doubles in speed</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/21/codetalker-doubles-in-speed.html"/>
+            <updated>2010-07-21T07:33:30Z</updated>
+            <published>2010-07-21T07:33:30Z</published>
+            <id>/blog/2010/jul/21/codetalker-doubles-in-speed.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/projects/logo_codetalker.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Python css parsing benchmarks</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/17/python-css-parsing-benchmarks.html"/>
+            <updated>2010-07-17T20:24:54Z</updated>
+            <published>2010-07-17T20:24:54Z</published>
+            <id>/blog/2010/jul/17/python-css-parsing-benchmarks.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/uploads/battle.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Announcing: python-css</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/17/announcing-python-css.html"/>
+            <updated>2010-07-17T18:37:15Z</updated>
+            <published>2010-07-17T18:37:15Z</published>
+            <id>/blog/2010/jul/17/announcing-python-css.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/projects/logo___.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Comparing parser generators in Python</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/17/comparing-parser-generators-python.html"/>
+            <updated>2010-07-17T08:42:45Z</updated>
+            <published>2010-07-17T08:42:45Z</published>
+            <id>/blog/2010/jul/17/comparing-parser-generators-python.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/uploads/battle.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Easy python dependency graphs</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/16/easy-python-dependency-graphs.html"/>
+            <updated>2010-07-16T13:41:53Z</updated>
+            <published>2010-07-16T13:41:53Z</published>
+            <id>/blog/2010/jul/16/easy-python-dependency-graphs.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/200px-Directed.svg.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Installing Vim Debug</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/16/installing-vim-debug.html"/>
+            <updated>2010-07-16T13:13:07Z</updated>
+            <published>2010-07-16T13:13:07Z</published>
+            <id>/blog/2010/jul/16/installing-vim-debug.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Vim Debug 1.5: Agyrtidae</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/14/vim-debug-15-agyrtidae.html"/>
+            <updated>2010-07-14T08:59:12Z</updated>
+            <published>2010-07-14T08:59:12Z</published>
+            <id>/blog/2010/jul/14/vim-debug-15-agyrtidae.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/uploads/images/agyrtidae.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Why it would be hard for me to give up git for mercurial</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/13/why-it-would-be-hard-me-give-git-mercurial.html"/>
+            <updated>2010-07-13T21:50:54Z</updated>
+            <published>2010-07-13T21:50:54Z</published>
+            <id>/blog/2010/jul/13/why-it-would-be-hard-me-give-git-mercurial.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/uploads/images/git-hgm.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Integrated python debugging in VIM</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/12/integrated-python-debugging-vim.html"/>
+            <updated>2010-07-12T17:19:19Z</updated>
+            <published>2010-07-12T17:19:19Z</published>
+            <id>/blog/2010/jul/12/integrated-python-debugging-vim.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/projects/logo__.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Python Registrar</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/10/python-registrar.html"/>
+            <updated>2010-07-10T15:49:25Z</updated>
+            <published>2010-07-10T15:49:25Z</published>
+            <id>/blog/2010/jul/10/python-registrar.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/projects/logo_.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Tabbify your vim</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/09/tabbify-your-vim.html"/>
+            <updated>2010-07-09T20:00:00Z</updated>
+            <published>2010-07-09T20:00:00Z</published>
+            <id>/blog/2010/jul/09/tabbify-your-vim.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Announcing: vim-phpdebug</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/09/announcing-vim-phpdebug.html"/>
+            <updated>2010-07-09T09:49:05Z</updated>
+            <published>2010-07-09T09:49:05Z</published>
+            <id>/blog/2010/jul/09/announcing-vim-phpdebug.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/projects/logo.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">JSON parsing in python</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/08/json-parsing-python.html"/>
+            <updated>2010-07-08T12:00:00Z</updated>
+            <published>2010-07-08T12:00:00Z</published>
+            <id>/blog/2010/jul/08/json-parsing-python.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Announcing: Codetalker</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jul/08/announcing-codetalker.html"/>
+            <updated>2010-07-08T01:38:08Z</updated>
+            <published>2010-07-08T01:38:08Z</published>
+            <id>/blog/2010/jul/08/announcing-codetalker.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/projects/navajo.gif&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">String concatenation kills babies</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jun/26/string-concatenation-kills-babies.html"/>
+            <updated>2010-06-26T18:16:03Z</updated>
+            <published>2010-06-26T18:16:03Z</published>
+            <id>/blog/2010/jun/26/string-concatenation-kills-babies.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Exceptions for failure reporting [performance]</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jun/22/exceptions-for-failure-reporting.html"/>
+            <updated>2010-06-22T11:13:57Z</updated>
+            <published>2010-06-22T11:13:57Z</published>
+            <id>/blog/2010/jun/22/exceptions-for-failure-reporting.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">CleverCSS reloaded</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jun/17/clevercss-reloaded.html"/>
+            <updated>2010-06-17T07:32:47Z</updated>
+            <published>2010-06-17T07:32:47Z</published>
+            <id>/blog/2010/jun/17/clevercss-reloaded.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;/media/uploads/ccss.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">What does setuptools &#34;test&#34; do?</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jun/16/what-does-setuptools-test-do.html"/>
+            <updated>2010-06-16T18:28:44Z</updated>
+            <published>2010-06-16T18:28:44Z</published>
+            <id>/blog/2010/jun/16/what-does-setuptools-test-do.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Announcing: Django-RESTive</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/jun/02/announcing-django-restive.html"/>
+            <updated>2010-06-02T09:29:59Z</updated>
+            <published>2010-06-02T09:29:59Z</published>
+            <id>/blog/2010/jun/02/announcing-django-restive.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/projects/djanfo-restive.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Pyjamas and PJS in depth</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/31/pyjamas-and-pjs-depth.html"/>
+            <updated>2010-05-31T18:13:10Z</updated>
+            <published>2010-05-31T18:13:10Z</published>
+            <id>/blog/2010/may/31/pyjamas-and-pjs-depth.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Easy zsh auto completion</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/30/easy-zsh-auto-completion.html"/>
+            <updated>2010-05-30T00:39:05Z</updated>
+            <published>2010-05-30T00:39:05Z</published>
+            <id>/blog/2010/may/30/easy-zsh-auto-completion.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;http://jaredforsyth.com/media/uploads/zsh-completion.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">My latest IE annoyance</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/26/my-latest-ie-annoyance.html"/>
+            <updated>2010-05-26T13:40:24Z</updated>
+            <published>2010-05-26T13:40:24Z</published>
+            <id>/blog/2010/may/26/my-latest-ie-annoyance.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Just wasted an hour; thanks, Rhino</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/26/just-wasted-hour-thanks-rhino.html"/>
+            <updated>2010-05-26T10:19:35Z</updated>
+            <published>2010-05-26T10:19:35Z</published>
+            <id>/blog/2010/may/26/just-wasted-hour-thanks-rhino.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Python Deepsort</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/25/python-deepsort.html"/>
+            <updated>2010-05-25T07:38:08Z</updated>
+            <published>2010-05-25T07:38:08Z</published>
+            <id>/blog/2010/may/25/python-deepsort.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Python operator magic</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/21/python-operator-magic.html"/>
+            <updated>2010-05-21T07:20:45Z</updated>
+            <published>2010-05-21T07:20:45Z</published>
+            <id>/blog/2010/may/21/python-operator-magic.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Javascript type madness</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/20/javascript-type-maddness.html"/>
+            <updated>2010-05-20T22:20:09Z</updated>
+            <published>2010-05-20T22:20:09Z</published>
+            <id>/blog/2010/may/20/javascript-type-maddness.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Manually enable clean urls in drupal</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/14/manually-enable-clean-urls-drupal.html"/>
+            <updated>2010-05-14T13:37:17Z</updated>
+            <published>2010-05-14T13:37:17Z</published>
+            <id>/blog/2010/may/14/manually-enable-clean-urls-drupal.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Birthday release: PJs 0.19</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/06/birthday-release-pjs-019.html"/>
+            <updated>2010-05-06T11:30:31Z</updated>
+            <published>2010-05-06T11:30:31Z</published>
+            <id>/blog/2010/may/06/birthday-release-pjs-019.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image:: http://jaredforsyth.com/media/projects/pjs_logo125x125.png
+   :align: left
+   :class:&amp;nbsp;first&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Disqus comments in Django</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/04/disqus-comments-django.html"/>
+            <updated>2010-05-04T21:41:29Z</updated>
+            <published>2010-05-04T21:41:29Z</published>
+            <id>/blog/2010/may/04/disqus-comments-django.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image:: http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg
+   :class: first
+   :width:&amp;nbsp;190px&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Announcing: PJs</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/may/04/announcing-pjs.html"/>
+            <updated>2010-05-04T20:38:37Z</updated>
+            <published>2010-05-04T20:38:37Z</published>
+            <id>/blog/2010/may/04/announcing-pjs.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Embed youtube videos in RestructuredText</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/apr/30/embed-youtube-videos-restructuredtext.html"/>
+            <updated>2010-04-30T06:30:26Z</updated>
+            <published>2010-04-30T06:30:26Z</published>
+            <id>/blog/2010/apr/30/embed-youtube-videos-restructuredtext.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Django to UML</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/apr/29/django-uml.html"/>
+            <updated>2010-04-29T16:49:12Z</updated>
+            <published>2010-04-29T16:49:12Z</published>
+            <id>/blog/2010/apr/29/django-uml.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">AccessInit: hash collision: 3 for both 1 and 1</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/apr/28/accessinit-hash-collision-3-both-1-and-1.html"/>
+            <updated>2010-04-28T11:43:54Z</updated>
+            <published>2010-04-28T11:43:54Z</published>
+            <id>/blog/2010/apr/28/accessinit-hash-collision-3-both-1-and-1.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Vim tip of the day: copy current file name</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/apr/17/vim-tip-day-copy-current-file-name.html"/>
+            <updated>2010-04-17T13:05:07Z</updated>
+            <published>2010-04-17T13:05:07Z</published>
+            <id>/blog/2010/apr/17/vim-tip-day-copy-current-file-name.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Vim crash recovery</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/apr/09/vim-crash-recovery.html"/>
+            <updated>2010-04-09T12:02:01Z</updated>
+            <published>2010-04-09T12:02:01Z</published>
+            <id>/blog/2010/apr/09/vim-crash-recovery.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Todo Post and Project</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/apr/08/todo.html"/>
+            <updated>2010-04-08T16:19:06Z</updated>
+            <published>2010-04-08T16:19:06Z</published>
+            <id>/blog/2010/apr/08/todo.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Giving Django admin a favicon</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/apr/06/giving-django-admin-favicon.html"/>
+            <updated>2010-04-06T19:24:25Z</updated>
+            <published>2010-04-06T19:24:25Z</published>
+            <id>/blog/2010/apr/06/giving-django-admin-favicon.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">One-liner to rule them all: django mingus install script</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/feb/27/one-liner-rule-them-all.html"/>
+            <updated>2010-02-27T23:16:15Z</updated>
+            <published>2010-02-27T23:16:15Z</published>
+            <id>/blog/2010/feb/27/one-liner-rule-them-all.html</id>
+                        <category   scheme="/blog/tags"
+                        term="mingus"
+                        label="Mingus" />
+                        <category   scheme="/blog/tags"
+                        term="django"
+                        label="Django" />
+                        <category   scheme="/blog/tags"
+                        term="install"
+                        label="Install" />
+                        <category   scheme="/blog/tags"
+                        term="script"
+                        label="Script" />
+                        <category   scheme="/blog/tags"
+                        term="dependencies"
+                        label="Dependencies" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Django apps&#39; documentation problem</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/feb/26/django-apps-documentation-problem.html"/>
+            <updated>2010-02-26T02:07:35Z</updated>
+            <published>2010-02-26T02:07:35Z</published>
+            <id>/blog/2010/feb/26/django-apps-documentation-problem.html</id>
+                        <category   scheme="/blog/tags"
+                        term="django"
+                        label="Django" />
+                        <category   scheme="/blog/tags"
+                        term="docs"
+                        label="Docs" />
+                        <category   scheme="/blog/tags"
+                        term="documentation"
+                        label="Documentation" />
+                        <category   scheme="/blog/tags"
+                        term="admindocs"
+                        label="Admindocs" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Django application settings</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/feb/25/django-application-settings.html"/>
+            <updated>2010-02-25T23:50:55Z</updated>
+            <published>2010-02-25T23:50:55Z</published>
+            <id>/blog/2010/feb/25/django-application-settings.html</id>
+                        <category   scheme="/blog/tags"
+                        term="django"
+                        label="Django" />
+                        <category   scheme="/blog/tags"
+                        term="dbsettings"
+                        label="Dbsettings" />
+                        <category   scheme="/blog/tags"
+                        term="settings"
+                        label="Settings" />
+                        <category   scheme="/blog/tags"
+                        term="application"
+                        label="Application" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Flatpages crazy 404</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/feb/25/flatpages-crazy-404.html"/>
+            <updated>2010-02-25T00:52:53Z</updated>
+            <published>2010-02-25T00:52:53Z</published>
+            <id>/blog/2010/feb/25/flatpages-crazy-404.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Setting up a blog in django</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/feb/25/setting-blog-django.html"/>
+            <updated>2010-02-25T00:10:09Z</updated>
+            <published>2010-02-25T00:10:09Z</published>
+            <id>/blog/2010/feb/25/setting-blog-django.html</id>
+                        <category   scheme="/blog/tags"
+                        term="django"
+                        label="Django" />
+                        <category   scheme="/blog/tags"
+                        term="blog"
+                        label="Blog" />
+                        <category   scheme="/blog/tags"
+                        term="drupal"
+                        label="Drupal" />
+                        <category   scheme="/blog/tags"
+                        term="how-to"
+                        label="How-To" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Songbird Global Hotkeys for Ubuntu Linux</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/feb/20/songbird-global-hotkeys-ubuntu-linux.html"/>
+            <updated>2010-02-20T21:00:35Z</updated>
+            <published>2010-02-20T21:00:35Z</published>
+            <id>/blog/2010/feb/20/songbird-global-hotkeys-ubuntu-linux.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">automagically install boost library on Ubuntu linux</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2010/feb/12/automagically-install-boost-library-ubuntu-linux.html"/>
+            <updated>2010-02-12T20:09:13Z</updated>
+            <published>2010-02-12T20:09:13Z</published>
+            <id>/blog/2010/feb/12/automagically-install-boost-library-ubuntu-linux.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Event Bubbling example</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/dec/28/event-bubbling-example.html"/>
+            <updated>2009-12-28T22:55:14Z</updated>
+            <published>2009-12-28T22:55:14Z</published>
+            <id>/blog/2009/dec/28/event-bubbling-example.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Skitch style screenshot text in the GIMP</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/dec/17/skitch-style-screenshot-text-gimp.html"/>
+            <updated>2009-12-17T14:16:23Z</updated>
+            <published>2009-12-17T14:16:23Z</published>
+            <id>/blog/2009/dec/17/skitch-style-screenshot-text-gimp.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Songbird won&#39;t start in Karmic - gstreamer error</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/nov/04/songbird-wont-start-karmic-gstreamer-error.html"/>
+            <updated>2009-11-04T12:18:36Z</updated>
+            <published>2009-11-04T12:18:36Z</published>
+            <id>/blog/2009/nov/04/songbird-wont-start-karmic-gstreamer-error.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">UNetbootin failed to unmount /cdrom</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/nov/01/unetbootin-failed-unmount-cdrom.html"/>
+            <updated>2009-11-01T13:49:56Z</updated>
+            <published>2009-11-01T13:49:56Z</published>
+            <id>/blog/2009/nov/01/unetbootin-failed-unmount-cdrom.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;/media/images/ubuntu-error.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">SVG Birds</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/oct/11/svg-birds.html"/>
+            <updated>2009-10-11T19:51:50Z</updated>
+            <published>2009-10-11T19:51:50Z</published>
+            <id>/blog/2009/oct/11/svg-birds.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image::&amp;nbsp;/media/images/birds2.png&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Error installing xdebug: phpize not found</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/aug/15/error-installing-xdebug-phpize-not-found.html"/>
+            <updated>2009-08-15T17:18:17Z</updated>
+            <published>2009-08-15T17:18:17Z</published>
+            <id>/blog/2009/aug/15/error-installing-xdebug-phpize-not-found.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">[Drupal] Make user profile URLs readable</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/may/27/drupal-make-user-profile-urls-readable.html"/>
+            <updated>2009-05-27T08:07:24Z</updated>
+            <published>2009-05-27T08:07:24Z</published>
+            <id>/blog/2009/may/27/drupal-make-user-profile-urls-readable.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">All screenshots from drupal theme garden on one page</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/may/15/all-screenshots-drupal-theme-garden-one-page.html"/>
+            <updated>2009-05-15T23:02:24Z</updated>
+            <published>2009-05-15T23:02:24Z</published>
+            <id>/blog/2009/may/15/all-screenshots-drupal-theme-garden-one-page.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">I have vanquished the beast!</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/may/11/i-have-vanquished-beast.html"/>
+            <updated>2009-05-11T21:35:50Z</updated>
+            <published>2009-05-11T21:35:50Z</published>
+            <id>/blog/2009/may/11/i-have-vanquished-beast.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">WA haxxz</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/apr/02/wa-haxxz.html"/>
+            <updated>2009-04-02T06:30:22Z</updated>
+            <published>2009-04-02T06:30:22Z</published>
+            <id>/blog/2009/apr/02/wa-haxxz.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Songbird Recipe: Playlists</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/feb/02/songbird-recipe-playlists.html"/>
+            <updated>2009-02-02T22:24:55Z</updated>
+            <published>2009-02-02T22:24:55Z</published>
+            <id>/blog/2009/feb/02/songbird-recipe-playlists.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Install Python 2.6 in Ubuntu</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/jan/20/install-python-26-ubuntu.html"/>
+            <updated>2009-01-20T18:20:48Z</updated>
+            <published>2009-01-20T18:20:48Z</published>
+            <id>/blog/2009/jan/20/install-python-26-ubuntu.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Python + Last.FM</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/jan/20/python-lastfm.html"/>
+            <updated>2009-01-20T17:27:48Z</updated>
+            <published>2009-01-20T17:27:48Z</published>
+            <id>/blog/2009/jan/20/python-lastfm.html</id>
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Songbird in Kubuntu</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/jan/13/songbird-kubuntu.html"/>
+            <updated>2009-01-13T20:20:13Z</updated>
+            <published>2009-01-13T20:20:13Z</published>
+            <id>/blog/2009/jan/13/songbird-kubuntu.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image:: http://lifehacker.com/assets/resources/2007/06/Songbird.png
+   :width: 272
+   :height: 282
+   :alt:&amp;nbsp;Songbird&lt;/p&gt;
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">Convert videos with ffmpeg</title>
+            <author><name>Jared Forsyth</name></author>
+            <link href="/blog/2009/jan/06/convert-videos-ffmpeg.html"/>
+            <updated>2009-01-06T14:07:58Z</updated>
+            <published>2009-01-06T14:07:58Z</published>
+            <id>/blog/2009/jan/06/convert-videos-ffmpeg.html</id>
+            
+            <content type="html">
+                &lt;p&gt;.. image:: http://ffmpeg.mplayerhq.hu/ffmpeg-logo.png
+   :width: 306
+   :height: 84
+   :alt: FFmpeg&amp;nbsp;logo&lt;/p&gt;
+                            </content>
+        </entry>
+    </feed>

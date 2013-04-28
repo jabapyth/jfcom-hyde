@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/21">Back to list</a>
+<a class="prev"
+    title="It's time for a better diff"
+        href="/blog/2010/jul/22/its-time-better-diff.html">
+    Previous
+</a>
+
+<a class="next"
+    title="CPython vs PyPy vs Cython "
+        href="/blog/2010/jul/21/cpython-vs-pypy-vs-cython.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/21/setuppy-test-distutils-pytest.html">
+        setup.py test with distutils (+py.test)
+    </a>
+</h1>
+<time datetime="2010-07-21">
+    Posted: Wed, 21 Jul 2010
+</time>
+
+
+<div class="document">
+<p>One thing that has bothered me about distutils is its lack of a &#8220;test&#8221; command &#8212; it seems strange to me that setuptools has it but distutils does&nbsp;not&#8230;</p>
+<p>Anyway I <a class="reference external" href="http://www.eggheadcafe.com/software/aspnet/36151038/does-distutils-support-python-setuppy-test.aspx">looked around</a> to <a class="reference external" href="http://da44en.wordpress.com/2002/11/22/using-distutils/">make sure</a> it <a class="reference external" href="http://mail.python.org/pipermail/distutils-sig/2000-September/001528.html">really wasn&#8217;t there</a> (I couldn&#8217;t believe it at first), but finally, convinced, <a class="reference external" href="http://github.com/jabapyth/disttest">I wrote my own</a>.</p>
+<p><strong>What&#8217;s cool about&nbsp;this:</strong></p>
+<ul class="simple">
+<li>it&#8217;s extensible &#8212; designed from the start to allow for many different style tests (using different testing&nbsp;libraries)</li>
+<li>includes 2 test types:<ul>
+<li>unittest</li>
+<li>py.test <em>(degrades gracefully to unittest if the py module is not&nbsp;present)</em></li>
+</ul>
+</li>
+</ul>
+<p>Here&#8217;s the code used to add unittest&nbsp;support:</p>
+<pre class="code python literal-block">
+<span class="keyword">def</span> <span class="name function">validate_unittest</span><span class="punctuation">(</span><span class="name">tester</span><span class="punctuation">):</span>
+    <span class="keyword">if</span> <span class="name">tester</span><span class="operator">.</span><span class="name">test_suite</span> <span class="operator word">is</span> <span class="name builtin pseudo">None</span><span class="punctuation">:</span>
+        <span class="keyword">if</span> <span class="name">tester</span><span class="operator">.</span><span class="name">test_modules</span> <span class="operator word">is</span> <span class="name builtin pseudo">None</span><span class="punctuation">:</span>
+            <span class="keyword">raise</span> <span class="name">DistutilsOptionError</span><span class="punctuation">(</span>
+                <span class="literal string">&quot;You must specify a module or a suite&quot;</span>
+            <span class="punctuation">)</span>
+        <span class="name">tester</span><span class="operator">.</span><span class="name">test_suite</span> <span class="operator">=</span> <span class="name builtin pseudo">self</span><span class="operator">.</span><span class="name">test_module</span><span class="operator">+</span><span class="literal string">&quot;.test_suite&quot;</span>
+    <span class="keyword">elif</span> <span class="name">tester</span><span class="operator">.</span><span class="name">test_module</span><span class="punctuation">:</span>
+        <span class="keyword">raise</span> <span class="name">DistutilsOptionError</span><span class="punctuation">(</span>
+            <span class="literal string">&quot;You may specify a module or a suite, but not both&quot;</span>
+        <span class="punctuation">)</span>
+
+<span class="name decorator">&#64;test.add_type</span><span class="punctuation">(</span><span class="literal string">'unittest'</span><span class="punctuation">,</span> <span class="name">options</span><span class="operator">=</span><span class="punctuation">(</span>
+        <span class="punctuation">(</span><span class="literal string">'test-module='</span><span class="punctuation">,</span><span class="literal string">'m'</span><span class="punctuation">,</span> <span class="literal string">&quot;Run 'test_suite' in specified module&quot;</span><span class="punctuation">),</span>
+        <span class="punctuation">(</span><span class="literal string">'test-suite='</span><span class="punctuation">,</span><span class="literal string">'s'</span><span class="punctuation">,</span>
+            <span class="literal string">&quot;Test suite to run (e.g. 'some_module.test_suite')&quot;</span><span class="punctuation">),</span>
+    <span class="punctuation">),</span> <span class="name">validate</span><span class="operator">=</span><span class="name">validate_unittest</span><span class="punctuation">)</span>
+<span class="keyword">def</span> <span class="name function">run_unittest</span><span class="punctuation">(</span><span class="name">tester</span><span class="punctuation">):</span>
+    <span class="keyword namespace">import</span> <span class="name namespace">unittest</span>
+    <span class="name">unittest</span><span class="operator">.</span><span class="name">main</span><span class="punctuation">(</span>
+        <span class="name builtin pseudo">None</span><span class="punctuation">,</span> <span class="name builtin pseudo">None</span><span class="punctuation">,</span> <span class="punctuation">[</span><span class="name">unittest</span><span class="operator">.</span><span class="name">__file__</span><span class="punctuation">,</span> <span class="name">tester</span><span class="operator">.</span><span class="name">test_suite</span><span class="punctuation">],</span>
+        <span class="name">testLoader</span> <span class="operator">=</span> <span class="name">unittest</span><span class="operator">.</span><span class="name">TestLoader</span><span class="punctuation">()</span>
+    <span class="punctuation">)</span>
+</pre>
+<p>Anyway, I&#8217;m calling it&nbsp;&#8220;disttest&#8221;&#8230;</p>
+<p>I don&#8217;t know whether to put it up on pypi or what&#8230;it would kindof be a drag to have to install another package in order to run&nbsp;tests&#8230;</p>
+<p>Then again, it is only one file, so it&#8217;s feasible to just package it in w/ your other code (<strong>grab the file</strong> <a class="reference external" href="http://github.com/jabapyth/disttest/blob/master/disttest.py">here</a>). That&#8217;s what I&#8217;ve <a class="reference external" href="http://github.com/jabapyth/codetalker/blob/master/test_cmd.py">done with codetalker</a>&#8230;</p>
+<p>Thoughts? Suggestions?&nbsp;Complaints?</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "setuppy-test-distutils-pytest";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

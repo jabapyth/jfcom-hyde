@@ -1,0 +1,77 @@
+---
+title: 'Javascript type madness'
+slug: javascript-type-maddness
+created: !!timestamp '2010-05-20 22:20:09'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+It truly amazes me the extent to which the javascript interpreter *inhibits*
+productivity. It seems extraordinary that the language could have gotten this
+far while still *by design* causing no end of headaches for developers.
+{% endmark %}
+
+
+Example 1
+----------
+
+When my code has a bug, *please* tell me. Preferably with an error. Even
+better, with an informative error and a full stack trace! (ok, maybe that's a
+little greedy). But *anything* would be better than passing around
+for-goodness'-sake **undefined** variables. I mean seriously? So unhelpful.
+Especially when variable types are just converted on the fly with abandon --
+you might *not even notice* that there are a number of undefined variables
+flying around unless you specifically check for them.
+
+Example 2
+----------
+
+Here's some code copied right from the interpreter:
+
+.. code-block:: js
+
+    > var a = {}
+    > var b = {3:4}
+    > var c = {5:5}
+    > a[b] = 4
+    4
+    > a[c] = 5
+    5
+    > a[b]
+    5
+
+**Woah.** Now maybe some of you look at that and think, *well, duh*, but this
+really threw me for a loop the first time I saw it. Coming from a largely
+python background, I thought, hmm, objects seem pretty much like dictionaries
+[hashtables]; I can deal with that. But the above code seems to contradict
+that. *What is going on?* Well, here's something to demonstrate:
+
+.. code-block:: js
+
+    > var a = {}
+    > var b = {4:5}
+    > a[b] = 12
+    > a['[object Object]']
+    12
+
+Javascript you sly dog! This is just one of uncountable occasions where
+javascript pulls the rug from under you by silently coercing variables to
+whatever it wants. Bah.
+
+The main reason I ran into this problem is my `PJs library/tool
+<http://jaredforsyth.com/projects/pjs/>`_, which converts python code
+into readable, maintainable, and best of all *sane* javascript. This includes
+but is not limited to:
+
+**[edit] thanks to Adriano for pointing this out. JS does have OO, but...class-based inheritance makes much more sense to me.**
+
+- *class-based* OO
+- module goodness
+- function magic \*args, \**kwargs, default values and more
+- *strict function argument checking*
+- python-style exceptions + **stack traces**
+- python basic types (list, tuple, str, dict)
+- iterators
+
+I'm still working on 'yield' though. Generators are *hard*.

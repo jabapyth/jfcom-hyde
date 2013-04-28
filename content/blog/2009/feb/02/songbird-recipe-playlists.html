@@ -1,0 +1,48 @@
+---
+title: 'Songbird Recipe: Playlists'
+slug: songbird-recipe-playlists
+created: !!timestamp '2009-02-02 22:24:55'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+Here's a quick javascript+XPCOM recipe on how to get a list of the user's 
+playlists in a songbird extension. 
+{% endmark %}
+
+
+.. code-block:: python
+
+    function getUserPlaylists() {
+        var sLM = Components.classes["@songbirdnest.com/Songbird/library/Manager;1"]  
+                    .getService(Components.interfaces.sbILibraryManager);
+        var aLib = sLM.mainLibrary;
+        var playlists = [aLib];
+        var pnames = [];
+        var listener = {
+            onEnumerationBegin: function() { },
+            onEnumerationEnd: function() { },
+            onEnumeratedItem: function(list, item) {
+                if (pnames.indexOf(item.name)==-1){ // sometimes we get smart playlists multiple times
+                    playlists.push(item);
+                    pnames.push(item.name);
+                }
+                return Components.interfaces.sbIMediaListEnumerationListener.CONTINUE;
+            }
+        };
+        aLib.enumerateItemsByProperty("http://songbirdnest.com/data/1.0#isList", "1", listener );
+        return playlists;
+    }
+    function playPlaylist(plist,i){ // i == index of the song you want to play
+        var gMM = Components.classes["@songbirdnest.com/Songbird/Mediacore/Manager;1"]  
+                        .getService(Components.interfaces.sbIMediacoreManager);
+        gMM.sequencer.playView(plist.createView(),i);
+    }
+
+Once you get your lists of playlists, you can start one playing with 
+playPlaylist(plist,index) or check the user-visible names with plist.name. 
+
+For more info on the songbird extension API, hit `the docs 
+<http://developer.songbirdnest.com/add-on-api/docs/trunk/>`_ or mozilla's 
+`songbird irc channel <irc://irc.mozilla.org/#songbird>`_.

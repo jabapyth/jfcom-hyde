@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/29">Back to list</a>
+<a class="prev"
+    title="A Sad Post"
+        href="/blog/sad-post.html">
+    Previous
+</a>
+
+<a class="next"
+    title="CodeTalker by example: translate"
+        href="/blog/2010/jul/29/codetalker-example-translate.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/29/codetalker-example-test.html">
+        CodeTalker by example: test!
+    </a>
+</h1>
+<time datetime="2010-07-29">
+    Posted: Thu, 29 Jul 2010
+</time>
+
+
+<div class="document">
+<p>This is the last in a four-part series, in which I demonstrate how to build a
+<span class="caps">CSS</span> parser using <a class="reference external" href="http://jaredforsyth.com/projects/codetalker/">CodeTalker</a>:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/">tokenize</a></li>
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/">parse</a></li>
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/">translate</a></li>
+<li><strong>test!</strong></li>
+</ul>
+<p>To get the code for&nbsp;this:</p>
+<p><tt class="docutils literal">git clone</tt> <a class="reference external" href="http://github.com/jabapyth/css/">git://github.com/jabapyth/css.git</a></p>
+<div class="section" id="test">
+<h1>Test!</h1>
+<p>No code is complete (and some would say it&#8217;s broken) without a good amount of
+testing, and CodeTalker provides a simple way to test your rules individually,
+to ensure the best&nbsp;coverage.</p>
+<p>the tests for our <span class="caps">CSS</span> grammar are contained in <a class="reference external" href="http://github.com/jabapyth/css/blob/master/tests/grammar.py">tests/grammar.py</a>. To run them
+(ensure you have py.test installed, then) <tt class="docutils literal">py.test tests/grammar.py</tt>. Or
+just <tt class="docutils literal">./setup.py test</tt> to run all of&nbsp;them.</p>
+<p>The <a class="reference external" href="http://github.com/jabapyth/codetalker/blob/master/codetalker/testing.py#L1">codetalker/testing.py</a>
+currently only has one function, but it will setup valitation tests for rule&nbsp;parsing.</p>
+<p>Here it is in&nbsp;action:</p>
+<pre class="code python literal-block">
+<span class="keyword namespace">import</span> <span class="name namespace">css.grammar</span> <span class="keyword namespace">as</span> <span class="name namespace">grammar</span>
+<span class="keyword namespace">from</span> <span class="name namespace">codetalker</span> <span class="keyword namespace">import</span> <span class="name">testing</span>
+
+<span class="name">parse_rule</span> <span class="operator">=</span> <span class="name">testing</span><span class="operator">.</span><span class="name">parse_rule</span><span class="punctuation">(</span><span class="name">__name__</span><span class="punctuation">,</span> <span class="name">grammar</span><span class="operator">.</span><span class="name">grammar</span><span class="punctuation">)</span>
+
+<span class="name">parse_rule</span><span class="punctuation">(</span><span class="name">grammar</span><span class="operator">.</span><span class="name">class_</span><span class="punctuation">,</span> <span class="punctuation">(</span>
+    <span class="literal string">'.one'</span><span class="punctuation">,</span>
+    <span class="literal string">'.green'</span><span class="punctuation">,</span>
+    <span class="literal string">'.GReEn'</span><span class="punctuation">,</span>
+    <span class="literal string">'.div'</span><span class="punctuation">,</span>
+    <span class="punctuation">),</span> <span class="punctuation">(</span>
+    <span class="literal string">'one'</span><span class="punctuation">,</span>
+    <span class="punctuation">))</span>
+
+<span class="name">parse_rule</span><span class="punctuation">(</span><span class="name">grammar</span><span class="operator">.</span><span class="name">simple_selector</span><span class="punctuation">,</span> <span class="punctuation">(</span> <span class="comment"># should pass</span>
+    <span class="literal string">'div'</span><span class="punctuation">,</span>
+    <span class="literal string">'div#some'</span><span class="punctuation">,</span>
+    <span class="literal string">'div#one.green'</span><span class="punctuation">,</span>
+    <span class="literal string">'div.frown'</span><span class="punctuation">,</span>
+    <span class="literal string">'ul.cheese:first-child'</span><span class="punctuation">,</span>
+    <span class="literal string">'li.one.two.three'</span><span class="punctuation">,</span>
+    <span class="literal string">'a#b.c.d:last-child'</span><span class="punctuation">,</span>
+    <span class="punctuation">),</span> <span class="punctuation">(</span>                              <span class="comment"># should fail</span>
+    <span class="literal string">'one'</span><span class="punctuation">,</span>
+    <span class="literal string">'div# and'</span><span class="punctuation">,</span>
+    <span class="literal string">'div. one'</span><span class="punctuation">,</span>
+    <span class="punctuation">))</span>
+</pre>
+<p>When you do that, <tt class="docutils literal">parse_rule</tt> sets up a verification test for each&nbsp;string.</p>
+<p>To get your very own factory function, call <tt class="docutils literal">parse_rule = testing.parse_rule(__name__,
+the_grammar)</tt> (it needs your module&#8217;s <tt class="docutils literal">__name__</tt> in order to setup the
+functions in your <tt class="docutils literal">global</tt> namespace, where py.test can recognize and run&nbsp;them.</p>
+<p>Then for each rule you want to test, call <tt class="docutils literal">parse_rule(the_rule,
+passing_strings, failing_strings</tt>.</p>
+<p>This method of incremental testing is really a boon while you are initially
+creating your grammar — this way, you don&#8217;t have to complete the grammar
+before you test parts of it&nbsp;out.</p>
+<p>Now, in addition to just grammar testing, you should have some testing of your
+translation as well, but the nature of those tests depends completely on your
+specific&nbsp;project.</p>
+</div>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "codetalker-example-test";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

@@ -1,0 +1,34 @@
+---
+title: 'Django to UML'
+slug: django-uml
+created: !!timestamp '2010-04-29 16:49:12'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+I was looking around for a django models to UML converter and took a bit of doing, but I found one nestled in the app `django-extensions <http://code.google.com/p/django-command-extensions/>`_. As it took a while, I thought I'd spare the next guy a search.
+{% endmark %}
+
+
+To use, grab the `latest version <http://django-command-extensions.googlecode.com/files/django-extensions-0.4.1.tar.gz>`_, and install pygraphviz. Here are the commands I used:
+
+.. code-block:: bash
+
+    wget http://django-command-extensions.googlecode.com/files/django-extensions-0.4.1.tar.gz
+    tar zxf django-extensions-0.4.1.tar.gz
+    cd django-extensions-0.4.1
+    sudo setup.py install
+
+.. note::
+
+    Make sure to add django_extensions to INSTALLED_APPS in your project's settings module (thanks Stephen!)
+
+and
+
+.. code-block:: bash
+
+    sudo apt-get install python-pygraphviz
+
+Then in your project directory:
+

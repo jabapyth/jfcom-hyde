@@ -1,0 +1,114 @@
+---
+title: 'CodeTalker by example: tokenize'
+slug: codetalker-example-tokenize
+created: !!timestamp '2010-07-27 16:33:48'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+This is the first in a four-part series, in which I demonstrate how to build a
+CSS parser using CodeTalker_:
+{% endmark %}
+
+
+- **tokenize**
+- parse_
+- translate_
+- `test!`_
+
+.. _parse: http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/
+.. _translate: http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/
+.. _test!: http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/
+
+
+To get the code for this:
+
+``git clone`` `git://github.com/jabapyth/css.git <http://github.com/jabapyth/css/>`_
+
+(background) What is CodeTalker?
+--------------------------------
+
+CodeTalker_ might be described as a `compiler-compiler`_ although that doesn't
+quite fit. I would probably call it a "compiler creation library", written in
+python (with a healthy dose of C for performance). With CodeTalker, I have
+`written a JSON parser
+<http://github.com/jabapyth/codetalker/blob/master/codetalker/contrib/json.py>`_
+in **66 lines of code** that `beats most of the other python-based JSON
+parsers around <http://jaredforsyth.com/media/uploads/new_json.html>`_.
+
+.. _CodeTalker: http://jaredforsyth.com/projects/codetalker/
+
+.. _compiler-compiler: http://en.wikipedia.org/wiki/Compiler-compiler
+
+Tokenizing
+----------
+
+For reference I will be using the CSS specification at w3.org, although I will
+be deviating somewhat from their suggested tokenization_.
+
+.. _tokenization: http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#tokenization
+
+Tokenization in CodeTalker is for the most part taken care of for you — as
+tokens don't differ too much between languages — but there are some things
+that it is useful to customize.
+
+.. code-block:: python
+
+    from codetalker.pgm.tokens import *
+    import constants
+    import re
+
+    ## specified http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#tokenization
+
+    class SYMBOL(CharToken):
+        chars = '@#-%();{}[].:>+,'
+
+    class HTMLCOMMENT(StringToken):
+        strings = '<!--', '-->'
+
+    class UNIT(IIdToken):
+        strings = 'em', 'px', 'pt', 'mm', 'cm', 'rad', 'deg', 'grad', 'in'
+
+    class COLOR(IIdToken):
+        strings = constants.colors
+
+    class NODE_NAME(IIdToken):
+        strings = constants.tags
+
+    class HEXCOLOR(ReToken):
+        rx = re.compile(r'#([\da-fA-F]{6}|[\da-fA-F]{3})')
+
+    the_tokens = [NUMBER, HEXCOLOR, CMCOMMENT, HTMLCOMMENT,
+                  SYMBOL, UNIT, COLOR, NODE_NAME, STRING,
+                  SSTRING, ID, WHITE, NEWLINE, ANY]
+
+In this case, I put the tokens in a saparate file from the main grammar, so
+I've made a ``list`` of the tokens, *in the order I want them*, which can
+simply be imported.
+
+Note that the order of tokens is very important — tokens are matched and
+consumed strictly on a first-match basis. Therefore, if you put the "ANY"
+token first (which matches any character), none of the other tokens would be
+used.
+
+A quick refresher on the Base token types:
+
+:CharToken:
+
+    Match a single char, restricted to those in its ``chars`` attribute.
+
+:StringToken:
+
+    Match one of the specified strings.
+
+:IIdToken:
+
+    Match one of the specified strings, case-insensitively, but *only* when
+    that string is followed by a non-id character.
+
+:ReToken:
+
+    Use RegEx to match tokens.
+
+Like I said; not too much going on here.

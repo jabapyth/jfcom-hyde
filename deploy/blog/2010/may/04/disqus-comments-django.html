@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/may/04">Back to list</a>
+<a class="prev"
+    title="Birthday release: PJs 0.19"
+        href="/blog/2010/may/06/birthday-release-pjs-019.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Announcing: PJs"
+        href="/blog/2010/may/04/announcing-pjs.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/may/04/disqus-comments-django.html">
+        Disqus comments in Django
+    </a>
+</h1>
+<time datetime="2010-05-04">
+    Posted: Tue, 04 May 2010
+</time>
+
+
+<div class="document">
+<img alt="http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg" class="first" src="http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg" style="width: 190px;" />
+<p>Recently I finally got around to adding comments to this blog; <a class="reference external" href="http://disqus.com">disqus</a> made it so easy that I didn&#8217;t really have an excuse to
+keep putting it off&nbsp;;)</p>
+<p>When I first made this blog&#8230;a few months ago, I was simultaneously
+discovering <a class="reference external" href="http://djangoproject.com">django</a> (they say the way to learn
+the ropes in django is to create a blogging engine) and wasn&#8217;t quite satisfied
+with the readily available comments&nbsp;solutions.</p>
+<p>I heard from several places that django.contrib.comments has a problem with
+taking you out of context if the form needs errors corrected, which really
+isn&#8217;t acceptible. Looking around further, I saw a presentation at djangocon 08
+(iirc) about pluggable apps, which looked like a solution, but I really didn&#8217;t
+want to go to the trouble; it was easier to just postpone the comments
+question, at least for a&nbsp;time.</p>
+<p>As I looked around at the blogs of people talking about django, I kept seeing
+&#8220;powered by disqus&#8221; at the bottom, so I went <a class="reference external" href="http://disqus.com">over to investigate</a>, and was very satisfied by their offering. Of course, it
+helps that it&#8217;s free, and that <strong>the only installation was adding 10 lines of
+<span class="caps">HTML</span> to the bottom of my blog_post template</strong>.</p>
+<p>The real clincher for me though was integration; disqus enables people reading
+my blog to use OpenID, facebook, twitter, or general disqus authorization.
+People who might not have commented had they been required to sign up for my
+site alone would have far fewer&nbsp;qualms.</p>
+<p>Cheers</p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "disqus-comments-django";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

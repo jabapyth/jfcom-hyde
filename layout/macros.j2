@@ -17,7 +17,9 @@
 {% endif %}
 </ul>
 <a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
-{{ post.excerpt|markdown|typogrify }}
+{% filter restructuredtext %}
+{{ post.excerpt }}
+{% endfilter %}
 </article>
 {% endmacro %}
 

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/29">Back to list</a>
+<a class="prev"
+    title="CodeTalker by example: test!"
+        href="/blog/2010/jul/29/codetalker-example-test.html">
+    Previous
+</a>
+
+<a class="next"
+    title="CodeTalker by example: parse"
+        href="/blog/2010/jul/28/codetalker-example-parse.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/29/codetalker-example-translate.html">
+        CodeTalker by example: translate
+    </a>
+</h1>
+<time datetime="2010-07-29">
+    Posted: Thu, 29 Jul 2010
+</time>
+
+
+<div class="document">
+<p>This is the third in a four-part series, in which I demonstrate how to build a
+<span class="caps">CSS</span> parser using <a class="reference external" href="http://jaredforsyth.com/projects/codetalker/">CodeTalker</a>:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/">tokenize</a></li>
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/">parse</a></li>
+<li><strong>translate</strong></li>
+<li><a class="reference external" href="http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/">test!</a></li>
+</ul>
+<p>To get the code for&nbsp;this:</p>
+<p><tt class="docutils literal">git clone</tt> <a class="reference external" href="http://github.com/jabapyth/css/">git://github.com/jabapyth/css.git</a></p>
+<div class="section" id="translation">
+<h1>Translation</h1>
+<p><em>[for the impatient, here&#8217;s the</em> <a class="reference external" href="http://github.com/jabapyth/css/blob/master/css/translator.py#L1">final code</a> <em>].</em></p>
+<p>Like everything else in CodeTalker, translation is mean to be straightforward;
+you have an abstract syntax tree, which is cool, but what you really want
+is&#8230;in this case, an object which represents a stylesheet. So you have a
+<tt class="docutils literal">StyleSheet</tt> class and a <tt class="docutils literal">RuleSet</tt> class, but how do you go from <span class="caps">AST</span>
+to&nbsp;that?</p>
+<p>In general, you&#8217;ll create one translation rule for each grammar rule.  Here&#8217;s
+the code for our <tt class="docutils literal">stylesheet</tt> rule to refresh your&nbsp;memory.</p>
+<pre class="code python literal-block">
+<span class="keyword">def</span> <span class="name function">style_sheet</span><span class="punctuation">(</span><span class="name">rule</span><span class="punctuation">):</span>
+    <span class="name">rule</span> <span class="operator">|</span> <span class="punctuation">([</span><span class="name">charset</span><span class="punctuation">],</span> <span class="name">star</span><span class="punctuation">(</span><span class="name">import_</span><span class="punctuation">),</span> <span class="name">star</span><span class="punctuation">(</span><span class="name">section</span><span class="punctuation">))</span>
+    <span class="name">rule</span><span class="operator">.</span><span class="name">astAttrs</span> <span class="operator">=</span> <span class="punctuation">{</span>
+            <span class="literal string">'charset'</span><span class="punctuation">:</span> <span class="name">charset</span><span class="punctuation">,</span>
+            <span class="literal string">'imports'</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="name">import_</span><span class="punctuation">],</span>
+            <span class="literal string">'sections'</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="name">section</span><span class="punctuation">],</span>
+        <span class="punctuation">}</span>
+</pre>
+<p>And here&#8217;s what it takes to translate&nbsp;it:</p>
+<pre class="code python literal-block">
+<span class="name decorator">&#64;t.translates</span><span class="punctuation">(</span><span class="name">ast</span><span class="operator">.</span><span class="name">StyleSheet</span><span class="punctuation">)</span>
+<span class="keyword">def</span> <span class="name function">stylesheet</span><span class="punctuation">(</span><span class="name">node</span><span class="punctuation">):</span>
+    <span class="name">ss</span> <span class="operator">=</span> <span class="name">StyleSheet</span><span class="punctuation">()</span>
+    <span class="keyword">if</span> <span class="name">node</span><span class="operator">.</span><span class="name">charset</span> <span class="operator word">is</span> <span class="operator word">not</span> <span class="name builtin pseudo">None</span><span class="punctuation">:</span>
+        <span class="name">ss</span><span class="operator">.</span><span class="name">charset</span> <span class="operator">=</span> <span class="name">t</span><span class="operator">.</span><span class="name">translate</span><span class="punctuation">(</span><span class="name">node</span><span class="operator">.</span><span class="name">charset</span><span class="punctuation">)</span>
+    <span class="name">ss</span><span class="operator">.</span><span class="name">imports</span> <span class="operator">=</span> <span class="name builtin">list</span><span class="punctuation">((</span><span class="name">imp</span><span class="operator">.</span><span class="name">source</span><span class="punctuation">,</span> <span class="name">imp</span><span class="operator">.</span><span class="name">media</span><span class="punctuation">)</span> <span class="keyword">for</span> <span class="name">imp</span> <span class="operator word">in</span> <span class="name">node</span><span class="operator">.</span><span class="name">imports</span><span class="punctuation">)</span>
+    <span class="name">ss</span><span class="operator">.</span><span class="name">rules</span> <span class="operator">=</span> <span class="punctuation">[]</span>
+    <span class="keyword">for</span> <span class="name">section</span> <span class="operator word">in</span> <span class="name">node</span><span class="operator">.</span><span class="name">sections</span><span class="punctuation">:</span>
+        <span class="keyword">if</span> <span class="name builtin">isinstance</span><span class="punctuation">(</span><span class="name">section</span><span class="punctuation">,</span> <span class="name">ast</span><span class="operator">.</span><span class="name">Ruleset</span><span class="punctuation">):</span> <span class="comment"># right now I'm not dealing</span>
+                                             <span class="comment"># with other kinds of sections (media, page, font_face)</span>
+            <span class="name">rule</span> <span class="operator">=</span> <span class="name">t</span><span class="operator">.</span><span class="name">translate</span><span class="punctuation">(</span><span class="name">section</span><span class="punctuation">)</span>
+            <span class="keyword">if</span> <span class="name">rule</span> <span class="operator word">is</span> <span class="operator word">not</span> <span class="name builtin pseudo">None</span><span class="punctuation">:</span>
+                <span class="name">ss</span><span class="operator">.</span><span class="name">rules</span><span class="operator">.</span><span class="name">append</span><span class="punctuation">(</span><span class="name">rule</span><span class="punctuation">)</span>
+    <span class="keyword">return</span> <span class="name">ss</span>
+</pre>
+<p>Create the object, populate it with the <span class="caps">AST</span> node, and then return it. And
+register the function w/ the translator&nbsp;object.</p>
+</div>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "codetalker-example-translate";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

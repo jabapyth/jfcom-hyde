@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/may/30">Back to list</a>
+<a class="prev"
+    title="Pyjamas and PJS in depth"
+        href="/blog/2010/may/31/pyjamas-and-pjs-depth.html">
+    Previous
+</a>
+
+<a class="next"
+    title="My latest IE annoyance"
+        href="/blog/2010/may/26/my-latest-ie-annoyance.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/may/30/easy-zsh-auto-completion.html">
+        Easy zsh auto completion
+    </a>
+</h1>
+<time datetime="2010-05-30">
+    Posted: Sun, 30 May 2010
+</time>
+
+
+<div class="document">
+<img alt="http://jaredforsyth.com/media/uploads/zsh-completion.png" src="http://jaredforsyth.com/media/uploads/zsh-completion.png" />
+<p>It took a surprising amount of looking to figure out how to create a custom zsh completion rule&#8230;so I&#8217;ll share my&nbsp;findings.</p>
+<p>For a static&nbsp;list:</p>
+<pre class="code bash literal-block">
+compctl -k <span class="literal string double">&quot;(one two other possibility)&quot;</span> <span class="name builtin">command</span>-name
+</pre>
+<p>those are space separated, surrounded first by parenthesis and then by&nbsp;quotes.</p>
+<p>For some dynamic completion, you specify a&nbsp;function:</p>
+<pre class="code bash literal-block">
+_my_cpl<span class="operator">()</span> <span class="operator">{</span>
+    <span class="name variable">reply</span><span class="operator">=(</span>one two other possibility<span class="operator">)</span>
+<span class="operator">}</span>
+compctl -K _my_cpl <span class="name builtin">command</span>-name
+</pre>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">the option is <tt class="docutils literal"><span class="pre">-K</span></tt> (capital)</p>
+</div>
+<p>Ok, so my example doesn&#8217;t do anything cool and dynamic =) but that was&nbsp;bare-bones.</p>
+<p>Here&#8217;s an example of what I&#8217;m doing for my <a class="reference external" href="http://jaredforsyth.com/projects/pbj/"><span class="caps">PBJ</span></a>&nbsp;completion:</p>
+<pre class="code bash literal-block">
+_make_pbj<span class="operator">()</span> <span class="operator">{</span>
+    <span class="name builtin">local </span>a
+    <span class="name builtin">read</span> -l a
+    <span class="name variable">reply</span><span class="operator">=(</span><span class="literal string backtick">`</span>./make.pbj --list <span class="literal string double">&quot;$a&quot;</span><span class="literal string backtick">`</span><span class="operator">)</span>
+<span class="operator">}</span>
+compctl -K _make_pbj ./make.pbj
+</pre>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p>The command name this time is <tt class="docutils literal">./make.pbj</tt> &#8212; that&#8217;s totally&nbsp;legal.</p>
+<p class="last"><tt class="docutils literal">read <span class="pre">-l</span></tt> returns the text currently being typed in (e.g. <tt class="docutils literal">./make.pbj some_arg</tt>)</p>
+</div>
+<p>Anyway, the zshell function is pretty simple here, too, but it runs a command to get completion options. The &#8220;./make.pbj&#8221; file outputs a space-separated list of build targets (<a class="reference external" href="http://jaredforsyth.com/projects/pbj/"><span class="caps">PBJ</span> is a build framework</a>) which are then interpreted by zsh for&nbsp;you!</p>
+<p>Some helpful&nbsp;references:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://zshwiki.org/home/examples/compctl">http://zshwiki.org/home/examples/compctl</a></li>
+<li><a class="reference external" href="http://linux.die.net/man/1/zshcompctl">http://linux.die.net/man/1/zshcompctl</a></li>
+<li><a class="reference external" href="http://www.ibm.com/developerworks/aix/library/au-satzsh.html#N102BD">http://www.ibm.com/developerworks/aix/library/au-satzsh.html#<span class="caps">N102BD</span></a></li>
+</ul>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "easy-zsh-auto-completion";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/jul/08">Back to list</a>
+<a class="prev"
+    title="Announcing: vim-phpdebug"
+        href="/blog/2010/jul/09/announcing-vim-phpdebug.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Announcing: Codetalker"
+        href="/blog/2010/jul/08/announcing-codetalker.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/jul/08/json-parsing-python.html">
+        JSON parsing in python
+    </a>
+</h1>
+<time datetime="2010-07-08">
+    Posted: Thu, 08 Jul 2010
+</time>
+
+
+<div class="document">
+<p>I&#8217;ve done some benchmarks on <span class="caps">JSON</span> parsing, and I thought I&#8217;d share the&nbsp;results.</p>
+<p><a class="reference external" href="http://jaredforsyth.com/media/uploads/json_display/view.html">[click here for a live&nbsp;graph]</a></p>
+<img alt="http://jaredforsyth.com/media/uploads/Selection_018.jpeg" class="align-left" src="http://jaredforsyth.com/media/uploads/Selection_018.jpeg" />
+<p>(note: simplejson, jsonlib and cjson all finished ~.02 seconds, so you can&#8217;t really see the&nbsp;bars)</p>
+<p><a class="reference external" href="http://jaredforsyth.com/media/uploads/json_tests.tgz">[here&#8217;s the code I used, if you want it &#8212; run&nbsp;&#8220;runner.py&#8221;]</a></p>
+<p>The main reason for testing several different parsing solutions was to compare them to my own json library, which is <strong>only 66 lines long</strong>. And it has comparable performance to other pure-python json libraries. How is this done? <a class="reference external" href="http://jaredforsyth.com/projects/codetalker/">Codetalker</a></p>
+<p><strong>Codetalker</strong> is a parsing library that I&#8217;ve been developing on and off for the past few months, which aims to facilitate easy and intuitive declaration of grammars, in a pythonic fashion that is influenced by the tradition of <span class="caps">BNF</span>, without compromising speed or&nbsp;flexibility.</p>
+<p>I&#8217;ll be writing much more about Codetalker in the near future (if I can find the time), but for now feel free to see for yourself just how easy using codetalker is, with my 66 line <a class="reference external" href="http://github.com/jabapyth/codetalker/blob/master/codetalker/contrib/json.py">example json&nbsp;parser</a></p>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "json-parsing-python";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

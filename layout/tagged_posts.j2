@@ -5,6 +5,7 @@
 <h1 class="tag title">{{ tag.name }}</h1>
 <ul class="posts clear">
 {% for resource in walker() -%}
+{% if not res.status or res.status == 'public' %}
 <li class="post clear">
     <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
         {{ resource.meta.created.strftime('%a, %d %b %Y') }}
@@ -22,6 +23,7 @@
     </ul>
     {% endif %}
 </li>
+{% endif %}
 {%- endfor %}
 </ul>
 </section>

@@ -1,0 +1,167 @@
+---
+title: 'Lessons learned; optimizing CodeTalker'
+slug: lessons-learned-optimizing-codetalker
+created: !!timestamp '2010-07-26 12:00:00'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark exerpt %}
+As `per request
+<http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/#comment-63681945>`_,
+I've decided to write down what I've learned from my `optimization adventures
+<http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/>`_
+with `CodeTalker <http://jaredforsyth.com/projects/codetalker/>`_.
+{% endmark %}
+
+
+Intro
+=====
+
+To start out, I'd like to lay a couple of baseline suggestions. **(Unit)tests are
+your very best friend**. Nothing is more satisfying than running your suite
+after an optimization and knowing that you **a)** didn't break anything and **b)**
+made it run faster. And nothing is more terrible than trying out some example
+code (or worse, hearing from a user) and realizing that you *broke something*,
+but you don't remember when or where. So you break out the old ``hg bisect``,
+but still, it's a pain.
+
+Which reminds me — *you are using version control, right?* Because if you
+aren't, you really should **get some**. Seriously. `Git <http://git-scm.com/>`_, 
+`Mercurial <http://mercurial.selenic.com/>`_, `Bazaar
+<http://bazaar.canonical.com/en/>`_...all good stuff. And really don't try to
+code without it. Especially when optimizing, when there's a better-than-average
+chance that you'll totally break something :)
+
+BTW (Why) Should I Profile?
+===========================
+
+I've heard several people throw out numbers like "90% of your time is spent in
+10% of your code — so to optimize, just find that 10%". If that's the case
+with you, this is probably *not the article you're looking for*. You can jump
+down to the `Initial Optimizations`_ section if you want, but most of my time
+I'll be talking about data processing optimization. Which brings me to my next
+point:
+
+**Most programs don't need to be fast**. Sure, if your django app takes *15
+seconds to render* you should do some profiling, but in general speed is not
+something you need to worry about. The specific section of computing that I'll
+be addressing is **data processing**, where it's pretty much *all hard work
+all the time*, and a 10x speedup from 100 minutes to 10 minutes is a big deal
+(again, in your average normal program, that same speedup would be from 1sec
+to .1sec, which doesn't make quite as much difference).
+
+Now, on to
+
+The actual optimizing stuff
+===========================
+
+Make sure you know what to optimize
+-----------------------------------
+
+Say you've got an example usage of your library/program that really puts it
+through its paces; let's call it ``examples/big.py``.
+
+Here's what I do:
+
+.. code-block:: bash
+
+    python -mcProfile -o big.prof examples/big.py
+    runsnake big.prof
+
+The first command you get out of the box w/ CPython (with some other python,
+try ``-mProfile`` instead of ``-mcProfile``). It runs big.py, profiles the
+methods run, and saves the profiling output to big.prof.
+
+Now in order to understand the profiling output, I like to use a program
+called `RunSnakeRun <http://www.vrplumber.com/programming/runsnakerun/>`_,
+which you can get through easy_install; ``easy_install RunSnakeRun``.
+
+Play around w/ the GUI a bit, and you should get an idea of what needs to be
+profiled.
+
+.. note::
+
+    Profiling works best when your code is well modularized - if you have all
+    the work in one function ``do_heavy_stuff`` you won't get as good a
+    picture of exactly what needs to be modified.
+
+Methods of optimization:
+
+- don't do stupid stuff
+- use the right datatypes
+- C > python
+- Caching
+
+Initial Optimizations
+---------------------
+
+**Dont do stupid stuff**
+
+... like concatenate a `bunch of strings together
+<http://jaredforsyth.com/blog/2010/jun/26/string-concatenation-kills-babies/>`_
+in cpython :). Or do things that aren't loop-dependent inside of a loop.
+Sometimes it's small *doh!* moments that give you some of your time back.
+
+**Use the right datatypes + don't reinvent the wheel**
+
+This is another section that a lot of people talk about, so I won't spend too
+much time. There are a number of problems (like searching, sorting), that
+people have spent a lot of time making fast, and there are some datatypes that
+are much faster to work with than others. 
+
+For example, in python, list lookup is faster than dictionary lookup (for
+large datasets).
+
+The Real Stuff
+--------------
+
+**C > Python**
+
+Sorry folks, but for straight data processing, C wins. But python is much
+easier + more fun to write/read/deal with...
+
+One of the best things I did for CodeTalker was to dive into `Cython
+<http://cython.org/>`_, which made the python+c integration a breeze.
+
+Parts of CodeTalker in C:
+
+- tokenization (when no custom tokens are used)
+- parsing
+
+Parts of CodeTalker in Cython:
+
+- AST conversion (back to python objects)
+
+Parts of CodeTalker in Python:
+
+- Final translation
+
+In the case of CodeTalker, tokenization was most expensive, followed by
+parsing, and then AST conversion. The final translation is specified by
+whoever is using CodeTalker, so it must be in python.
+
+**Caching is King**
+
+I was able to get several big speedups by just caching various objects (often
+when converting between python and C). On modern systems, memory is prolific,
+so feel free to use it.
+
+Some specific CodeTalker notes
+==============================
+
+Back when I had everything in python, I tried moving from a function-centric
+organization to a more OO friendly structure, and I took a big performance
+hit.
+
+moving from explicit Tokens to regex was *huge*. Moving from regex to
+hard-coded C was another huge
+
+Cython
+------
+
+For some reason, I trust myself more than I trust cython to write pure C.
+Maybe I'm unfounded in this, but I like to have control when I'm only
+working with C data types. When python exceptions/objects get involved, I
+owe everything to Cython. [one weird thing — cython's "hello world" ``print
+"hello world"`` is 1204 lines of C?? and the hello.so is 26k??]

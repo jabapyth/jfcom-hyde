@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Jared | Forsyth
+    </title>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/blog-post.css"/>
+  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>        <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>        <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>        <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>        <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>        <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>        <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+</nav>
+  </div>
+</div><div id="content">
+<article class="post">
+<nav class="post_nav">
+<a class="backlink" href="/blog/2010/may/20">Back to list</a>
+<a class="prev"
+    title="Python operator magic"
+        href="/blog/2010/may/21/python-operator-magic.html">
+    Previous
+</a>
+
+<a class="next"
+    title="Manually enable clean urls in drupal"
+        href="/blog/2010/may/14/manually-enable-clean-urls-drupal.html">
+    Next
+</a>
+
+</nav>
+<h1 class="title">
+    <a href="/blog/2010/may/20/javascript-type-maddness.html">
+        Javascript type madness
+    </a>
+</h1>
+<time datetime="2010-05-20">
+    Posted: Thu, 20 May 2010
+</time>
+
+
+<div class="document">
+<p>It truly amazes me the extent to which the javascript interpreter <em>inhibits</em>
+productivity. It seems extraordinary that the language could have gotten this
+far while still <em>by design</em> causing no end of headaches for&nbsp;developers.</p>
+<div class="section" id="example-1">
+<h1>Example&nbsp;1</h1>
+<p>When my code has a bug, <em>please</em> tell me. Preferably with an error. Even
+better, with an informative error and a full stack trace! (ok, maybe that&#8217;s a
+little greedy). But <em>anything</em> would be better than passing around
+for-goodness&#8217;-sake <strong>undefined</strong> variables. I mean seriously? So unhelpful.
+Especially when variable types are just converted on the fly with abandon &#8212;
+you might <em>not even notice</em> that there are a number of undefined variables
+flying around unless you specifically check for&nbsp;them.</p>
+</div>
+<div class="section" id="example-2">
+<h1>Example&nbsp;2</h1>
+<p>Here&#8217;s some code copied right from the&nbsp;interpreter:</p>
+<pre class="code js literal-block">
+<span class="operator">&gt;</span> <span class="keyword declaration">var</span> <span class="name other">a</span> <span class="operator">=</span> <span class="punctuation">{</span><span class="punctuation">}</span>
+<span class="operator">&gt;</span> <span class="keyword declaration">var</span> <span class="name other">b</span> <span class="operator">=</span> <span class="punctuation">{</span><span class="literal number integer">3</span><span class="operator">:</span><span class="literal number integer">4</span><span class="punctuation">}</span>
+<span class="operator">&gt;</span> <span class="keyword declaration">var</span> <span class="name other">c</span> <span class="operator">=</span> <span class="punctuation">{</span><span class="literal number integer">5</span><span class="operator">:</span><span class="literal number integer">5</span><span class="punctuation">}</span>
+<span class="operator">&gt;</span> <span class="name other">a</span><span class="punctuation">[</span><span class="name other">b</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="literal number integer">4</span>
+<span class="literal number integer">4</span>
+<span class="operator">&gt;</span> <span class="name other">a</span><span class="punctuation">[</span><span class="name other">c</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="literal number integer">5</span>
+<span class="literal number integer">5</span>
+<span class="operator">&gt;</span> <span class="name other">a</span><span class="punctuation">[</span><span class="name other">b</span><span class="punctuation">]</span>
+<span class="literal number integer">5</span>
+</pre>
+<p><strong>Woah.</strong> Now maybe some of you look at that and think, <em>well, duh</em>, but this
+really threw me for a loop the first time I saw it. Coming from a largely
+python background, I thought, hmm, objects seem pretty much like dictionaries
+[hashtables]; I can deal with that. But the above code seems to contradict
+that. <em>What is going on?</em> Well, here&#8217;s something to&nbsp;demonstrate:</p>
+<pre class="code js literal-block">
+<span class="operator">&gt;</span> <span class="keyword declaration">var</span> <span class="name other">a</span> <span class="operator">=</span> <span class="punctuation">{</span><span class="punctuation">}</span>
+<span class="operator">&gt;</span> <span class="keyword declaration">var</span> <span class="name other">b</span> <span class="operator">=</span> <span class="punctuation">{</span><span class="literal number integer">4</span><span class="operator">:</span><span class="literal number integer">5</span><span class="punctuation">}</span>
+<span class="operator">&gt;</span> <span class="name other">a</span><span class="punctuation">[</span><span class="name other">b</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="literal number integer">12</span>
+<span class="operator">&gt;</span> <span class="name other">a</span><span class="punctuation">[</span><span class="literal string single">'[object Object]'</span><span class="punctuation">]</span>
+<span class="literal number integer">12</span>
+</pre>
+<p>Javascript you sly dog! This is just one of uncountable occasions where
+javascript pulls the rug from under you by silently coercing variables to
+whatever it wants.&nbsp;Bah.</p>
+<p>The main reason I ran into this problem is my <a class="reference external" href="http://jaredforsyth.com/projects/pjs/">PJs library/tool</a>, which converts python code
+into readable, maintainable, and best of all <em>sane</em> javascript. This includes
+but is not limited&nbsp;to:</p>
+<p><strong>[edit] thanks to Adriano for pointing this out. <span class="caps">JS</span> does have <span class="caps">OO</span>, but&#8230;class-based inheritance makes much more sense to&nbsp;me.</strong></p>
+<ul class="simple">
+<li><em>class-based</em>&nbsp;<span class="caps">OO</span></li>
+<li>module&nbsp;goodness</li>
+<li>function magic *args, **kwargs, default values and&nbsp;more</li>
+<li><em>strict function argument&nbsp;checking</em></li>
+<li>python-style exceptions + <strong>stack&nbsp;traces</strong></li>
+<li>python basic types (list, tuple, str,&nbsp;dict)</li>
+<li>iterators</li>
+</ul>
+<p>I&#8217;m still working on &#8216;yield&#8217; though. Generators are <em>hard</em>.</p>
+</div>
+</div>
+
+</article>
+
+<div class="post-comments">
+    <a name="comments"></a>
+    <script>
+        var disqus_identifier = "javascript-type-maddness";
+    </script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /**
+    * var disqus_identifier; [Optional but recommended: Define a unique
+    * identifier (e.g. post id or slug) for this thread] 
+    */
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jaredforsyth">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</div>  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+title: 'Announcing: python-css'
+slug: announcing-python-css
+created: !!timestamp '2010-07-17 18:37:15'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/projects/logo___.png
+{% endmark %}
+
+{% mark exerpt %}
+In the course of `rewriting CleverCSS <http://github.com/jabapyth/clevercss2>`_, I wanted to write a `backwards converter <http://github.com/jabapyth/clevercss2/blob/master/clevercss/backwards.py>`_ from css to ccss. I thought it would make the tool *much* easier to adopt.
+{% endmark %}
+
+
+You know, you've got this big web project, and you realize that what you really need is a little more power behind your stylesheets, and it would be *great* to have scoping, and variables... but you've already got 2,000 lines of css that you really don't want to port over... just throw it at css2ccss and you're golden!
+
+Anyway, it currently uses `cssutils <http://cthedot.de/cssutils/>`_, but I thought that CSS would be another great grammar to try codetalker against. And the result is `python-css <http://jaredforsyth.com/projects/python-css/>`_. **108 lines, faster than cssutils...** I'm doing some more detailed benchmarks which I'll put up later.
+
+**update:** here are the `benchmarks <http://jaredforsyth.com/blog/2010/jul/17/python-css-parsing-benchmarks/>`_
