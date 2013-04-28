@@ -44,7 +44,7 @@
                 {% if item.type == 'external' %}
                 target="_blank"
                 {% endif %}
-                {% if not active %}
+                {% if item.url != resource.url %}
                 href="{{ content_url(item.url) }}"
                 {% endif %}
                 >

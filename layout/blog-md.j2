@@ -1,0 +1,10 @@
+{% extends "blog.j2" %}
+{% block post_content %}
+
+{% filter markdown|typogrify -%}
+{% mark post -%}
+{% block post -%}{%- endblock %}
+{%- endmark %}
+{%- endfilter %}
+
+{% endblock %}
