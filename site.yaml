@@ -17,29 +17,54 @@ context:
         tweet_via: jabapyth
         menu:
             -
-                name: Home
+                name: home
                 description: Home Page
                 css_class: home
                 type: page
                 url: index.html
             -
-                name: Projects
+                name: projects
                 description: Projects
                 css_class: projects
                 type: node
                 url: projects
             -
-                name: Blog
+                name: blog
                 description: Blog
                 css_class: blog
                 type: node
                 url: blog
             -
-                name: About
+                name: about
                 description: About
                 css_class: about
                 type: page
                 url: about.html
+        external_nav:
+            - 
+                name: github
+                description: my github repositories
+                css_class: github
+                type: external
+                url: http://github.com/jabapyth
+            -
+                name: twitter
+                description: my twitter account
+                css_class: twitter
+                type: external
+                url: http://twitter.com/jabapyth
+            -
+                name: linkedin
+                description: my linkedin profile
+                css_class: linkedin
+                type: external
+                url: http://www.linkedin.com/profile/view?id=37203333
+            -
+                name: stackoverflow
+                description: my stackoverflow profile
+                css_class: stackoverflow
+                type: external
+                url: http://stackoverflow.com/users/290784/jared-forsyth
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2010-01-01 00:00:00
