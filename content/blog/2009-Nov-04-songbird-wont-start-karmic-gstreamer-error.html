@@ -1,0 +1,51 @@
+---
+title: "Songbird won't start in Karmic - gstreamer error"
+slug: songbird-wont-start-karmic-gstreamer-error
+created: !!timestamp '2009-11-04 12:18:36'
+extends: blog-rst.j2
+status: draft
+
+---
+{% mark excerpt %}
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstrawparse.so': /usr/lib/gstreamer-0.10/libgstrawparse.so: undefined symbol: gst_video_format_new_caps_interlaced
+{% endmark %}
+
+
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstdeinterlace.so': /usr/lib/gstreamer-0.10/libgstdeinterlace.so: undefined symbol: gst_video_format_parse_caps_interlaced
+
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstschro.so': /usr/lib/gstreamer-0.10/libgstschro.so: undefined symbol: gst_adapter_masked_scan_uint32
+
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgsthdvparse.so': /usr/lib/gstreamer-0.10/libgsthdvparse.so: undefined symbol: _gst_debug_dump_mem
+
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstmpegdemux.so': /usr/lib/gstreamer-0.10/libgstmpegdemux.so: undefined symbol: _gst_debug_dump_mem
+
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstlibvisual.so': /usr/lib/gstreamer-0.10/libgstlibvisual.so: undefined symbol: gst_adapter_prev_timestamp
+
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libresindvd.so': /usr/lib/gstreamer-0.10/libresindvd.so: undefined symbol: gst_navigation_event_parse_command
+
+(songbird-bin:2944): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstdv.so': /usr/lib/gstreamer-0.10/libgstdv.so: undefined symbol: gst_tag_list_new_full
+^Z
+[1]+  Stopped                 ./testing/Songbird/songbird
+jared@jared-laptop:~$ cd testing/Songbird/
+jared@jared-laptop:~/testing/Songbird$ killall -9 songbird
+[1]+  Killed                  ./testing/Songbird/songbird  (wd: ~)
+(wd now: ~/testing/Songbird)
+jared@jared-laptop:~/testing/Songbird$ killall -9 songbird
+songbird: no process found
+jared@jared-laptop:~/testing/Songbird$ ./songbird
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstrawparse.so': /usr/lib/gstreamer-0.10/libgstrawparse.so: undefined symbol: gst_video_format_new_caps_interlaced
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstdeinterlace.so': /usr/lib/gstreamer-0.10/libgstdeinterlace.so: undefined symbol: gst_video_format_parse_caps_interlaced
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstschro.so': /usr/lib/gstreamer-0.10/libgstschro.so: undefined symbol: gst_adapter_masked_scan_uint32
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgsthdvparse.so': /usr/lib/gstreamer-0.10/libgsthdvparse.so: undefined symbol: _gst_debug_dump_mem
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstmpegdemux.so': /usr/lib/gstreamer-0.10/libgstmpegdemux.so: undefined symbol: _gst_debug_dump_mem
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstlibvisual.so': /usr/lib/gstreamer-0.10/libgstlibvisual.so: undefined symbol: gst_adapter_prev_timestamp
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libresindvd.so': /usr/lib/gstreamer-0.10/libresindvd.so: undefined symbol: gst_navigation_event_parse_command
+
+(songbird-bin:2983): GStreamer-WARNING **: Failed to load plugin '/usr/lib/gstreamer-0.10/libgstdv.so': /usr/lib/gstreamer-0.10/libgstdv.so: undefined symbol: gst_tag_list_new_full

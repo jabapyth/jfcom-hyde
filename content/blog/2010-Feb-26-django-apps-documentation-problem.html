@@ -1,0 +1,27 @@
+---
+title: "Django apps' documentation problem"
+slug: django-apps-documentation-problem
+created: !!timestamp '2010-02-26 02:07:35'
+extends: blog-rst.j2
+status: public
+tags:
+    - django
+    -  docs
+    -  documentation
+    -  admindocs
+---
+{% mark excerpt %}
+So I just spent the last little while going back to the `dawn of time <http://code.djangoproject.com/changeset/392>`_ and svn revision 392 of django core-- the current revision is nearly 13 **thousand**) to find the answer to a surprisingly elusive question: why is there a 
+::
+{% endmark %}
+
+
+    ^templates/(?P<template>.*)/$
+
+pattern in admindocs URLconf, and a corresponding template_detail view? (there's no template_list view mind, and no way of ever getting to the template_detail view other than typing a url in directly).
+
+At first I thought that it might be a recent addition to admindocs, and therefore not fully implemented -- that could explain its effectively disabled status. But no, it's a **year dormant** little bit of code.
+
+contrib.admindocs seems to me to be not very well cared for -- especially in light of its vast importance, imo, to django's user experience. I know that when I install a module I don't want to dig through all of its code (although I have resorted to that several times), I want its functionality and configurability laid out for me in a nice, friendly manner. In keeping with this, I believe strongly that contrib.admindocs should have the ability to show me general docs *of my installed modules*, and not just the component parts. In reality, if I have to look at an app's Models to understand *what it is the darn thing does*, it's already to late.
+
+As I see it, django suffers from a staggering lack of documentation (mostly with regards to community apps), which I see as a side-effect of a lack of a 'tradition of documentation'. This is really the biggest barrier to me installing a new app (as we are *supposed to*, make and use others' reusable apps).

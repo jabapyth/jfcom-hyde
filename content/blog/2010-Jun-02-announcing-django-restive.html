@@ -1,0 +1,68 @@
+---
+title: 'Announcing: Django-RESTive'
+slug: announcing-django-restive
+created: !!timestamp '2010-06-02 09:29:59'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/projects/djanfo-restive.png
+{% endmark %}
+
+{% mark excerpt %}
+**res·tive**: *marked by impatience or uneasiness*
+{% endmark %}
+
+
+`django-restive <http://jaredforsyth.com/projects/django-restive/>`_ is a
+short and sweet library for setting up RESTful services in django - both the
+django backend and, if you want the javascript frontend.
+
+It was created for the AJAX webapp I'm currently devving -- or rather, spun
+off of it. As with many apps, restive was originally built into another project (`GameCC <http://github.com/jabapyth/GameCC>`_) until I realized it deserved an
+app of its own.
+
+A few items of interest:
+
+- all communication is in JSON
+
+  - on the client side, POST to the url with the ``data`` keyword holding a JSON
+    serialized dictionary of ``key, value`` pairs which will be passed to the
+    function as keyword arguments.
+  - on the server side, return a dictionary which will be JSON serialized and
+    output as text.
+
+- passing Django models is also supported. From the server side, if the
+  returned dictionary has\_key ``_models``, they will be serialized using
+  Django's built-in JSON serializer.
+- I plan to support CSRF token checking.
+
+The aim of *restive* is to get in the way as little as possible =).
+
+**Here's a short sample:** ``my_app/rest.py``
+
+.. code-block:: python
+
+    from restive import Service
+
+    service = Service()
+
+    @service.add
+    def hello(request, name='Jimmy'):
+        return {'message': 'Hello %s!' % name}
+
+    urlpatterns = service.urls()
+
+and in ``my_project/urls.py`` just do
+
+.. code-block:: python
+
+    urlpatterns = patterns('',
+        ('^myapp/', include('my_app.rest'))
+    )
+
+It's as simple as that! Now ``http://example.com/myapp/hello/`` is live and
+kicking.
+
+*django-restive II: return of the client-side* coming soon.

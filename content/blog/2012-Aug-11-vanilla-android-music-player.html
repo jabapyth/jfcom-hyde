@@ -1,0 +1,54 @@
+---
+title: 'Vanilla Android Music Player'
+slug: vanilla-android-music-player
+created: !!timestamp '2012-08-11 14:49:10'
+extends: blog-rst.j2
+status: public
+tags:
+    - android
+    -  vanilla
+    -  app
+    -  open-source
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying_h.png
+   :width: 40%
+{% endmark %}
+
+{% mark excerpt %}
+So I just got myself an LG-G2x android smartphone [running eaglesblood ICS :)] and I've been trying a lot of things out. One thing that I really wanted to get right was a music player app. I looked around at the many reviews of the (mostly adware or freemium) popular music apps, thinking to myself "there's gotta be a really good, free, even open-source music player. somewhere". well, I stumbled across "vanilla" early on, but was scared away by the somewhat primitive and downright clucky looking graphics [see the screenshots on `google play <https://play.google.com/store/apps/details?id=org.kreed.vanilla>`_ or `AndroidOpenSourceApplications <http://www.androidopensourceapplications.com/content/vanilla-music-player>`_ ]. But, after more searching and finding nothing promising, I decided to give it a spin.
+{% endmark %}
+
+
+So I grabbed `the source <https://github.com/kreed/vanilla/>`_ from github, compiled it and gave it a ride on my g2x, and...it's beautiful! At least, much more than the aformentioned screenshots would attest. It looks really sharp, actually blending in perfectly with the UI, and packing some surprise goodies like an *integrated file-browser* and *lock screen support*. Granted, the lock screen could use some tweaking, but that's what ``fork`` and ``pull-request`` are for!
+
+
+Anyway, to save the next guy some trouble, I've taken some screenshots of this app in action. (running at commit `496d28411a <https://github.com/kreed/vanilla/commit/496d28411acc82c032e20bbf402dee1a901cbe01>`_ )
+
+**[update]:** looks like the apk on google play *really is* as old as Jan 2011...so for anyonw that wants it, here's the build I made -- for Ice Cream Sandwich [warning: I have very little knowledge of these things. so it might be buggy on GB, etc... I'm still learning]
+
+`Download apk <http://jaredforsyth.com/media/downloads/VanillaMusic.apk>`_
+
+.. image:: http://qr.kaywa.com/img.php?s=4&d=http%3A%2F%2Fjaredforsyth.com%2Fmedia%2Fdownloads%2FVanillaMusic.apk
+
+ALSO: I made no changes to the source code so far, this is all kreed's work.
+
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying.png
+   :width: 40%
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying_h.png
+   :width: 40%
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/list_albums.png
+   :width: 40%
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/list_artists.png
+   :width: 40%
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/list_songs.png
+   :width: 40%
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/list_files.png
+   :width: 40%
+
+Lock screens (grid and slide)
+
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/lock_grid.png
+   :width: 40%
+.. image:: http://jaredforsyth.com/media/uploads/screenshots/vanilla/lock_slide.png
+   :width: 40%

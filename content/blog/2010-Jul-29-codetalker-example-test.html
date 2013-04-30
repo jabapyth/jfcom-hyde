@@ -1,0 +1,94 @@
+---
+title: 'CodeTalker by example: test!'
+slug: codetalker-example-test
+created: !!timestamp '2010-07-29 14:08:10'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark excerpt %}
+This is the last in a four-part series, in which I demonstrate how to build a
+CSS parser using CodeTalker_:
+{% endmark %}
+
+
+- tokenize_
+- parse_
+- translate_
+- **test!**
+
+.. _parse: http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/
+.. _tokenize: http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/
+.. _translate: http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/
+.. _CodeTalker: http://jaredforsyth.com/projects/codetalker/
+
+To get the code for this:
+
+``git clone`` `git://github.com/jabapyth/css.git <http://github.com/jabapyth/css/>`_
+
+Test!
+=====
+
+No code is complete (and some would say it's broken) without a good amount of
+testing, and CodeTalker provides a simple way to test your rules individually,
+to ensure the best coverage.
+
+the tests for our CSS grammar are contained in `tests/grammar.py
+<http://github.com/jabapyth/css/blob/master/tests/grammar.py>`_. To run them
+(ensure you have py.test installed, then) ``py.test tests/grammar.py``. Or
+just ``./setup.py test`` to run all of them.
+
+The `codetalker/testing.py
+<http://github.com/jabapyth/codetalker/blob/master/codetalker/testing.py#L1>`_
+currently only has one function, but it will setup valitation tests for rule
+parsing.
+
+Here it is in action:
+
+.. code-block:: python
+
+    import css.grammar as grammar
+    from codetalker import testing
+
+    parse_rule = testing.parse_rule(__name__, grammar.grammar)
+
+    parse_rule(grammar.class_, (
+        '.one',
+        '.green',
+        '.GReEn',
+        '.div',
+        ), (
+        'one',
+        ))
+
+    parse_rule(grammar.simple_selector, ( # should pass
+        'div',
+        'div#some',
+        'div#one.green',
+        'div.frown',
+        'ul.cheese:first-child',
+        'li.one.two.three',
+        'a#b.c.d:last-child',
+        ), (                              # should fail
+        'one',
+        'div# and',
+        'div. one',
+        ))
+
+When you do that, ``parse_rule`` sets up a verification test for each string.
+
+To get your very own factory function, call ``parse_rule = testing.parse_rule(__name__,
+the_grammar)`` (it needs your module's ``__name__`` in order to setup the
+functions in your ``global`` namespace, where py.test can recognize and run
+them.
+
+Then for each rule you want to test, call ``parse_rule(the_rule,
+passing_strings, failing_strings``.
+
+This method of incremental testing is really a boon while you are initially
+creating your grammar — this way, you don't have to complete the grammar
+before you test parts of it out.
+
+Now, in addition to just grammar testing, you should have some testing of your
+translation as well, but the nature of those tests depends completely on your
+specific project.

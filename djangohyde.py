@@ -21,9 +21,11 @@ def fix_tilde(lines):
             lines[i] = '^' * len(ln)
 
 def get_ident(text):
-    return re.match('^\s*', text).group()
+    return len(re.match('^\s*', text).group())
 
 def raw_code_blocks(lines):
+    '''Find code blocks that need to be escaped (the ones that use {{ or {%)
+    and escape them with {% raw %}'''
     good = []
     ident = None
     in_block = False
@@ -31,6 +33,7 @@ def raw_code_blocks(lines):
     for line in lines:
         if not in_block:
             if line.strip().startswith('.. code-block'):
+                print 'in!', line
                 block.append(line)
                 in_block = True
             else:
@@ -53,6 +56,7 @@ def raw_code_blocks(lines):
     return good
 
 def mark_body(text):
+    '''Mark text for images and excerpts.'''
     text = text.replace('\r\n', '\n')
     text = text.strip().split('\n')
     fix_tilde(text)
@@ -69,11 +73,11 @@ def mark_body(text):
     if image:
         image = ['{% mark image %}'] + image + ['{% endmark %}', '']
     if tease:
-        tease = ['{% mark exerpt %}'] + tease + ['{% endmark %}', '']
+        tease = ['{% mark excerpt %}'] + tease + ['{% endmark %}', '']
     return '\n'.join(image + tease + text)
 
 date_fmt = '%Y-%m-%d %H:%M:%S'
-date_outfmt = '%Y/%b/%d/'
+date_outfmt = '%Y-%b-%d-'
 
 list_tpl = '''---
 title: {}
@@ -119,11 +123,8 @@ status: {status}
             tags=tags,
             body = mark_body(data['body'].encode('utf8')))
     date = datetime.datetime.strptime(data['publish'], date_fmt)
-    output_listings(date, outdir)
-    postdir = os.path.join(outdir, date.strftime(date_outfmt)).lower()
-    if not os.path.exists(postdir):
-        os.makedirs(postdir)
-    fname = os.path.join(postdir, data['slug'] + '.html')
+    # output_listings(date, outdir)
+    fname = os.path.join(outdir, date.strftime(date_outfmt) + data['slug'] + '.html')
     print 'writing', fname
     open(fname, 'w').write(text)
 

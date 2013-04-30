@@ -1,0 +1,104 @@
+---
+title: 'Python Registrar'
+slug: python-registrar
+created: !!timestamp '2010-07-10 15:49:25'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/projects/logo_.png
+{% endmark %}
+
+{% mark excerpt %}
+Here's a small library I've been playing around with: registrar. I often find myself writing meta decorators:
+{% endmark %}
+
+
+.. code-block:: python
+
+    _reg = {}
+    def register(name):
+         def meta(func):
+              _reg[name] = func
+              return func
+         return meta
+
+Or some such thing. And that solution is very often enough. But, for the times when you need a bit more control, I've created `Registrar <http://jaredforsyth.com/projects/registrar/>`_. The situation that prompted me to write this was within the confines of a class -- and the functions were being "registered" before they became bound...
+
+Here's the registrar:
+
+.. code-block:: python
+
+    import types
+    class Registrar:
+        def __init__(self, swallow=False):
+            self.reg = {}
+            self.swallow = swallow
+
+        def register(self, *args, **kwds):
+            def meta(func):
+                self.add(func, args, kwds)
+                if not self.swallow:
+                    return func
+            return meta   
+        __call__ = register
+
+        def add(self, func, args, kwds):
+            self.reg[func] = (args, kwds)
+
+        def bind(self, inst):
+            res = {}
+            for func, value in self.reg.iteritems():
+                if callable(func):
+                    func = types.MethodType(func, inst, inst.__class__)
+                res[func] = value
+            return res
+
+
+And a subclass, if you want a name (or other id) associated w/ your function
+
+.. code-block:: python
+
+    class NamedRegistrar(Registrar):
+        def add(self, func, args, kwds):
+            if not args:
+                raise TypeError('at least one positional argument required (0 given)')
+            self.reg[args[0]] = (func, args[1:], kwds)
+            return func
+
+        def bind(self, inst):
+            res = {}
+            for name, value in self.reg.iteritems():
+                value = list(value)
+                if callable(value[0]):
+                    value[0] = types.MethodType(value[0], inst, inst.__class__)
+                res[name] = list(value)
+            return res
+
+But of course all you want is an honest application. So here's an example using event handling:
+
+.. code-block:: python
+
+    class Spam:
+        def __init__(self):
+            self.events = self._events.bind(self)
+
+            # or
+            self.shop = Shoppe()
+            for event, value in self._events.bind(self):
+                self.show.addEventHandler(event, value[0], **value[2])
+
+        ## setup events
+        _events = NamedRegistrar()
+
+        @_events('cheese', bubble=False)
+        def onCheese(self, baz):
+            pass
+
+        @_events('eggs')
+        def onEggs(self, baz):
+            return 'no eggs. cheese.'
+
+
+Has anyone done this before? Am a solving a problem that doesn't exist? Tell me in the comments.

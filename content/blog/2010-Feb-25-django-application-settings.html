@@ -1,0 +1,26 @@
+---
+title: 'Django application settings'
+slug: django-application-settings
+created: !!timestamp '2010-02-25 23:50:55'
+extends: blog-rst.j2
+status: public
+tags:
+    - django
+    -  dbsettings
+    -  settings
+    -  application
+---
+{% mark excerpt %}
+One thing that (it looks like) is missing in the django tradition is a generally adopted method for making user-friendly application-specific settings. And this feature is extremely key if we want to appeal to a broader audience; your average person *does not* want to have to edit a settings.py file in order to change [most] things. Yes, settings that would require a server restart should go there, but there are a vast number of settings which are UI/display related, and should be dynamically modifiable.
+{% endmark %}
+
+
+Examples from the public:
+
+http://oebfare.com/blog/2008/nov/07/app-settings/
+http://thisweekindjango.com/screencasts/episode/6/application-settings/
+
+I sent an email to the group detailing my feelings on the subject.
+
+dbsettings:
+http://stackoverflow.com/questions/1308034/admin-interface-editable-django-app-settings

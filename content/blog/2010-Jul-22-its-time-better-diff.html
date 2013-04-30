@@ -1,0 +1,55 @@
+---
+title: "It's time for a better diff"
+slug: its-time-better-diff
+created: !!timestamp '2010-07-22 10:23:24'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark excerpt %}
+``diff`` is one of those programs that's just been around *forever*, and that hasn't changed much b/c it's the best it can possibly be. ...right?
+{% endmark %}
+
+
+Sort of. For finding out which lines have changed between two files, there's none better (maybe). 40 (!) years of use has shown us this. But for *finding the difference* between two files? I argue that those two problems, which have been so long conflated, are actually not the same.
+
+Why do I care so much about this? Who uses diff, anyway? Well, *git*. *mercurial*. *svn*. The places that ``diff`` falls short are in dealing with *multiple conflicting changes* to a file. Oh, yeah; this post is about merge conflicts.
+
+If you will kindly consider the following diagram, I will present a case which *is covered* by both git and mercurial:
+
+.. image:: http://jaredforsyth.com/media/uploads/images/diffmerge.png
+
+Here's an example of changes to an essay, made on two different clones (or branches, or forks -- w/e). The first decides the "Donec justo..." should be moved up, and the second realizes that "Maecenas" should really be "Spam".
+
+Fortunately, automerge takes care of this instance, as it is fairly simple; there is only one commit on each side, and relatively little was done.
+
+For this next part, you'll be required to use your imagination (sorry, I didn't want to diagram it), or you can just hark back to the last time a merge failed on you.
+
+Say I've got a javascript file, and I rearrange the functions to be in a more sensible arrangement (grouping like functions together spatially). And I commit. And then I fix some bugs, committing for each one.
+
+My friend Jason fixes some *completely different* bugs, which wouldn't normally have interfered with my changes, had I only not moved the functions around.
+
+And the merge fails, which makes sense from the vcs' point of view, but *I* know that it really shouldn't have failed -- we didn't modify conflicting *logical lines of code*, we just modified conflicting *physical lines of text*. See the difference? Git doesn't. But it should.
+
+I know that there are times when merges should fail; when people modify the same thing, and a human has to step in and decide which modifications to give preference. But there are also several cases where merges *shouldn't* fail, and yet they do.
+
+If you want to get really fancy, I can envision our vcs actually **grokking syntax**, realizing that
+
+.. code-block:: javascript
+
+    if (name=="Cain") alert("Oh no!");
+
+and
+
+.. code-block:: javascript
+
+    if (name == "Cain")
+    {
+        alert( "Oh no!" );
+    }
+
+are syntactically equivalent, and conduct merges accordingly. (The opportunity for cases such for this is greatly increased with languages such as C, Java, and Javascript that don't pay attention to whitespace).
+
+Now, I realize that with greater merge power comes greater flexibility...I mean responsibility. Opportunity for things to get totally messed up. To fix that, you can specify that if a merge fails and "supermerge" thinks its found a solution, that solution pops up for you to vet (in mercurial, a merge never gets auto committed -- you have to do that yourself). In any event, you've got a pre-commit test suite, right? =)
+
+I really love version control, and it makes all of our lives easier. This is just one area where I think there's some interesting room for improvement.

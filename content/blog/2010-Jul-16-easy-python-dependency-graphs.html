@@ -1,0 +1,54 @@
+---
+title: 'Easy python dependency graphs'
+slug: easy-python-dependency-graphs
+created: !!timestamp '2010-07-16 13:41:53'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/200px-Directed.svg.png
+{% endmark %}
+
+{% mark excerpt %}
+I was looking around for ways to get a look at a python dependency graph, and found `this site <http://www.tarind.com/depgraph.html>`_ which actually does a pretty good job. The only gripe I have regards the command you must use:
+{% endmark %}
+
+
+.. code-block:: bash
+
+   python py2depgraph.py path/to/my/script.py | python depgraph2dot.py | dot -T png -o depgraph.png
+
+Couldn't be easier, right? ...
+
+Anyway, I added a bit of sugar on top of it.
+
+First I put the two files they provided in ~/clone/modgraph
+
+.. code-block:: bash
+
+    mkdir ~/clone/modgraph
+    cd ~/clone/modgraph
+    wget http://www.tarind.com/py2depgraph.py
+    wget http://www.tarind.com/depgraph2dot.py
+    touch ~/bin/modgraph
+    chmod +x ~/bin/modgraph
+
+and then in ~/bin/modgraph
+
+.. code-block:: bash
+
+    if [ -z "$2" ]
+    then
+        echo "usage: modgraph somepythonfile.py out.png"
+        exit
+    fi
+    python ~/clone/modgraph/py2depgraph.py $1 | python ~/clone/modgraph/depgraph2dot.py | dot -T png -o $2
+
+And of course to use it:
+
+.. code-block:: bash
+
+    modgraph myfile.py outfile.png
+
+Is there another module that does this better? Should I package this up and throw it on pypi?

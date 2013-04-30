@@ -87,3 +87,7 @@ tagger:
             archive_extension: html
             meta:
                 listable: false
+restructuredtext:
+    highlight_source: true
+    extensions:
+        - youtube_rst

@@ -1,0 +1,58 @@
+Index: docutils/parsers/rst/directives/images.py
+===================================================================
+--- docutils/parsers/rst/directives/images.py	(revision 6317)
++++ docutils/parsers/rst/directives/images.py	(working copy)
+@@ -17,9 +17,12 @@
+ from docutils.parsers.rst.roles import set_classes
+ 
+ try:
+-    import Image as PIL                        # PIL
++    import PIL
+ except ImportError:
+-    PIL = None
++    try:
++        import Image as PIL                        # PIL
++    except ImportError:
++        PIL = None
+ 
+ 
+ class Image(Directive):
+Index: docutils/writers/html4css1/__init__.py
+===================================================================
+--- docutils/writers/html4css1/__init__.py	(revision 6317)
++++ docutils/writers/html4css1/__init__.py	(working copy)
+@@ -20,9 +20,12 @@
+ import time
+ import re
+ try:
+-    import Image                        # check for the Python Imaging Library
++    from PIL import Image                        # check for the Python Imaging Library
+ except ImportError:
+-    Image = None
++    try:
++        import Image
++    except ImportError:
++        Image = None
+ import docutils
+ from docutils import frontend, nodes, utils, writers, languages, io
+ from docutils.transforms import writer_aux
+Index: docutils/writers/odf_odt/__init__.py
+===================================================================
+--- docutils/writers/odf_odt/__init__.py	(revision 6317)
++++ docutils/writers/odf_odt/__init__.py	(working copy)
+@@ -66,9 +66,12 @@
+ #
+ # Is the PIL imaging library installed?
+ try:
+-    import Image
+-except ImportError, exp:
+-    Image = None
++    from PIL import Image
++except ImportError:
++    try:
++        import Image
++    except ImportError:
++        Image = None
+ 
+ ## import warnings
+ ## warnings.warn('importing IPShellEmbed', UserWarning)

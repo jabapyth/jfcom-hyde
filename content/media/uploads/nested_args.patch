@@ -1,0 +1,14 @@
+Index: trunk/pyjs/src/pyjs/translator.py
+===================================================================
+--- trunk/pyjs/src/pyjs/translator.py	(revision 2422)
++++ trunk/pyjs/src/pyjs/translator.py	(working copy)
+@@ -2619,6 +2619,9 @@
+         arg_names = []
+         for arg in node.argnames:
+             if isinstance(arg, tuple):
++                raise Exception, ('Syntax error at line %d: ' % node.lineno + \
++                                 'pyjs doesnt currently support nested function arguments, ' + \
++                                 'e.g. def foo((a, b), c): and neither will python 3')
+                 for a in arg:
+                     arg_names.append(self.add_lookup('variable', a, a))
+             else:

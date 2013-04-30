@@ -1,0 +1,68 @@
+---
+title: 'Convert videos with ffmpeg'
+slug: convert-videos-ffmpeg
+created: !!timestamp '2009-01-06 14:07:58'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark image %}
+.. image:: http://ffmpeg.mplayerhq.hu/ffmpeg-logo.png
+   :width: 306
+   :height: 84
+   :alt: FFmpeg logo
+{% endmark %}
+
+{% mark excerpt %}
+`FFmpeg <http://ffmpeg.mplayerhq.hu/>`_ is a wonderful   tool which every 
+aspiring linux guru should get familiar with. The thing it does, just about 
+better   than anything else, is handle media files. You can mux them, demux 
+them, encode/decode, resize, compress  .....you name it. 
+{% endmark %}
+
+
+Unfortunately, all that versatility means that it can be somewhat confusing, 
+if, say *all you want   to do is convert this one file*. 
+
+Well, actually, most of the time, ffmpeg will play nice, and theres this one 
+simple command that will   do you: 
+
+.. code-block:: python
+
+    ffmpeg -i "infile.abc" "outfile.cba"
+
+In this manner, you can convert wav to mp3, wmv to avi, or flv to mpg. 
+
+The problems start, of course, when ffmpeg starts spitting out errors. This 
+happens when the settings   for your infile are incompatible woth the format of 
+your outfile...so the solution is to manually set   those settings. 
+
+if it complains about "timebase not supported by mpeg 4 standard", try adding 
+this parameter (before   the outfile param): 
+
+.. code-block:: python
+
+    -r 25
+
+this sets the framerate to the ffmpeg default 
+
+Another error I got was "Sampling rate 11025 is not allowed in mp2" 
+
+to fix that, just set the sampling rate to the default with 
+
+.. code-block:: python
+
+    -ar 44100
+
+Another handy option is the file size limit -- great for compressing a video, 
+when you dont want to   mess with bitrates and framerates and the like. The 
+file size is specified in bytes, thus 
+
+.. code-block:: python
+
+    ffmpeg -i "large.mov" -fs 10000000 -s qvga "small.avi"
+
+the "-s qvga" parameter resizes the video as well -- down to 320x240. 
+
+For extensive technical documentation for ffmpeg, `go here 
+<http://ffmpeg.mplayerhq.hu/ffmpeg-doc.html>`_.

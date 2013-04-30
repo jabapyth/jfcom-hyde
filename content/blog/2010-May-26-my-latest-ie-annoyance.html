@@ -1,0 +1,22 @@
+---
+title: 'My latest IE annoyance'
+slug: my-latest-ie-annoyance
+created: !!timestamp '2010-05-26 13:40:24'
+extends: blog-rst.j2
+status: draft
+
+---
+{% mark excerpt %}
+Wow. I really hate Internet Explorer. There are so many *bugs*! It's a nightmare to program for, even now!
+{% endmark %}
+
+
+anyway; consider the following.
+
+var b = 3;
+var a = function b(){};
+alert(b);
+
+any standards-sompliant browser would alert "3"; but no -- IE leaks the function name into the surrounding namespace, and in fact creates *two different functions*. Really, microsoft?
+
+http://yura.thinkweb2.com/named-function-expressions/

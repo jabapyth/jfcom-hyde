@@ -1,0 +1,66 @@
+---
+title: 'Event Bubbling example'
+slug: event-bubbling-example
+created: !!timestamp '2009-12-28 22:55:14'
+extends: blog-rst.j2
+status: public
+
+---
+{% mark excerpt %}
+Javascript events are handled in a very particular way...
+a way that isn't always immediately intuitive. For an excellent description of just how this all works, check out `this article <http://www.quirksmode.org/js/events_order.html>`_ over on quirksmode.org. The purpose of this post is to give you a practical knowledge of how this actually works, as well as point out a few quirks.
+{% endmark %}
+
+
+break
+
+To start, here's a few nested divs, which each have a 'mouseover' event 
+attached -- when the event is fired, it will insert 'leave x' into the 
+following textbox. Go ahead and try it -- mouse over one of the divs, and see 
+the order (and number) of events fired. 
+
+**OnMouseOver Example**
+^^^^^^^^^^^^^^^^^^^^^^^
+
+a1
+
+a2
+
+a3
+
+a4
+
+ So, what you might notice is that you get a lot more events fired than you 
+would expect. Moving your mouse from a2 to a3 results in 'enter a3', 'enter 
+a2', 'enter a1'. Even more interestingly, moving from a3 to a2 produces 'enter 
+a2', again, along with 'enter a1'. So if you attached something meaningful to 
+the a1 onmouseover, you would get many more than you expected. An mouseout is 
+just as strange. 
+
+**OnMouseOut Example**
+^^^^^^^^^^^^^^^^^^^^^^
+
+a1
+
+a2
+
+a3
+
+a4
+
+So going from a2 to a3 means you're *leaving* a2. and a1. But wait, didn't you 
+enter them as well? As it turns out, you did both. Thanks to bubbling, things 
+get get really complicated, really fast. As a case in point, check out the next 
+example: both events combined. Playing around with it should give you a pretty 
+good idea of how it all works. 
+
+a1
+
+a2
+
+a3
+
+a4
+
+To highlight one example, going from a2 to a1 means 'leave a2', 'leave a1', and 
+then 'enter a1' again.

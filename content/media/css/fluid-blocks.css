@@ -26,6 +26,10 @@
         margin-top: -10px;
         margin-bottom: 5px;
         float: right; }
+      #content #main-content .post img {
+        width: 100%!important; }
+      #content #main-content .post object {
+        width: 100%!important; }
   #content #right-sidebar {
     padding: 10px 20px;
     box-sizing: border-box;

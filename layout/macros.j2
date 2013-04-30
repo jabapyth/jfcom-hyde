@@ -16,7 +16,10 @@
     {% endfor %}
 {% endif %}
 </ul>
-<a href="{{ content_url(res.url) }}">{{ post.image|markdown|typogrify }}</a>
+<a href="{{ content_url(res.url) }}">
+{% filter restructuredtext %}
+{{ post.image }}
+{% endfilter %}</a>
 {% filter restructuredtext %}
 {{ post.excerpt }}
 {% endfilter %}
