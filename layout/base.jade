@@ -4,9 +4,21 @@ html
         title
             block head_title
                 | Jared | Forsyth
+        link(rel="openid.server", href="http://www.myopenid.com/server")
+        link(rel="openid.delegate", href="http://jabapyth.myopenid.com/")
         block head_css
             link(rel='stylesheet', href='/media/bootstrap/css/bootstrap.css')
             link(rel='stylesheet', href='/media/css/general.css')
         block head_js
     body(class='{% block body_class %}{% endblock %}')
         block body
+
+
+script(type="text/javascript")
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+script(type="text/javascript")
+    try {
+    var pageTracker = _gat._getTracker("UA-7002862-1");
+    pageTracker._trackPageview();
+    } catch(err) {}

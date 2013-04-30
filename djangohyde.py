@@ -124,7 +124,7 @@ status: {status}
             body = mark_body(data['body'].encode('utf8')))
     date = datetime.datetime.strptime(data['publish'], date_fmt)
     # output_listings(date, outdir)
-    fname = os.path.join(outdir, date.strftime(date_outfmt) + data['slug'] + '.html')
+    fname = os.path.join(outdir, date.strftime(date_outfmt).lower() + data['slug'] + '.html')
     print 'writing', fname
     open(fname, 'w').write(text)
 
