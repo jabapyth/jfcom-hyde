@@ -4,7 +4,9 @@ slug: songbird-recipe-playlists
 created: !!timestamp '2009-02-02 22:24:55'
 extends: blog-rst.j2
 status: public
-
+tags:
+- songbird
+- tip
 ---
 {% mark excerpt %}
 Here's a quick javascript+XPCOM recipe on how to get a list of the user's 
@@ -12,7 +14,7 @@ playlists in a songbird extension.
 {% endmark %}
 
 
-.. code-block:: python
+.. code-block:: javascript
 
     function getUserPlaylists() {
         var sLM = Components.classes["@songbirdnest.com/Songbird/library/Manager;1"]  
@@ -41,7 +43,7 @@ playlists in a songbird extension.
     }
 
 Once you get your lists of playlists, you can start one playing with 
-playPlaylist(plist,index) or check the user-visible names with plist.name. 
+``playPlaylist(plist,index)`` or check the user-visible names with ``plist.name``. 
 
 For more info on the songbird extension API, hit `the docs 
 <http://developer.songbirdnest.com/add-on-api/docs/trunk/>`_ or mozilla's 

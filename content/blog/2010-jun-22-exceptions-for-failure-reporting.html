@@ -4,14 +4,20 @@ slug: exceptions-for-failure-reporting
 created: !!timestamp '2010-06-22 11:13:57'
 extends: blog-rst.j2
 status: public
-
+tags:
+- benchmark
+- exceptions
+- error handling
+- performance
+- python
 ---
 {% mark excerpt %}
-I was wondering how much (if any) of a hit performance would take were I to make excessive use of exceptions, not merely for error reporting, but also for reporting failure (in place of, say, returning None to indicate failure).
-{% endmark %}
-
+I was wondering how much (if any) of a hit performance would take were I to
+make excessive use of exceptions, not merely for error reporting, but also for
+reporting failure (in place of, say, returning None to indicate failure).
 
 The results were pretty conclusive.
+{% endmark %}
 
 ::
 
@@ -32,4 +38,45 @@ The results were pretty conclusive.
     returning is 7.218662x faster
 
 And here's the code:
+
+.. code-block:: python
+
+    import time
+
+    def timeit(x, num=1000):
+        t = time.time()
+        [x() for i in xrange(num)]
+        return time.time()-t
+
+    def showtime(xs, num=1000):
+        res = [(x, timeit(x, num)) for x in xs]
+        for f, one in res:
+            print '%s x %d\t' % (f.__name__, num), one
+        for f, one in res[1:]:
+            print '%s is %03fx faster' % (f.__name__, res[0][1] / one)
+        print
+
+    def excepting():
+        try:
+            res = e2()
+        except:
+            return None
+        return 1
+
+    def e2():
+        raise Exception
+
+    def returning():
+        res = r2()
+        if res is None:
+            return None
+        return 1
+
+    def r2():
+        return None
+
+    showtime((excepting, returning), 1000)
+    showtime((excepting, returning), 10000)
+    showtime((excepting, returning), 100000)
+    showtime((excepting, returning), 1000000)
 

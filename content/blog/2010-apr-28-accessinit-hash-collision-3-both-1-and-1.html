@@ -4,23 +4,44 @@ slug: accessinit-hash-collision-3-both-1-and-1
 created: !!timestamp '2010-04-28 11:43:54'
 extends: blog-rst.j2
 status: public
-
+tags:
+- troubleshooting
+- PIL
+- python
+- import
 ---
 {% mark excerpt %}
-I recently ran into a problem, which didn't immediately make itself clear (this is one of the troubles that django causes me -- too often the error reporting is just *not there*, and forces me to do a good deal of debugging to even determine where the error is occurring).
+I recently ran into a problem, which didn't immediately make itself clear
+(this is one of the troubles that django causes me -- too often the error
+reporting is just *not there*, and forces me to do a good deal of debugging to
+even determine where the error is occurring).
 {% endmark %}
 
 
 
-After facing several unpromising "500" errors (well, they were really 404's "page 500.shtml not found..."), I broke down, tunneled in and started the devel server. At this point, the error was made plain; python was all-out *dying*, with the cryptic message ``AccessInit: hash collision: 3 for both 1 and 1``.
+After facing several unpromising "500" errors (well, they were really 404's
+"page 500.shtml not found..."), I broke down, tunneled in and started the
+devel server. At this point, the error was made plain; python was all-out
+*dying*, with the cryptic message ``AccessInit: hash collision: 3 for both 1
+and 1``.
 
 [for the impatient, you can jump down to `The Solution`_ ]
 
-A good deal of googling later found no satisfactory answers, but `several <http://aspn.activestate.com/ASPN/Mail/Message/image-sig/3841039>`_ `unanswered <http://groups.google.com/group/satchmo-users/browse_thread/thread/b763986876a131cf/f0d9759524270000?hl=en&lnk=gst&q=Daniel+Hirsch#f0d9759524270000>`_ `questions <http://www.mail-archive.com/image-sig@python.org/msg03083.html>`_ (hence this post).
+A good deal of googling later found no satisfactory answers, but `several
+<http://aspn.activestate.com/ASPN/Mail/Message/image-sig/3841039>`_
+`unanswered
+<http://groups.google.com/group/satchmo-users/browse_thread/thread/b763986876a131cf/f0d9759524270000?hl=en&lnk=gst&q=Daniel+Hirsch#f0d9759524270000>`_
+`questions <http://www.mail-archive.com/image-sig@python.org/msg03083.html>`_
+(hence this post).
 
-What I got from these posts was that **somehow, PIL was getting imported twice**, or something, and was **choking because of it**. But the question remained as to *how* this could happen.
+What I got from these posts was that **somehow, PIL was getting imported
+twice**, or something, and was **choking because of it**. But the question
+remained as to *how* this could happen.
 
-So, I dove into the source code, and several unscrupulous `print statements <http://en.wikipedia.org/wiki/Debugging#Various_debugging_techniques>`_ later, I traced the problem down to my use of the "Pygments" module, which in turn uses PIL.
+So, I dove into the source code, and several unscrupulous `print statements
+<http://en.wikipedia.org/wiki/Debugging#Various_debugging_techniques>`_ later,
+I traced the problem down to my use of the "Pygments" module, which in turn
+uses PIL.
 
 The Problem
 ----------------

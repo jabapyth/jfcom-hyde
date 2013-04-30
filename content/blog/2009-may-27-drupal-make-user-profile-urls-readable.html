@@ -4,12 +4,14 @@ slug: drupal-make-user-profile-urls-readable
 created: !!timestamp '2009-05-27 08:07:24'
 extends: blog-rst.j2
 status: public
-
+tags:
+- drupal
+- pathauto
+- pretty-urls
+- ux
 ---
 {% mark excerpt %}
 Here's a tip for making you're community site that much more user friendly:
-{% endmark %}
-
 
 change this:
 
@@ -19,18 +21,19 @@ to this:
 
      *http://example.com/users/joe-shmo*
 
+{% endmark %}
+
 Much better, right?
 
-To accomplish this, we will make use of the excellent `Pathauto <http://drupal.org/project/pathauto>`_ module, which, among other things, allows us to alias user profile urls.
+To accomplish this, we will make use of the excellent `Pathauto
+<http://drupal.org/project/pathauto>`_ module, which, among other things,
+allows us to alias user profile urls.
 
-Once pathauto is installed and enabled, go to *admin/build/path/pathauto* (*admin/settings/pathauto* in drupal 5), and select **"
+Once pathauto is installed and enabled, go to *admin/build/path/pathauto*
+(*admin/settings/pathauto* in drupal 5), and select **"Bulk generate aliases
+for users that are not aliased"** under the "user path settings" dropdown.
 
-.. image:: file:///tmp/URL%20aliases%20%7C%20YAAlumni%20Test%20Page.jpg
-
-Bulk generate aliases for users that are not aliased"** under the "user path settings" dropdown.
-
-.. image:: /media/images/URL%20aliases%20%7C%20YAAlumni%20Test%20Page-1.jpg
-
- This will create the aliases for all your current users (future users will be aliased as they are registered).
+This will create the aliases for all your current users (future users will be
+aliased as they are registered).
 
 Save the configuration, and you're all set!

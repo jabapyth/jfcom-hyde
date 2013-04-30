@@ -1,20 +1,30 @@
 ---
-title: 'Flatpages crazy 404'
+title: 'Django Flatpages crazy 404'
 slug: flatpages-crazy-404
 created: !!timestamp '2010-02-25 00:52:53'
 extends: blog-rst.j2
 status: public
-
+tags:
+- django
+- troubleshooting
+- flatpages
 ---
 {% mark excerpt %}
 Wow, they're not kidding about "Make sure to have leading and trailing slashes"...Don't know what I'm talking about?
+
+That's the 'help text' on the "Create flat page" form -- and boy, do they mean
+it. I just spent the last [longer than I care to admit] trying to figure out
+*why* flatpages was giving me a 404! I had installed and configured everything
+correctly, and, *darn it*, flatpages is about the simplest app out there.
+*What is wrong with me?*
 {% endmark %}
 
+Well, it turns out I entered "/about" as the url for the page -- extremely
+foolish of me, I know. What really floored me, though, was that the form
+didn't complain, and it gave me a link to "view this flatpage on site ->",
+which invariably led to a 404.
 
-That's the 'help text' on the "Create flat page" form -- and boy, do they mean it. I just spent the last [longer than I care to admit] trying to figure out *why* flatpages was giving me a 404! I had installed and configured everything correctly, and, *darn it*, flatpages is about the simplest app out there. *What is wrong with me?*
-
-Well, it turns out I entered "/about" as the url for the page -- extremely foolish of me, I know. What really floored me, though, was that the form didn't complain, and it gave me a link to "view this flatpage on site ->", which invariably led to a 404.
-
-IMO there should definitely be an error thrown if you're stupid enough not to include the trailing slash [submitting ticket now].
+IMO there should definitely be an error thrown if you're stupid enough not to
+include the trailing slash [submitting ticket now].
 
 **edit:** sent in a patch, so hopefully this we be dealt with

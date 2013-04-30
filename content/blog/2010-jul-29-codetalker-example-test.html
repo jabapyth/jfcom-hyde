@@ -4,13 +4,19 @@ slug: codetalker-example-test
 created: !!timestamp '2010-07-29 14:08:10'
 extends: blog-rst.j2
 status: public
-
+tags:
+- codetalker
+- tutorial
+- testing
+- python
 ---
+{% mark image %}
+.. image:: http://jaredforsyth.com/media/projects/navajo.gif
+{% endmark %}
+
 {% mark excerpt %}
 This is the last in a four-part series, in which I demonstrate how to build a
 CSS parser using CodeTalker_:
-{% endmark %}
-
 
 - tokenize_
 - parse_
@@ -21,6 +27,7 @@ CSS parser using CodeTalker_:
 .. _tokenize: http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/
 .. _translate: http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/
 .. _CodeTalker: http://jaredforsyth.com/projects/codetalker/
+{% endmark %}
 
 To get the code for this:
 

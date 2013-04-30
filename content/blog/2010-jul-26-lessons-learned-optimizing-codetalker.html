@@ -4,7 +4,12 @@ slug: lessons-learned-optimizing-codetalker
 created: !!timestamp '2010-07-26 12:00:00'
 extends: blog-rst.j2
 status: public
-
+tags:
+- editorial
+- codetalker
+- optimization
+- python
+- performance
 ---
 {% mark excerpt %}
 As `per request
@@ -13,7 +18,6 @@ I've decided to write down what I've learned from my `optimization adventures
 <http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/>`_
 with `CodeTalker <http://jaredforsyth.com/projects/codetalker/>`_.
 {% endmark %}
-
 
 Intro
 =====
@@ -155,7 +159,7 @@ organization to a more OO friendly structure, and I took a big performance
 hit.
 
 moving from explicit Tokens to regex was *huge*. Moving from regex to
-hard-coded C was another huge
+hard-coded C was another huge.
 
 Cython
 ------
@@ -165,3 +169,4 @@ Maybe I'm unfounded in this, but I like to have control when I'm only
 working with C data types. When python exceptions/objects get involved, I
 owe everything to Cython. [one weird thing — cython's "hello world" ``print
 "hello world"`` is 1204 lines of C?? and the hello.so is 26k??]
+

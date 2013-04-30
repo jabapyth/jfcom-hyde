@@ -4,13 +4,18 @@ slug: error-installing-xdebug-phpize-not-found
 created: !!timestamp '2009-08-15 17:18:17'
 extends: blog-rst.j2
 status: public
-
+tags:
+- troubleshooting
+- xdebug
 ---
 {% mark excerpt %}
-So I ran "sudo pecl install xdebug" like a good linux user, but was stymied when it threw the error "phpize not found", especially when "sudo apt-get install phpize" yielded no friuts (darn it, that usually works!)
+So I ran ``sudo pecl install xdebug`` like a good linux user, but was stymied
+when it threw the error ``phpize not found``, especially when ``sudo apt-get
+install phpize`` yielded no friuts (darn it, that usually works!)
 {% endmark %}
 
+The magic package actually happens to be "php5-dev", so a quick ``sudo apt-get
+install php5-dev`` fixes everything!
 
-The magic package actually happens to be "php5-dev", so a quick "sudo apt-get install php5-dev" fixes everything!
-
-Now wasn't that simple...of course it made me waste a half hour searching, but, never again ;)
+Now wasn't that simple...of course it made me waste a half hour searching, but,
+never again ;)

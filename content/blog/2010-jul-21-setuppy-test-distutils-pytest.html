@@ -4,14 +4,26 @@ slug: setuppy-test-distutils-pytest
 created: !!timestamp '2010-07-21 12:14:34'
 extends: blog-rst.j2
 status: public
-
+tags:
+- setuptools
+- python
+- build
+- tip
+- testing
+- unittesting
 ---
 {% mark excerpt %}
-One thing that has bothered me about distutils is its lack of a "test" command -- it seems strange to me that setuptools has it but distutils does not...
+One thing that has bothered me about distutils is its lack of a "test" command
+-- it seems strange to me that setuptools has it but distutils does not...
+
+Anyway I `looked around
+<http://www.eggheadcafe.com/software/aspnet/36151038/does-distutils-support-python-setuppy-test.aspx>`_
+to `make sure <http://da44en.wordpress.com/2002/11/22/using-distutils/>`_ it
+`really wasn't there
+<http://mail.python.org/pipermail/distutils-sig/2000-September/001528.html>`_
+(I couldn't believe it at first), but finally, convinced, `I wrote my own
+<http://github.com/jabapyth/disttest>`_.
 {% endmark %}
-
-
-Anyway I `looked around <http://www.eggheadcafe.com/software/aspnet/36151038/does-distutils-support-python-setuppy-test.aspx>`_ to `make sure <http://da44en.wordpress.com/2002/11/22/using-distutils/>`_ it `really wasn't there <http://mail.python.org/pipermail/distutils-sig/2000-September/001528.html>`_ (I couldn't believe it at first), but finally, convinced, `I wrote my own <http://github.com/jabapyth/disttest>`_.
 
 **What's cool about this:**
 
@@ -48,8 +60,6 @@ Here's the code used to add unittest support:
             None, None, [unittest.__file__, tester.test_suite],
             testLoader = unittest.TestLoader()
         )
-
-
 
 Anyway, I'm calling it "disttest"...
 

@@ -4,17 +4,18 @@ slug: vim-tip-day-copy-current-file-name
 created: !!timestamp '2010-04-17 13:05:07'
 extends: blog-rst.j2
 status: public
-
+tags:
+- vim
+- tip
 ---
 {% mark excerpt %}
 If you want to copy/paste the current filename, the magic register "%" is just what you need.
-{% endmark %}
-
 
 It's as simple as "%p (which means p[aste] from the register %)
 ::
 
     "%p
+{% endmark %}
 
 Or if you're in insert mode, <C-r>% will do the same.
 
@@ -31,3 +32,6 @@ roughly translated::
    <C-r>% paste the contents of %
    <Esc>  exit insert mode
    "fdd   then delete that line and put it into f
+
+Note: this might not exactly work with indenting...
+

@@ -8,13 +8,28 @@ status: draft
 ---
 {% mark excerpt %}
 So there hasn't been too much going on here for about the past month :)
+
+At the beginning of may, I started working on the front-end for the GameCC
+Editor, and Pyjamas caught my eye -- my experiences with javascript are often
+fraught with frustration at the inheritance system there, so I though PyJamas
+would be the perfect fit -- python input, javascript output, everyone's happy!
 {% endmark %}
 
+Unfortunately my initial experiences playing around with pyjamas were less than
+enjoyable. In *running one of there examples*, the build worked, but the output
+javascript was broken. To compound the problem, as I traced through the
+javascript, I discovered **minimal error/sanity checking on the javascript
+side**; things like passing undefined around as arguments weren't even checked.
 
-At the beginning of may, I started working on the front-end for the GameCC Editor, and Pyjamas caught my eye -- my experiences with javascript are often fraught with frustration at the inheritance system there, so I though PyJamas would be the perfect fit -- python input, javascript output, everyone's happy!
+When I finally tracked down the bug, (which was actually in their compiler) I
+wasn't completely put off; in fact I was all ready to jump in for some core
+development, fix the problems I'd seen and generally make the world a better
+place ;).
 
-Unfortunately my initial experiences playing around with pyjamas were less than enjoyable. In *running one of there examples*, the build worked, but the output javascript was broken. To compound the problem, as I traced through the javascript, I discovered **minimal error/sanity checking on the javascript side**; things like passing undefined around as arguments weren't even checked.
-
-When I finally tracked down the bug, (which was actually in their compiler) I wasn't completely put off; in fact I was all ready to jump in for some core development, fix the problems I'd seen and generally make the world a better place ;).
-
-Jumping into the code wasn't as straightforward as I had imagined, and I soon decided that what was needed (or at least what I wanted) was a ground-up rewrite. Perhaps I was premature in this decision, but the damage is done...and PJs was what I came up with! Over the past month I've been busy bringing PJs from a twinkle in my eye to a full-fledged conversion solution. For a quick look at what It can currently do, take a look at `the tests directory <http://github.com/jabapyth/PJs/tree/master/test/py/>`_
+Jumping into the code wasn't as straightforward as I had imagined, and I soon
+decided that what was needed (or at least what I wanted) was a ground-up
+rewrite. Perhaps I was premature in this decision, but the damage is done...and
+PJs was what I came up with! Over the past month I've been busy bringing PJs
+from a twinkle in my eye to a full-fledged conversion solution. For a quick
+look at what It can currently do, take a look at `the tests directory
+<http://github.com/jabapyth/PJs/tree/master/test/py/>`_

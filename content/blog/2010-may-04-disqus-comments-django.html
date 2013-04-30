@@ -4,7 +4,14 @@ slug: disqus-comments-django
 created: !!timestamp '2010-05-04 21:41:29'
 extends: blog-rst.j2
 status: public
-
+tags:
+- disqus
+- django
+- python
+- blog
+- webdev
+- comments
+- tip
 ---
 {% mark image %}
 .. image:: http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg
@@ -16,13 +23,12 @@ status: public
 Recently I finally got around to adding comments to this blog; `disqus
 <http://disqus.com>`_ made it so easy that I didn't really have an excuse to
 keep putting it off ;)
-{% endmark %}
-
 
 When I first made this blog...a few months ago, I was simultaneously
 discovering `django <http://djangoproject.com>`_ (they say the way to learn
 the ropes in django is to create a blogging engine) and wasn't quite satisfied
 with the readily available comments solutions. 
+{% endmark %}
 
 I heard from several places that django.contrib.comments has a problem with
 taking you out of context if the form needs errors corrected, which really

@@ -1,11 +1,11 @@
-{% extends "base.j2" %}
+{% extends "base.jade" %}
 
 {% block main %}
 <section class="archives">
 <h1 class="tag title">{{ tag.name }}</h1>
 <ul class="posts clear">
 {% for resource in walker() -%}
-{% if not res.status or res.status == 'public' %}
+{% if not res.meta.status or res.meta.status == 'public' %}
 <li class="post clear">
     <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
         {{ resource.meta.created.strftime('%a, %d %b %Y') }}

@@ -4,7 +4,11 @@ slug: python-registrar
 created: !!timestamp '2010-07-10 15:49:25'
 extends: blog-rst.j2
 status: public
-
+tags:
+- announcing
+- project
+- python
+- decorators
 ---
 {% mark image %}
 .. image:: http://jaredforsyth.com/media/projects/logo_.png
@@ -12,8 +16,6 @@ status: public
 
 {% mark excerpt %}
 Here's a small library I've been playing around with: registrar. I often find myself writing meta decorators:
-{% endmark %}
-
 
 .. code-block:: python
 
@@ -24,7 +26,11 @@ Here's a small library I've been playing around with: registrar. I often find my
               return func
          return meta
 
-Or some such thing. And that solution is very often enough. But, for the times when you need a bit more control, I've created `Registrar <http://jaredforsyth.com/projects/registrar/>`_. The situation that prompted me to write this was within the confines of a class -- and the functions were being "registered" before they became bound...
+Or some such thing.{% endmark %} And that solution is very often enough. But,
+for the times when you need a bit more control, I've created `Registrar
+<http://jaredforsyth.com/projects/registrar/>`_. The situation that prompted me
+to write this was within the confines of a class -- and the functions were
+being "registered" before they became bound...
 
 Here's the registrar:
 
@@ -100,5 +106,5 @@ But of course all you want is an honest application. So here's an example using 
         def onEggs(self, baz):
             return 'no eggs. cheese.'
 
-
-Has anyone done this before? Am a solving a problem that doesn't exist? Tell me in the comments.
+Has anyone done this before? Am a solving a problem that doesn't exist? Tell me
+in the comments.

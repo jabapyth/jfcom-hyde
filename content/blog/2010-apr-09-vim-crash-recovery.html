@@ -4,12 +4,15 @@ slug: vim-crash-recovery
 created: !!timestamp '2010-04-09 12:02:01'
 extends: blog-rst.j2
 status: public
-
+tags:
+- vim
+- sessions
+- tip
 ---
+
 {% mark excerpt %}
 Currently the host I use (bluehost) likes to SIGKILL my processes if they run too long (in an ssh session). This makes perfect sense from their point of view -- it's a shared hosting situation, so they don't want processes hogging resources -- but it can get pretty annoying, especially as I usually have several buffers open in split windows.
 {% endmark %}
-
 
 Solution! I now have vim automatically save my session on exit. I put the following line in my .vimrc
 ::

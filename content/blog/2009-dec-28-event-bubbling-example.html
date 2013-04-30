@@ -3,16 +3,13 @@ title: 'Event Bubbling example'
 slug: event-bubbling-example
 created: !!timestamp '2009-12-28 22:55:14'
 extends: blog-rst.j2
-status: public
+status: draft
 
 ---
 {% mark excerpt %}
 Javascript events are handled in a very particular way...
 a way that isn't always immediately intuitive. For an excellent description of just how this all works, check out `this article <http://www.quirksmode.org/js/events_order.html>`_ over on quirksmode.org. The purpose of this post is to give you a practical knowledge of how this actually works, as well as point out a few quirks.
 {% endmark %}
-
-
-break
 
 To start, here's a few nested divs, which each have a 'mouseover' event 
 attached -- when the event is fired, it will insert 'leave x' into the 
@@ -30,7 +27,7 @@ a3
 
 a4
 
- So, what you might notice is that you get a lot more events fired than you 
+So, what you might notice is that you get a lot more events fired than you 
 would expect. Moving your mouse from a2 to a3 results in 'enter a3', 'enter 
 a2', 'enter a1'. Even more interestingly, moving from a3 to a2 produces 'enter 
 a2', again, along with 'enter a1'. So if you attached something meaningful to 

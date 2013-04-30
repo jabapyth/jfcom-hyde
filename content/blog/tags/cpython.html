@@ -1,0 +1,10 @@
+---
+extends: false
+listable: false
+
+---
+
+{% set tag = site.tagger.tags['cpython'] %}
+{% set source = site.content.node_from_relative_path('blog') %}
+{% set walker = source['walk_resources_tagged_with_cpython'] %}
+{% extends "tagged_posts.j2" %}

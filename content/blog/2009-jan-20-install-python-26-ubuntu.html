@@ -4,6 +4,12 @@ slug: install-python-26-ubuntu
 created: !!timestamp '2009-01-20 18:20:48'
 extends: blog-rst.j2
 status: public
+tags:
+- how-to
+- tips
+- troubleshooting
+- python
+- ubuntu
 
 ---
 {% mark excerpt %}
@@ -18,7 +24,7 @@ complicated, is spared us by our friends over at Launchpad, and their
 
 
 In order to install anything from the PPA, you need to add them to your 
-repositories: "deb http://ppa.launchpad.net/doko/ubuntu/ intrepid main" 
+repositories: ``deb http://ppa.launchpad.net/doko/ubuntu/ intrepid main``
 
 For those who've forgotten how, or just need a refresher, hit `this page 
 <https://help.ubuntu.com/community/Repositories/Ubuntu#Adding%20Repositories%20in%20Ubuntu>`_ 
@@ -26,10 +32,9 @@ for full instructions.
 
 Once you've done that, just run 
 
-.. code-block:: python
+.. code-block:: bash
 
     sudo apt-get update
-
     sudo apt-get install python2.6
 
 and you're done! (note that aptitude will inform you that this package is *not 

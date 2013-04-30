@@ -4,7 +4,11 @@ slug: easy-zsh-auto-completion
 created: !!timestamp '2010-05-30 00:39:05'
 extends: blog-rst.j2
 status: public
-
+tags:
+- zsh
+- terminal
+- tip
+- completion
 ---
 {% mark image %}
 .. image:: http://jaredforsyth.com/media/uploads/zsh-completion.png
@@ -12,14 +16,13 @@ status: public
 
 {% mark excerpt %}
 It took a surprising amount of looking to figure out how to create a custom zsh completion rule...so I'll share my findings.
-{% endmark %}
-
 
 For a static list:
 
 .. code-block:: bash
 
    compctl -k "(one two other possibility)" command-name
+{% endmark %}
 
 those are space separated, surrounded first by parenthesis and then by quotes.
 
