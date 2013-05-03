@@ -1,22 +1,31 @@
 
 @import "colors";
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro:100);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:200);
+
+@font-face {
+    font-family: junction;
+    src: url('/media/fonts/Junction-webfont.ttf')
+         url('/media/fonts/Junction-webfont.eot'); /* IE 9 */
+}
 
 #header {
     background-color: $base;
-    padding: 10px 20px;
-    color: white;
+    padding: 20px 20px 0;
+    color: $text;
     text-decoration: none;
     border-bottom: 20px solid $darker;
 
     a {
         text-decoration: none;
-        color: white;
+        color: $text;
     }
 
     .title {
         margin: 50px 20px 20px;
         font-size: 2.4em;
         font-weight: bold;
+        font-family: 'junction', sans-serif;
     }
     .nav-internal, .nav-external {
         ul {
@@ -24,7 +33,10 @@
             li a:hover, li a.active {
                 background-color: transparent;
                 border-radius: 0;
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid $text-active;
+            }
+            li a.active {
+                color: $text-active;
             }
         }
     }

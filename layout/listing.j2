@@ -4,9 +4,7 @@
 
 {% for res in resource.node.walk_resources_sorted_by_time() %}
 {% if not res.meta.status or res.meta.status == 'public' %}
-<div class="post">
     {{ render_excerpt(res) }}
-</div>
 {% endif %}
 {% endfor %}
 {% endblock %}

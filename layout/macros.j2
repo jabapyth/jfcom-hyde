@@ -1,25 +1,26 @@
 {% macro render_excerpt(res, class=None) %}
 {% refer to res.url as post %}
-<article {{'class='~class if class }}>
-<h3 class="title"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
-<a href="{{ content_url(res.url) }}">
-    <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
-        {{ res.meta.created.strftime('%a, %d %b %Y') }}
-    </time>
-</a>
-<ul class="tags">
-{% if res.meta.tags %}
-    {% for tag in res.meta.tags %}
-        <li><a class="small label" href="{{ content_url('blog/tags/'~tag~'.html') }}">
-            {{ tag }}
-        </a></li>
-    {% endfor %}
-{% endif %}
-</ul>
-<a href="{{ content_url(res.url) }}">
+<article class="post {{ class if class }}">
+    <a class="date" href="{{ content_url(res.url) }}">
+        <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+            {{ res.meta.created.strftime('%d %b<br>%Y') }}
+        </time>
+    </a>
+    <h3 class="title"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
+    <ul class="tags">
+    {% if res.meta.tags %}
+        {% for tag in res.meta.tags %}
+            <li><a class="small" href="{{ content_url('blog/tags/'~tag~'.html') }}">
+                {{ tag }}
+            </a></li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+    <a href="{{ content_url(res.url) }}">
 {% filter restructuredtext %}
 {{ post.image }}
-{% endfilter %}</a>
+{% endfilter %}
+    </a>
 {% filter restructuredtext %}
 {{ post.excerpt }}
 {% endfilter %}
