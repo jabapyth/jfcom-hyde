@@ -31,6 +31,9 @@
       color: #fdb813; }
     #header .nav-internal ul li a, #header .nav-external ul li a {
       border-bottom: 1px solid white; }
+  #header .nav-internal .subnav li span.pusher, #header .nav-external .subnav li span.pusher {
+    padding: 8px 0 8px 20px;
+    line-height: 35px; }
   #header .nav-internal .subnav li a, #header .nav-external .subnav li a {
     border-top: 1px solid white; }
     #header .nav-internal .subnav li a:hover, #header .nav-internal .subnav li a.active, #header .nav-external .subnav li a:hover, #header .nav-external .subnav li a.active {

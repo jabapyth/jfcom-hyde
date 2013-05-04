@@ -84,7 +84,9 @@
         </li>
         {%- endfor %}
     </ul>
+    {% if subnav %}
     <ul class="nav nav-pills subnav">
+        <li><span class="pusher">&raquo;</span></li>
         {% for item in subnav -%}
         {% set active = False -%}
         {% if item.type == 'page' -%}
@@ -113,6 +115,7 @@
         </li>
         {%- endfor %}
     </ul>
+    {% endif %}
 </nav>
 {%- endif %}
 {%- endmacro %}
