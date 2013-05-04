@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Advent+Pro:100);
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:200);
 @font-face {
   font-family: junction-fallback;
   src: url("/media/fonts/junction.ttf"); }
@@ -13,7 +11,8 @@
   padding: 20px 20px 0;
   color: #999999;
   text-decoration: none;
-  border-bottom: 20px solid #777777; }
+  border-bottom: 20px solid #777777;
+  position: relative; }
   #header a {
     text-decoration: none;
     color: #999999; }
@@ -32,11 +31,19 @@
       color: #fdb813; }
     #header .nav-internal ul li a, #header .nav-external ul li a {
       border-bottom: 1px solid white; }
+  #header .nav-internal .subnav li a, #header .nav-external .subnav li a {
+    border-top: 1px solid white; }
+    #header .nav-internal .subnav li a:hover, #header .nav-internal .subnav li a.active, #header .nav-external .subnav li a:hover, #header .nav-external .subnav li a.active {
+      border-bottom: 1px solid #546bd6; }
+    #header .nav-internal .subnav li a.active, #header .nav-external .subnav li a.active {
+      color: #546bd6; }
   #header .nav-internal {
     float: left;
     margin-left: 10px; }
   #header .nav-external {
-    float: right; }
+    position: absolute;
+    bottom: 0;
+    right: 20px; }
   @media (max-width: 650px) {
     #header .nav-external {
       display: none; }

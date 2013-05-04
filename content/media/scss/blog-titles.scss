@@ -6,17 +6,30 @@
             width: 100%;
             margin: 0;
             min-height: 0;
+            padding: 5px 10px 0;
 
-            ul.tags {
-                float: right;
-                margin: 5px 10px;
+            header {
+                ul.tags {
+                    float: right;
+                    margin: 0 10px;
+                }
+                h3.title {
+                    margin: 6px 0 5px 0;
+                }
+                time {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                }
             }
+
             section {
                 display: none;
             }
-            h3.title {
-                float: left;
-                margin: 6px 0 0 0;
+
+            @media (max-width: 650px) {
+                ul.tags {
+                    display: none;
+                }
             }
         }
 

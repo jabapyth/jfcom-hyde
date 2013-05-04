@@ -1,5 +1,9 @@
 @import "colors";
 
+a, a:hover {
+    color: $off_accent;
+}
+
 ul.tags {
     li a {
         font-size: 12px;

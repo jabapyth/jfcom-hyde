@@ -1,7 +1,5 @@
 
 @import "colors";
-@import url(http://fonts.googleapis.com/css?family=Advent+Pro:100);
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:200);
 
 @font-face {
     font-family: junction-fallback;
@@ -18,6 +16,7 @@
     color: $text;
     text-decoration: none;
     border-bottom: 20px solid $darker;
+    position: relative;
 
     a {
         text-decoration: none;
@@ -46,13 +45,27 @@
                 border-bottom: 1px solid white;
             }
         }
+        .subnav {
+            li a {
+                border-top: 1px solid white;
+
+                &:hover, &.active {
+                    border-bottom: 1px solid $off_accent;
+                }
+                &.active {
+                    color: $off_accent;
+                }
+            }
+        }
     }
     .nav-internal {
         float: left;
         margin-left: 10px;
     }
     .nav-external {
-        float: right;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
     }
 
     @media (max-width: 650px) {

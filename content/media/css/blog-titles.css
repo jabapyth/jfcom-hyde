@@ -1,12 +1,18 @@
 #content #main-content .post {
   width: 100%;
   margin: 0;
-  min-height: 0; }
-  #content #main-content .post ul.tags {
+  min-height: 0;
+  padding: 5px 10px 0; }
+  #content #main-content .post header ul.tags {
     float: right;
-    margin: 5px 10px; }
+    margin: 0 10px; }
+  #content #main-content .post header h3.title {
+    margin: 6px 0 5px 0; }
+  #content #main-content .post header time {
+    margin-top: 0;
+    margin-bottom: 10px; }
   #content #main-content .post section {
     display: none; }
-  #content #main-content .post h3.title {
-    float: left;
-    margin: 6px 0 0 0; }
+  @media (max-width: 650px) {
+    #content #main-content .post ul.tags {
+      display: none; } }

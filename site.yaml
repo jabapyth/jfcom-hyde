@@ -26,7 +26,7 @@ context:
                 name: projects
                 description: Projects
                 css_class: projects
-                type: node
+                type: page
                 url: projects
             -
                 name: blog
@@ -39,19 +39,19 @@ context:
                         name: blocks
                         description: View posts as blocks
                         css_class: blog-blocks
-                        type: node
-                        url: blog
+                        type: page
+                        url: blog/index.html
                     -
                         name: full
                         description: View full posts
                         css_class: blog-full
-                        type: node
+                        type: page
                         url: blog/full.html
                     -
                         name: titles
                         description: View post titles
                         css_class: blog-titles
-                        type: node
+                        type: page
                         url: blog/titles.html
             -
                 name: about

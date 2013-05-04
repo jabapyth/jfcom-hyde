@@ -2,6 +2,12 @@
   width: 100%!important; }
 #content #main-content object {
   width: 100%!important; }
+#content #main-content .post header {
+  margin-top: 6px; }
+#content #main-content .post section.body {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 26px; }
 @media (min-width: 1281px) {
   #content #main-content .post {
     width: 23.076923076923077%;
