@@ -4,7 +4,7 @@
 
 {% for res in resource.node.walk_resources_sorted_by_time() %}
 {% if not res.meta.status or res.meta.status == 'public' %}
-    {{ render_excerpt(res) }}
+    {{ render_excerpt(res, "spanner") }}
 {% endif %}
 {% endfor %}
 {% endblock %}

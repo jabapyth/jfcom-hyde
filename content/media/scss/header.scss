@@ -28,8 +28,9 @@
         margin: 50px 20px 20px;
         font-size: 2.4em;
         font-weight: bold;
-        font-family: /* 'junction', 'junction-fallback', */ sans-serif;
+        font-family: /* 'junction', 'junction-fallback', */ "Helvetica";
     }
+
     .nav-internal, .nav-external {
         ul {
             margin-bottom: 0;
@@ -41,6 +42,9 @@
             li a.active {
                 color: $text-active;
             }
+            li a {
+                border-bottom: 1px solid white;
+            }
         }
     }
     .nav-internal {
@@ -49,6 +53,20 @@
     }
     .nav-external {
         float: right;
+    }
+
+    @media (max-width: 650px) {
+        .nav-external {
+            display: none;
+        }
+        .nav-internal {
+            margin-left: none;
+        }
+        .title {
+            font-size: 1.4em;
+            margin: 0 0 10px;
+            text-align: center;
+        }
     }
 }
 
