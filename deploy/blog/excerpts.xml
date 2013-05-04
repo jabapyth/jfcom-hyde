@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2013-04-29T21:41:14Z</updated>
+    <updated>2013-05-04T01:22:34Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
@@ -18,11 +18,25 @@
                 <updated>2013-04-25T20:00:38Z</updated>
                 <published>2013-04-25T20:00:38Z</published>
                 <id>/blog/2013-apr-25-protoclipper-clip-web-pages-rapid-prototyping.html</id>
+                                <category   scheme="/blog/tags"
+                            term="rapid prototyping"
+                            label="Rapid Prototyping" />
+                                <category   scheme="/blog/tags"
+                            term="javascript"
+                            label="Javascript" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I&#39;m doing some prototyping of UX changed for a website, and created a tool to help you create sandboxed, interactive prototypes. Essentially it lets you take a snapshot of a single section of a page and save it as a static HTML file - including everything that may have been dynamically loaded or changed. Then the in-body javascript is removed, and you&#39;re free to edit the resulting file and produce your interactive mockup.&lt;/blockquote&gt;
+&lt;img alt=&#34;/media/uploads/jared_protoclipper.png&#34; src=&#34;/media/uploads/jared_protoclipper.png&#34; style=&#34;width: 470px;&#34; /&gt;
+&lt;p&gt;I&#39;m doing some prototyping of UX changed for a website, and created a tool to
+help you create sandboxed, interactive prototypes. Essentially it lets you take
+a snapshot of a single section of a page and save it as a static HTML file -
+including everything that may have been dynamically loaded or changed. Then the
+in-body javascript is removed, and you&#39;re free to edit the resulting file and
+produce your interactive mockup.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -33,27 +47,19 @@ I&#39;m doing some prototyping of UX changed for a website, and created a tool t
                 <updated>2013-04-11T11:00:00Z</updated>
                 <published>2013-04-11T11:00:00Z</published>
                 <id>/blog/2013-apr-11-internet-things.html</id>
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-The &amp;quot;simplify&amp;quot; trend among productivity specialists calls for a rejection of&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;much of the complexities of modern lifestyle, opting instead for simplicity
+&lt;p&gt;The &amp;quot;simplify&amp;quot; trend among productivity specialists calls for a rejection of
+much of the complexities of modern lifestyle, opting instead for simplicity
 and minimalism. This is by no means a new concept; the ascetic monks from
-various religions have embraced such practices for millenia. However, with the
-rise of the technological age and the birth of the twenty-first century, such
-ideals have become increasingly popular. Why is it, though, that the modern
-world with all its conveniences and time-savers would drive so many to reject
-these very &amp;quot;advancements&amp;quot;? These amenities and convenient technologies are
-developed around and often serve to support a culture of consumerism,
-materialism, and individualism. While online shopping, social networking, and
-email can be incredibly useful and assist in necessary tasks, they can also be
-a significant detriment to our productivity and general well-being. Add to
-that the many often disturbing negative uses of these new technologies, and
-one can readily understand the urge to step back and focus on the essential.&lt;/p&gt;
+various religions have embraced such practices for millenia.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -64,15 +70,17 @@ one can readily understand the urge to step back and focus on the essential.&lt;
                 <updated>2013-04-09T21:18:00Z</updated>
                 <published>2013-04-09T21:18:00Z</published>
                 <id>/blog/2013-apr-09-social-conference.html</id>
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-This past weekend I experimented with using twitter during one of the sessions&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;of &lt;a class=&#34;reference external&#34; href=&#34;http://conference.lds.org/&#34;&gt;General Conference&lt;/a&gt;. Frankly, it was
+&lt;p&gt;This past weekend I experimented with using twitter during one of the sessions
+of &lt;a class=&#34;reference external&#34; href=&#34;http://conference.lds.org/&#34;&gt;General Conference&lt;/a&gt;. Frankly, it was
 similar to watching conference with several dozen other people who were all
 carrying on lively conversations, complete with peanut gallery.&lt;/p&gt;
 &lt;/div&gt;
@@ -85,33 +93,23 @@ carrying on lively conversations, complete with peanut gallery.&lt;/p&gt;
                 <updated>2013-04-04T00:04:39Z</updated>
                 <published>2013-04-04T00:04:39Z</published>
                 <id>/blog/2013-apr-04-if-i-cant-see-you.html</id>
+                                <category   scheme="/blog/tags"
+                            term="gaming"
+                            label="Gaming" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-If you know indisputably that a behavior or product has destroyed lives and&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;families, would you dare touch it? In a number of cases, online gaming has
+&lt;p&gt;If you know indisputably that a behavior or product has destroyed lives and
+families, would you dare touch it? In a number of cases, online gaming has
 done just that. This is only a small percentage, of course, and we can&#39;t live
 our lives in fear of everything that has associated risks. We all enjoy
-electricity, for example, though it has tremendous power to kill. But this
-begs the question: what benefits are there from online gaming that warrant
-even the slight risk of devastation? Call me an idealist, but I believe in a
-world where truth is more exciting than fiction, where reality is &lt;em&gt;better&lt;/em&gt;
-than virtual reality. Is it too much to hope that everyone could be exerting
-their individual effort towards something constructive and inherently
-meaningful for mankind, rather than commanding hoards of virtual orcs to blow
-up someone else&#39;s hoards of virtual orcs? And it&#39;s not just the war games;
-cultivating a virtual farm or flinging angry birds seems to accomplish equally
-little. I don&#39;t mean to imply that online gaming is devoid of inherent value.
-I&#39;m sure that players learn some amount of teamwork and problem solving over
-the course of a quest. I propose, however, that spending time and effort in
-actual reality results in stronger relationships and greater real value
-overall. Escaping the problems we face in real life by immersing ourselves in
-a virtual life does nothing to solve our problems, and often just intensifies
-them.&lt;/p&gt;
+electricity, for example, though it has tremendous power to kill.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -122,10 +120,21 @@ them.&lt;/p&gt;
                 <updated>2013-04-02T21:59:48Z</updated>
                 <published>2013-04-02T21:59:48Z</published>
                 <id>/blog/2013-apr-02-software-patents.html</id>
+                                <category   scheme="/blog/tags"
+                            term="video"
+                            label="Video" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="patents"
+                            label="Patents" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;object type=&#34;application/x-shockwave-flash&#34;
         width=&#34;425&#34;
         height=&#34;344&#34;
@@ -134,7 +143,6 @@ them.&lt;/p&gt;
     &lt;param name=&#34;movie&#34; value=&#34;http://www.youtube.com/v/Hk0E5a1nCjU&#34;&gt;&lt;/param&gt;
     &lt;param name=&#34;wmode&#34; value=&#34;transparent&#34;&gt;&lt;/param&gt;
 &lt;/object&gt;
-&lt;/blockquote&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -151,15 +159,17 @@ them.&lt;/p&gt;
                                 <category   scheme="/blog/tags"
                             term="reform"
                             label="Reform" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-It&#39;s time to  stop ignoring the need for general education reform. It&#39;s true,&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;there are some of us who happen to be good at the kinds of things that
+&lt;p&gt;It&#39;s time to  stop ignoring the need for general education reform. It&#39;s true,
+there are some of us who happen to be good at the kinds of things that
 standardized tests are looking for, and who learn to love to learn &lt;em&gt;despite&lt;/em&gt; their
 public education. But for every one who survives public schooling with creativity in tact, there
 are a dozen others who buy in to the game, who either spend their time trying
@@ -179,25 +189,19 @@ conformity and punishes their creativity.&lt;/p&gt;
                                 <category   scheme="/blog/tags"
                             term="ict4d"
                             label="Ict4D" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-If you want to change the world, chances are you major in business, law,&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;political science, or economics. If you don&#39;t really care about making tons of
+&lt;p&gt;If you want to change the world, chances are you major in business, law,
+political science, or economics. If you don&#39;t really care about making tons of
 money, then sociology, anthropology, and nonprofit management are
-possibilities. In general, though, computer science isn&#39;t on the top of the
-&amp;quot;change-maker&amp;quot; list, and yet computer technology is changing the world faster
-than anything else.  In many developing nations, the urban and rural poor have
-cell phones and satellite dishes before they have shoes and running water. In
-the information age, technology has the potential to connect societies and
-cultures, and to empower the poor in less-developed nations to speak up and be
-heard on a global scale. But who will build the software and design the
-hardware that will enable this change? Computer scientists and engineers are
-changing the world already.&lt;/p&gt;
+possibilities.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -211,27 +215,20 @@ changing the world already.&lt;/p&gt;
                                 <category   scheme="/blog/tags"
                             term="communism"
                             label="Communism" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-The world has seen several attempts to implement communism in the political&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;sphere, which invariably end in corrupt leaders and oppression of the masses.
+&lt;p&gt;The world has seen several attempts to implement communism in the political
+sphere, which invariably end in corrupt leaders and oppression of the masses.
 So what makes open source and free software different? The core open
 source values look a lot like communism on the face of it; people contribute
-without monetary compensation, and receive without having to pay. Everyone
-gives what they can and receives what they need. The key difference here,
-though, is that the open source phenomenon has been entirely voluntary, in no
-way enforced by a government or entity.  For some reason, intelligent,
-hard-working people from around the world have gravitated to this standard of
-openness, resulting in an incredible number of free software projects, many of
-which are very professional and have been able to help millions of people. The
-ease of contributing afforded by the internet and the inherent low resource
-cost make software development a domain where the ideal of community
-contribution and benefit can actually be realized.&lt;/p&gt;
+without monetary compensation, and receive without having to pay.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -245,24 +242,19 @@ contribution and benefit can actually be realized.&lt;/p&gt;
                                 <category   scheme="/blog/tags"
                             term="genealogy"
                             label="Genealogy" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-In general, age and technological aptitude seem to be negatively correlated.&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;Toddlers raised on an iPad have no difficulty navigating the various menus and
+&lt;p&gt;In general, age and technological aptitude seem to be negatively correlated.
+Toddlers raised on an iPad have no difficulty navigating the various menus and
 interfaces now ubiquitous in the digital age, while their grandparents and
-great-grandparents are left in the dust. In fact, &amp;quot;my grandmother&amp;quot; has become
-the archetypal &amp;quot;most inept computer user I know&amp;quot;, resulting in claims such as
-&amp;quot;this is so easy even my grandmother could use it&amp;quot;. Imagine the clash, then,
-when a domain dominated by the elderly -- genealogy -- experiences a
-technological revolution, as has occurred over the past few decades. The
-search for progenitors lends itself naturally to digitization, but it also
-requires the main demographic involved to rely heavily on the younger
-generation.&lt;/p&gt;
+great-grandparents are left in the dust.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -273,29 +265,21 @@ generation.&lt;/p&gt;
                 <updated>2013-03-07T11:19:16Z</updated>
                 <published>2013-03-07T11:19:16Z</published>
                 <id>/blog/2013-mar-07-software-wars.html</id>
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-The current software patent environment is enough to make me want to hide&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;under a rock somewhere, alone with my code and safe from predatory companies
+&lt;p&gt;The current software patent environment is enough to make me want to hide
+under a rock somewhere, alone with my code and safe from predatory companies
 and their packs of lawyers. If you&#39;ve missed it, the news is rife with
 examples of companies armed with rediculously broad patents--covering things
 like &amp;quot;downloading a file&amp;quot; or &amp;quot;a webpage with a popup&amp;quot;--who pray on small
-startups without the funds to cover the court costs.  The internet is littered
-with examples of bright minds speaking out against the current software patent
-situation, and I haven&#39;t found one yet touting its benefits, or claiming that
-it does in fact encourage innovation or accomplish &lt;em&gt;any&lt;/em&gt; of the goals for
-which it was originally created.  But it&#39;s important to remember that we haven&#39;t
-yet had two decades of the &lt;em&gt;internet&lt;/em&gt;, and the software industry isn&#39;t even
-half a century old.  It&#39;s more than likely that the situation will become a
-lot more sane after another half-century or so; I have faith in humanity that
-judges around the country will eventually understand the nature of software,
-and this familiarity will remove the opportunity for predatory &amp;quot;patent
-trolling&amp;quot; and the like.&lt;/p&gt;
+startups without the funds to cover the court costs.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -309,24 +293,19 @@ trolling&amp;quot; and the like.&lt;/p&gt;
                                 <category   scheme="/blog/tags"
                             term="microsoft"
                             label="Microsoft" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-There was a time when Microsoft was the hottest, fastest kid on the block,&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;dominating every market it entered. Bill Gates, the magnetic visionary, lead
+&lt;p&gt;There was a time when Microsoft was the hottest, fastest kid on the block,
+dominating every market it entered. Bill Gates, the magnetic visionary, lead
 the company with a philosophy that rejected complacency, always striving for
-progress and innovation. That was the Microsoft of the 90s. The most recent
-decade saw the software giant become complacent, somehow failing to retain the
-air of innovation, drive, and novelty. In mobile devices, the Zune and the
-Windows phone were relegated to the back seat while Apple and Google drove the
-market. Yet, somehow, Microsoft seems to have accomplished the improbable in
-the world of technology: a public image reboot. Young people of today see
-Microsoft as cooler than it was two years ago, thanks to a strong emphasis on
-design and human connectedness in advertising and marketing.&lt;/p&gt;
+progress and innovation. That was the Microsoft of the 90s.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -337,15 +316,17 @@ design and human connectedness in advertising and marketing.&lt;/p&gt;
                 <updated>2013-02-14T11:33:58Z</updated>
                 <published>2013-02-14T11:33:58Z</published>
                 <id>/blog/2013-feb-14-security-paranoid.html</id>
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Through modern media, we are well aware of the prevalence of hackers and&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;compromised accounts, both on a personal and corporate level. Yet somehow
+&lt;p&gt;Through modern media, we are well aware of the prevalence of hackers and
+compromised accounts, both on a personal and corporate level. Yet somehow
 it&#39;s still easy to be lulled into security by SSL, secure routers, and
 passwords that Google told me were &amp;quot;very strong&amp;quot;.&lt;/p&gt;
 &lt;/div&gt;
@@ -358,21 +339,18 @@ passwords that Google told me were &amp;quot;very strong&amp;quot;.&lt;/p&gt;
                 <updated>2013-02-07T11:36:49Z</updated>
                 <published>2013-02-07T11:36:49Z</published>
                 <id>/blog/2013-feb-07-what-if-computer-science-had-been-invented-women.html</id>
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-If we want to know why women aren&#39;t drawn to CS like they are to other&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;scientific departments, we have no further to look than the &amp;quot;typical computer
-nerd&amp;quot;. Since it&#39;s inception, computer programming has been dominated by
-young men whose fascination with computers borders on obsession; early
-startups in the now silicon valley were manned by college kids who ran on
-pizza and slept in their cubicles. Why would women want to be a part of that?
-If the culture of computing had &lt;em&gt;begun&lt;/em&gt; with women, it would likely
-be much better structured, cleaner, and less dominated by trial-and-error.&lt;/p&gt;
+&lt;p&gt;If we want to know why women aren&#39;t drawn to CS like they are to other
+scientific departments, we have no further to look than the &amp;quot;typical computer
+nerd&amp;quot;.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -386,24 +364,20 @@ be much better structured, cleaner, and less dominated by trial-and-error.&lt;/p
                                 <category   scheme="/blog/tags"
                             term="facebook"
                             label="Facebook" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Get ready for Big Brother: Facebook&#39;s new app &amp;quot;innovation&amp;quot; will track your&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;movements even when you aren&#39;t using it. Though this might have a few perks
+&lt;p&gt;Get ready for Big Brother: Facebook&#39;s new app &amp;quot;innovation&amp;quot; will track your
+movements even when you aren&#39;t using it. Though this might have a few perks
 for users, the real winners are in advertising -- marketers would leap at the
 chance to take advantage of that kind of information, to make
-ultra-personalized ads based on where you go and what you do. But for the
-average user, this could usher in the era forecasted by minority report and
-1984, where big brother knows where you are at all times, billboards address
-you by name, and abuse of privacy is just too easy to pass up. This begs the
-question: is such a future inevitable? Can we imagine technological advance
-without such deterioration of privacy? Because if we don&#39;t come up with
-something soon, it will no longer be an option.&lt;/p&gt;
+ultra-personalized ads based on where you go and what you do.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -414,21 +388,19 @@ something soon, it will no longer be an option.&lt;/p&gt;
                 <updated>2013-01-29T21:29:12Z</updated>
                 <published>2013-01-29T21:29:12Z</published>
                 <id>/blog/2013-jan-29-north-korea-penetrated-crowd-sourcing.html</id>
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-North Korea, which since the end of the Korean war has been shut off from the&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;world and especially technology, is finally being opened up, at least
+&lt;p&gt;North Korea, which since the end of the Korean war has been shut off from the
+world and especially technology, is finally being opened up, at least
 cartographically; google maps will soon be updated with detail about the
-streets and cities of the hermit nation, thanks entirely to user contributions.
-This instance joins many others in the recent past showing the sometimes
-disruptive power of internet collaboration. Even in a country where internet
-access is highly restricted, truth and information eventually find their way
-out onto the larger scene.&lt;/p&gt;
+streets and cities of the hermit nation, thanks entirely to user contributions.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -454,24 +426,14 @@ out onto the larger scene.&lt;/p&gt;
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;div class=&#34;figure&#34;&gt;
+&lt;div class=&#34;align-right figure&#34;&gt;
 &lt;img alt=&#34;http://farm4.staticflickr.com/3123/2553692300_acd80eff45_m.jpg&#34; src=&#34;http://farm4.staticflickr.com/3123/2553692300_acd80eff45_m.jpg&#34; /&gt;
 &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;table class=&#34;docutils field-list&#34; frame=&#34;void&#34; rules=&#34;none&#34;&gt;
-&lt;col class=&#34;field-name&#34; /&gt;
-&lt;col class=&#34;field-body&#34; /&gt;
-&lt;tbody valign=&#34;top&#34;&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;figclass:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;align-right&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;When my father was growing up, he didn&#39;t have wikipedia or google to answer
+every question. Why is the sky blue? Today you would just look it up on
+wikipedia. He actually had to &lt;em&gt;think&lt;/em&gt; if he wanted a reasonable answer. And
+it&#39;s the act and effort of reasoning about the small things as a child that
+lead to skills in critical thinking as an adult.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -494,27 +456,22 @@ Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
                                 <category   scheme="/blog/tags"
                             term="enlightenment"
                             label="Enlightenment" />
+                                <category   scheme="/blog/tags"
+                            term="society"
+                            label="Society" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;div class=&#34;figure&#34;&gt;
+&lt;div class=&#34;align-right med-img figure&#34;&gt;
 &lt;img alt=&#34;http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Jean-Jacques_Rousseau_%28painted_portrait%29.jpg/220px-Jean-Jacques_Rousseau_%28painted_portrait%29.jpg&#34; src=&#34;http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Jean-Jacques_Rousseau_%28painted_portrait%29.jpg/220px-Jean-Jacques_Rousseau_%28painted_portrait%29.jpg&#34; /&gt;
 &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;table class=&#34;docutils field-list&#34; frame=&#34;void&#34; rules=&#34;none&#34;&gt;
-&lt;col class=&#34;field-name&#34; /&gt;
-&lt;col class=&#34;field-body&#34; /&gt;
-&lt;tbody valign=&#34;top&#34;&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;figclass:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;align-right med-img&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;In pondering the issues raised by the advent of big data and public access to
+vast stores of information, I am reminded of Rousseau&#39;s book &lt;em&gt;Emilie&lt;/em&gt; in which
+he describes how best to raise a hypothetical child of the same name. Speaking
+of the acquisition of knowledge, he writes:&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -540,24 +497,8 @@ Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;img alt=&#34;http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying_h.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying_h.png&#34; /&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 2)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;table class=&#34;docutils field-list&#34; frame=&#34;void&#34; rules=&#34;none&#34;&gt;
-&lt;col class=&#34;field-name&#34; /&gt;
-&lt;col class=&#34;field-body&#34; /&gt;
-&lt;tbody valign=&#34;top&#34;&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;width:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;40%&lt;/p&gt;
-&lt;p class=&#34;last&#34;&gt;So I just got myself an LG-G2x android smartphone [running eaglesblood ICS :)] and I&#39;ve been trying a lot of things out. One thing that I really wanted to get right was a music player app. I looked around at the many reviews of the (mostly adware or freemium) popular music apps, thinking to myself &amp;quot;there&#39;s gotta be a really good, free, even open-source music player. somewhere&amp;quot;. well, I stumbled across &amp;quot;vanilla&amp;quot; early on, but was scared away by the somewhat primitive and downright clucky looking graphics [see the screenshots on &lt;a class=&#34;reference external&#34; href=&#34;https://play.google.com/store/apps/details?id=org.kreed.vanilla&#34;&gt;google play&lt;/a&gt; or &lt;a class=&#34;reference external&#34; href=&#34;http://www.androidopensourceapplications.com/content/vanilla-music-player&#34;&gt;AndroidOpenSourceApplications&lt;/a&gt; ]. But, after more searching and finding nothing promising, I decided to give it a spin.&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/blockquote&gt;
+&lt;img alt=&#34;http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying_h.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/screenshots/vanilla/nowplaying_h.png&#34; style=&#34;width: 40%;&#34; /&gt;
+&lt;p&gt;So I just got myself an LG-G2x android smartphone [running eaglesblood ICS :)] and I&#39;ve been trying a lot of things out. One thing that I really wanted to get right was a music player app. I looked around at the many reviews of the (mostly adware or freemium) popular music apps, thinking to myself &amp;quot;there&#39;s gotta be a really good, free, even open-source music player. somewhere&amp;quot;. well, I stumbled across &amp;quot;vanilla&amp;quot; early on, but was scared away by the somewhat primitive and downright clucky looking graphics [see the screenshots on &lt;a class=&#34;reference external&#34; href=&#34;https://play.google.com/store/apps/details?id=org.kreed.vanilla&#34;&gt;google play&lt;/a&gt; or &lt;a class=&#34;reference external&#34; href=&#34;http://www.androidopensourceapplications.com/content/vanilla-music-player&#34;&gt;AndroidOpenSourceApplications&lt;/a&gt; ]. But, after more searching and finding nothing promising, I decided to give it a spin.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -568,21 +509,30 @@ Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
                 <updated>2010-07-29T14:08:10Z</updated>
                 <published>2010-07-29T14:08:10Z</published>
                 <id>/blog/2010-jul-29-codetalker-example-test.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="tutorial"
+                            label="Tutorial" />
+                                <category   scheme="/blog/tags"
+                            term="testing"
+                            label="Testing" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-This is the last in a four-part series, in which I demonstrate how to build a&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;CSS parser using &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;CodeTalker_&lt;/span&gt;&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;system-messages section&#34;&gt;
-&lt;h1&gt;Docutils System Messages&lt;/h1&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
-&lt;/div&gt;
+&lt;img alt=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; src=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; /&gt;
+&lt;p&gt;This is the last in a four-part series, in which I demonstrate how to build a
+CSS parser using &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/codetalker/&#34;&gt;CodeTalker&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class=&#34;simple&#34;&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/&#34;&gt;tokenize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/&#34;&gt;parse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/&#34;&gt;translate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;test!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -593,21 +543,30 @@ Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
                 <updated>2010-07-29T11:54:10Z</updated>
                 <published>2010-07-29T11:54:10Z</published>
                 <id>/blog/2010-jul-29-codetalker-example-translate.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="tutorial"
+                            label="Tutorial" />
+                                <category   scheme="/blog/tags"
+                            term="translation"
+                            label="Translation" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-This is the third in a four-part series, in which I demonstrate how to build a&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;CSS parser using &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;CodeTalker_&lt;/span&gt;&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;system-messages section&#34;&gt;
-&lt;h1&gt;Docutils System Messages&lt;/h1&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
-&lt;/div&gt;
+&lt;img alt=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; src=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; /&gt;
+&lt;p&gt;This is the third in a four-part series, in which I demonstrate how to build a
+CSS parser using &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/codetalker/&#34;&gt;CodeTalker&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class=&#34;simple&#34;&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/&#34;&gt;tokenize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/&#34;&gt;parse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;translate&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/&#34;&gt;test!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -618,21 +577,30 @@ Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
                 <updated>2010-07-28T09:41:59Z</updated>
                 <published>2010-07-28T09:41:59Z</published>
                 <id>/blog/2010-jul-28-codetalker-example-parse.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="tutorial"
+                            label="Tutorial" />
+                                <category   scheme="/blog/tags"
+                            term="parser"
+                            label="Parser" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-This is the second in a four-part series, in which I demonstrate how to build a&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;CSS parser using &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;CodeTalker_&lt;/span&gt;&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;system-messages section&#34;&gt;
-&lt;h1&gt;Docutils System Messages&lt;/h1&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
-&lt;/div&gt;
+&lt;img alt=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; src=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; /&gt;
+&lt;p&gt;This is the second in a four-part series, in which I demonstrate how to build a
+CSS parser using &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/codetalker/&#34;&gt;CodeTalker&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class=&#34;simple&#34;&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/27/codetalker-example-tokenize/&#34;&gt;tokenize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;parse&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/&#34;&gt;translate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/&#34;&gt;test!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -643,21 +611,29 @@ Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
                 <updated>2010-07-27T16:33:48Z</updated>
                 <published>2010-07-27T16:33:48Z</published>
                 <id>/blog/2010-jul-27-codetalker-example-tokenize.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="tutorial"
+                            label="Tutorial" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="tokenization"
+                            label="Tokenization" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-This is the first in a four-part series, in which I demonstrate how to build a&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;CSS parser using &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;CodeTalker_&lt;/span&gt;&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;system-messages section&#34;&gt;
-&lt;h1&gt;Docutils System Messages&lt;/h1&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;This is the first in a four-part series, in which I demonstrate how to build a
+CSS parser using &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/codetalker/&#34;&gt;CodeTalker&lt;/a&gt;:&lt;/p&gt;
+&lt;ul class=&#34;simple&#34;&gt;
+&lt;li&gt;&lt;strong&gt;tokenize&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/28/codetalker-example-parse/&#34;&gt;parse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-translate/&#34;&gt;translate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/29/codetalker-example-test/&#34;&gt;test!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -668,20 +644,17 @@ Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
                 <updated>2010-07-27T15:36:59Z</updated>
                 <published>2010-07-27T15:36:59Z</published>
                 <id>/blog/2010-jul-27-orphan-alert.html</id>
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-In last couple of weeks a few of my projects (most notably &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;`vim-debug`_&lt;/span&gt;&lt;/a&gt; and &lt;a href=&#34;#id3&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id4&#34;&gt;CodeTalker_&lt;/span&gt;&lt;/a&gt;) have really begun to take off and generate some public interest.&lt;/blockquote&gt;
-&lt;div class=&#34;system-messages section&#34;&gt;
-&lt;h1&gt;Docutils System Messages&lt;/h1&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 2); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Unknown target name: &amp;quot;vim-debug&amp;quot;.&lt;/div&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id3&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 2); &lt;em&gt;&lt;a href=&#34;#id4&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;In last couple of weeks a few of my projects (most notably &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/vim-debug/&#34;&gt;vim-debug&lt;/a&gt; and
+&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/CodeTalker/&#34;&gt;CodeTalker&lt;/a&gt;) have really begun to take off and generate some public interest.&lt;/p&gt;
+&lt;p&gt;Unfortunately (for the projects), I will be &lt;strong&gt;leaving next week&lt;/strong&gt; to serve an
+&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/mission/&#34;&gt;LDS Mission&lt;/a&gt; in Germany &lt;strong&gt;for the next two years&lt;/strong&gt;, during which time I will
+have exactly &lt;em&gt;no time&lt;/em&gt; to pursue various hobbies, including any coding.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -692,15 +665,24 @@ Unknown target name: &amp;quot;codetalker&amp;quot;.&lt;/div&gt;
                 <updated>2010-07-26T17:35:38Z</updated>
                 <published>2010-07-26T17:35:38Z</published>
                 <id>/blog/2010-jul-26-only-codetalker-introduction-youll-ever-need.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="tutorial"
+                            label="Tutorial" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="parser"
+                            label="Parser" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Or at least that&#39;s the idea. I tried to design CodeTalker such that you don&#39;t&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;need to pore over pages of API docs... This document + the example contrib parsers
+&lt;img alt=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; src=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; /&gt;
+&lt;p&gt;Or at least that&#39;s the idea. I tried to design CodeTalker such that you don&#39;t
+need to pore over pages of API docs... This document + the example contrib parsers
 provided should be enough (let me know if they aren&#39;t).&lt;/p&gt;
 &lt;/div&gt;
                 </content>
@@ -712,19 +694,25 @@ provided should be enough (let me know if they aren&#39;t).&lt;/p&gt;
                 <updated>2010-07-26T12:00:00Z</updated>
                 <published>2010-07-26T12:00:00Z</published>
                 <id>/blog/2010-jul-26-lessons-learned-optimizing-codetalker.html</id>
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="optimization"
+                            label="Optimization" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="performance"
+                            label="Performance" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;p&gt;As &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;`&lt;/span&gt;&lt;/a&gt;per request&lt;/p&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 2); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Inline interpreted text or phrase reference start-string without end-string.&lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;&amp;lt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/#comment-63681945&#34;&gt;http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/#comment-63681945&lt;/a&gt;&amp;gt;`_,
+&lt;p&gt;As &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/#comment-63681945&#34;&gt;per request&lt;/a&gt;,
 I&#39;ve decided to write down what I&#39;ve learned from my &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/21/codetalker-doubles-in-speed/&#34;&gt;optimization adventures&lt;/a&gt;
 with &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/codetalker/&#34;&gt;CodeTalker&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -737,11 +725,22 @@ with &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/
                 <updated>2010-07-22T10:23:24Z</updated>
                 <published>2010-07-22T10:23:24Z</published>
                 <id>/blog/2010-jul-22-its-time-better-diff.html</id>
+                                <category   scheme="/blog/tags"
+                            term="diff"
+                            label="Diff" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
+                                <category   scheme="/blog/tags"
+                            term="dvcs"
+                            label="Dvcs" />
+                                <category   scheme="/blog/tags"
+                            term="git"
+                            label="Git" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;tt class=&#34;docutils literal&#34;&gt;diff&lt;/tt&gt; is one of those programs that&#39;s just been around &lt;em&gt;forever&lt;/em&gt;, and that hasn&#39;t changed much b/c it&#39;s the best it can possibly be. ...right?&lt;/blockquote&gt;
+&lt;p&gt;&lt;tt class=&#34;docutils literal&#34;&gt;diff&lt;/tt&gt; is one of those programs that&#39;s just been around &lt;em&gt;forever&lt;/em&gt;, and that hasn&#39;t changed much b/c it&#39;s the best it can possibly be. ...right?&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -752,11 +751,33 @@ with &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/
                 <updated>2010-07-21T12:14:34Z</updated>
                 <published>2010-07-21T12:14:34Z</published>
                 <id>/blog/2010-jul-21-setuppy-test-distutils-pytest.html</id>
+                                <category   scheme="/blog/tags"
+                            term="setuptools"
+                            label="Setuptools" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="build"
+                            label="Build" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
+                                <category   scheme="/blog/tags"
+                            term="testing"
+                            label="Testing" />
+                                <category   scheme="/blog/tags"
+                            term="unittesting"
+                            label="Unittesting" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-One thing that has bothered me about distutils is its lack of a &amp;quot;test&amp;quot; command -- it seems strange to me that setuptools has it but distutils does not...&lt;/blockquote&gt;
+&lt;p&gt;One thing that has bothered me about distutils is its lack of a &amp;quot;test&amp;quot; command
+-- it seems strange to me that setuptools has it but distutils does not...&lt;/p&gt;
+&lt;p&gt;Anyway I &lt;a class=&#34;reference external&#34; href=&#34;http://www.eggheadcafe.com/software/aspnet/36151038/does-distutils-support-python-setuppy-test.aspx&#34;&gt;looked around&lt;/a&gt;
+to &lt;a class=&#34;reference external&#34; href=&#34;http://da44en.wordpress.com/2002/11/22/using-distutils/&#34;&gt;make sure&lt;/a&gt; it
+&lt;a class=&#34;reference external&#34; href=&#34;http://mail.python.org/pipermail/distutils-sig/2000-September/001528.html&#34;&gt;really wasn&#39;t there&lt;/a&gt;
+(I couldn&#39;t believe it at first), but finally, convinced, &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/disttest&#34;&gt;I wrote my own&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -767,13 +788,24 @@ One thing that has bothered me about distutils is its lack of a &amp;quot;test&a
                 <updated>2010-07-21T10:23:29Z</updated>
                 <published>2010-07-21T10:23:29Z</published>
                 <id>/blog/2010-jul-21-cpython-vs-pypy-vs-cython.html</id>
+                                <category   scheme="/blog/tags"
+                            term="benchmark"
+                            label="Benchmark" />
+                                <category   scheme="/blog/tags"
+                            term="cpython"
+                            label="Cpython" />
+                                <category   scheme="/blog/tags"
+                            term="pypy"
+                            label="Pypy" />
+                                <category   scheme="/blog/tags"
+                            term="cython"
+                            label="Cython" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/uploads/images/cy_py_py.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/images/cy_py_py.png&#34; /&gt;
-&lt;p&gt;One problem that I needed to solve while making &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/codetalker/&#34;&gt;CodeTalker&lt;/a&gt; was fast tokenization -- so I benchmarked several implementations of matching the WHITE and ID tokens.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;One problem that I needed to solve while making &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/codetalker/&#34;&gt;CodeTalker&lt;/a&gt; was fast tokenization -- so I
+benchmarked several implementations of matching the WHITE and ID tokens.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -784,13 +816,28 @@ One thing that has bothered me about distutils is its lack of a &amp;quot;test&a
                 <updated>2010-07-21T07:33:30Z</updated>
                 <published>2010-07-21T07:33:30Z</published>
                 <id>/blog/2010-jul-21-codetalker-doubles-in-speed.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="benchmark"
+                            label="Benchmark" />
+                                <category   scheme="/blog/tags"
+                            term="profiling"
+                            label="Profiling" />
+                                <category   scheme="/blog/tags"
+                            term="optimization"
+                            label="Optimization" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/projects/logo_codetalker.png&#34; src=&#34;http://jaredforsyth.com/media/projects/logo_codetalker.png&#34; /&gt;
-&lt;p&gt;Just when you though codetalker &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/17/python-css-parsing-benchmarks/&#34;&gt;couldn&#39;t get&lt;/a&gt; &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/17/comparing-parser-generators-python/&#34;&gt;any faster&lt;/a&gt;, I managed to &lt;em&gt;double its speed&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Just when you though codetalker &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/17/python-css-parsing-benchmarks/&#34;&gt;couldn&#39;t get&lt;/a&gt;
+&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/17/comparing-parser-generators-python/&#34;&gt;any faster&lt;/a&gt;,
+I managed to &lt;em&gt;double its speed&lt;/em&gt;.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -801,13 +848,32 @@ One thing that has bothered me about distutils is its lack of a &amp;quot;test&a
                 <updated>2010-07-17T20:24:54Z</updated>
                 <published>2010-07-17T20:24:54Z</published>
                 <id>/blog/2010-jul-17-python-css-parsing-benchmarks.html</id>
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="css"
+                            label="Css" />
+                                <category   scheme="/blog/tags"
+                            term="parser"
+                            label="Parser" />
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="cssutils"
+                            label="Cssutils" />
+                                <category   scheme="/blog/tags"
+                            term="csspy"
+                            label="Csspy" />
+                                <category   scheme="/blog/tags"
+                            term="benchmark"
+                            label="Benchmark" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/uploads/battle.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/battle.png&#34; /&gt;
 &lt;p&gt;And I put together another graph, profiling the different libraries for parsing CSS with python.&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -818,13 +884,25 @@ One thing that has bothered me about distutils is its lack of a &amp;quot;test&a
                 <updated>2010-07-17T18:37:15Z</updated>
                 <published>2010-07-17T18:37:15Z</published>
                 <id>/blog/2010-jul-17-announcing-python-css.html</id>
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="css"
+                            label="Css" />
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/projects/logo___.png&#34; src=&#34;http://jaredforsyth.com/media/projects/logo___.png&#34; /&gt;
-&lt;p&gt;In the course of &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/clevercss2&#34;&gt;rewriting CleverCSS&lt;/a&gt;, I wanted to write a &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/clevercss2/blob/master/clevercss/backwards.py&#34;&gt;backwards converter&lt;/a&gt; from css to ccss. I thought it would make the tool &lt;em&gt;much&lt;/em&gt; easier to adopt.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;In the course of &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/clevercss2&#34;&gt;rewriting CleverCSS&lt;/a&gt;, I wanted to write a &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/clevercss2/blob/master/clevercss/backwards.py&#34;&gt;backwards
+converter&lt;/a&gt;
+from css to ccss. I thought it would make the tool &lt;em&gt;much&lt;/em&gt; easier to adopt.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -835,13 +913,25 @@ One thing that has bothered me about distutils is its lack of a &amp;quot;test&a
                 <updated>2010-07-17T08:42:45Z</updated>
                 <published>2010-07-17T08:42:45Z</published>
                 <id>/blog/2010-jul-17-comparing-parser-generators-python.html</id>
+                                <category   scheme="/blog/tags"
+                            term="benchmark"
+                            label="Benchmark" />
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="pyparsing"
+                            label="Pyparsing" />
+                                <category   scheme="/blog/tags"
+                            term="ply"
+                            label="Ply" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/uploads/battle.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/battle.png&#34; /&gt;
-&lt;p&gt;One of the &lt;a class=&#34;reference external&#34; href=&#34;http://www.reddit.com/r/Python/comments/cne57/announcing_codetalker/&#34;&gt;comments on reddit&lt;/a&gt; when I &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/8/announcing-codetalker/&#34;&gt;announced codetalker&lt;/a&gt; was &amp;quot;what&#39;s wrong with pyparsing?&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;One of the &lt;a class=&#34;reference external&#34; href=&#34;http://www.reddit.com/r/Python/comments/cne57/announcing_codetalker/&#34;&gt;comments on reddit&lt;/a&gt; when I
+&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/blog/2010/jul/8/announcing-codetalker/&#34;&gt;announced codetalker&lt;/a&gt; was &amp;quot;what&#39;s
+wrong with pyparsing?&amp;quot;&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -852,13 +942,25 @@ One thing that has bothered me about distutils is its lack of a &amp;quot;test&a
                 <updated>2010-07-16T13:41:53Z</updated>
                 <published>2010-07-16T13:41:53Z</published>
                 <id>/blog/2010-jul-16-easy-python-dependency-graphs.html</id>
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="dependency graph"
+                            label="Dependency Graph" />
+                                <category   scheme="/blog/tags"
+                            term="dot"
+                            label="Dot" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/200px-Directed.svg.png&#34; src=&#34;http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Directed.svg/200px-Directed.svg.png&#34; /&gt;
-&lt;p&gt;I was looking around for ways to get a look at a python dependency graph, and found &lt;a class=&#34;reference external&#34; href=&#34;http://www.tarind.com/depgraph.html&#34;&gt;this site&lt;/a&gt; which actually does a pretty good job. The only gripe I have regards the command you must use:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;I was looking around for ways to get a look at a python dependency graph, and
+found &lt;a class=&#34;reference external&#34; href=&#34;http://www.tarind.com/depgraph.html&#34;&gt;this site&lt;/a&gt; which actually does a
+pretty good job. The only gripe I have regards the command you must use:&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -869,11 +971,28 @@ One thing that has bothered me about distutils is its lack of a &amp;quot;test&a
                 <updated>2010-07-16T13:13:07Z</updated>
                 <published>2010-07-16T13:13:07Z</published>
                 <id>/blog/2010-jul-16-installing-vim-debug.html</id>
+                                <category   scheme="/blog/tags"
+                            term="vim-debug"
+                            label="Vim-Debug" />
+                                <category   scheme="/blog/tags"
+                            term="vim"
+                            label="Vim" />
+                                <category   scheme="/blog/tags"
+                            term="debug"
+                            label="Debug" />
+                                <category   scheme="/blog/tags"
+                            term="installation"
+                            label="Installation" />
+                                <category   scheme="/blog/tags"
+                            term="how-to"
+                            label="How-To" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I&#39;ve had a few people ask me for installations for &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/vim-debug/&#34;&gt;vim-debug&lt;/a&gt;, which I guess is natural...I&#39;m just not used to the whole &amp;quot;package maintainer&amp;quot; persona yet. Anyway, here it is.&lt;/blockquote&gt;
+&lt;img alt=&#34;http://jaredforsyth.com/media/uploads/images/install.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/images/install.png&#34; /&gt;
+&lt;p&gt;I&#39;ve had a few people ask me for installations for &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/vim-debug/&#34;&gt;vim-debug&lt;/a&gt;, which I guess is natural...I&#39;m
+just not used to the whole &amp;quot;package maintainer&amp;quot; persona yet. Anyway, here it
+is.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -884,13 +1003,24 @@ I&#39;ve had a few people ask me for installations for &lt;a class=&#34;referenc
                 <updated>2010-07-14T08:59:12Z</updated>
                 <published>2010-07-14T08:59:12Z</published>
                 <id>/blog/2010-jul-14-vim-debug-15-agyrtidae.html</id>
+                                <category   scheme="/blog/tags"
+                            term="vim-debug"
+                            label="Vim-Debug" />
+                                <category   scheme="/blog/tags"
+                            term="vim"
+                            label="Vim" />
+                                <category   scheme="/blog/tags"
+                            term="debug"
+                            label="Debug" />
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/uploads/images/agyrtidae.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/images/agyrtidae.png&#34; /&gt;
-&lt;p&gt;&lt;tt class=&#34;docutils literal&#34;&gt;Agyrtidae&lt;/tt&gt; is the name of a &lt;a class=&#34;reference external&#34; href=&#34;http://www.zin.ru/animalia/Coleoptera/eng/agyrt_fm.htm&#34;&gt;family of Beetles&lt;/a&gt; (found in Russia), and the codename for the &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/vim-debug/tree/1.5&#34;&gt;1.5 release&lt;/a&gt; of &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/vim-debug&#34;&gt;Vim Debug&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;tt class=&#34;docutils literal&#34;&gt;Agyrtidae&lt;/tt&gt; is the name of a &lt;a class=&#34;reference external&#34; href=&#34;http://www.zin.ru/animalia/Coleoptera/eng/agyrt_fm.htm&#34;&gt;family of Beetles&lt;/a&gt; (found in Russia),
+and the codename for the &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/vim-debug/tree/1.5&#34;&gt;1.5 release&lt;/a&gt; of &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/vim-debug&#34;&gt;Vim Debug&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -901,13 +1031,26 @@ I&#39;ve had a few people ask me for installations for &lt;a class=&#34;referenc
                 <updated>2010-07-13T21:50:54Z</updated>
                 <published>2010-07-13T21:50:54Z</published>
                 <id>/blog/2010-jul-13-why-it-would-be-hard-me-give-git-mercurial.html</id>
+                                <category   scheme="/blog/tags"
+                            term="git"
+                            label="Git" />
+                                <category   scheme="/blog/tags"
+                            term="mercurial"
+                            label="Mercurial" />
+                                <category   scheme="/blog/tags"
+                            term="dvcs"
+                            label="Dvcs" />
+                                <category   scheme="/blog/tags"
+                            term="comparison"
+                            label="Comparison" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/uploads/images/git-hgm.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/images/git-hgm.png&#34; /&gt;
-&lt;p&gt;I discovered &lt;tt class=&#34;docutils literal&#34;&gt;git&lt;/tt&gt; fairly recently, actually (near the end of last year), but already it has become an integral player in my arsenal of powertools. That said, I have also become intrigued by &lt;tt class=&#34;docutils literal&#34;&gt;mercurial&lt;/tt&gt; over the past month or so, but not quite enough to switch.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;I discovered &lt;tt class=&#34;docutils literal&#34;&gt;git&lt;/tt&gt; fairly recently, actually (near the end of last year), but
+already it has become an integral player in my arsenal of powertools. That
+said, I have also become intrigued by &lt;tt class=&#34;docutils literal&#34;&gt;mercurial&lt;/tt&gt; over the past month or so,
+but not quite enough to switch.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -918,13 +1061,26 @@ I&#39;ve had a few people ask me for installations for &lt;a class=&#34;referenc
                 <updated>2010-07-12T17:19:19Z</updated>
                 <published>2010-07-12T17:19:19Z</published>
                 <id>/blog/2010-jul-12-integrated-python-debugging-vim.html</id>
+                                <category   scheme="/blog/tags"
+                            term="vim-debug"
+                            label="Vim-Debug" />
+                                <category   scheme="/blog/tags"
+                            term="vim"
+                            label="Vim" />
+                                <category   scheme="/blog/tags"
+                            term="debug"
+                            label="Debug" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/projects/logo__.png&#34; src=&#34;http://jaredforsyth.com/media/projects/logo__.png&#34; /&gt;
-&lt;p&gt;A few days ago, I posted that I was taking over &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/vim-debug/&#34;&gt;a project&lt;/a&gt; which provides a debugging environment in VIM, specifically geared toward PHP. Soon after a guy w/ the handle Epeli asked (perhaps not very grammatically), &amp;quot;I can we debug Python like this with Vim?&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;A few days ago, I posted that I was taking over &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/vim-debug/&#34;&gt;a project&lt;/a&gt; which provides a debugging
+environment in VIM, specifically geared toward PHP. Soon after a guy w/ the
+handle Epeli asked (perhaps not very grammatically), &amp;quot;I can we debug Python
+like this with Vim?&amp;quot;&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -935,13 +1091,32 @@ I&#39;ve had a few people ask me for installations for &lt;a class=&#34;referenc
                 <updated>2010-07-10T15:49:25Z</updated>
                 <published>2010-07-10T15:49:25Z</published>
                 <id>/blog/2010-jul-10-python-registrar.html</id>
+                                <category   scheme="/blog/tags"
+                            term="announcing"
+                            label="Announcing" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="decorators"
+                            label="Decorators" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/projects/logo_.png&#34; src=&#34;http://jaredforsyth.com/media/projects/logo_.png&#34; /&gt;
 &lt;p&gt;Here&#39;s a small library I&#39;ve been playing around with: registrar. I often find myself writing meta decorators:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre class=&#34;code python literal-block&#34;&gt;
+&lt;span class=&#34;name&#34;&gt;_reg&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;punctuation&#34;&gt;{}&lt;/span&gt;
+&lt;span class=&#34;keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;name function&#34;&gt;register&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;name&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;):&lt;/span&gt;
+     &lt;span class=&#34;keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;name function&#34;&gt;meta&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;name&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;):&lt;/span&gt;
+          &lt;span class=&#34;name&#34;&gt;_reg&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;name&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;name&#34;&gt;func&lt;/span&gt;
+          &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;name&#34;&gt;func&lt;/span&gt;
+     &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;name&#34;&gt;meta&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Or some such thing.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -952,11 +1127,24 @@ I&#39;ve had a few people ask me for installations for &lt;a class=&#34;referenc
                 <updated>2010-07-09T20:00:00Z</updated>
                 <published>2010-07-09T20:00:00Z</published>
                 <id>/blog/2010-jul-09-tabbify-your-vim.html</id>
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
+                                <category   scheme="/blog/tags"
+                            term="vim"
+                            label="Vim" />
+                                <category   scheme="/blog/tags"
+                            term="tabs"
+                            label="Tabs" />
+                                <category   scheme="/blog/tags"
+                            term="editor"
+                            label="Editor" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I&#39;ve just [re]discovered Vim&#39;s tabs. Which are awesome. What isn&#39;t so awesome is the movement between tabs... &lt;tt class=&#34;docutils literal&#34;&gt;:tabnew&lt;/tt&gt; &lt;tt class=&#34;docutils literal&#34;&gt;:tabn&lt;/tt&gt; &lt;tt class=&#34;docutils literal&#34;&gt;:tabp&lt;/tt&gt;. Of course, the beauty of vim is customization -- it&#39;s trivial to make your own keybindings.&lt;/blockquote&gt;
+&lt;p&gt;I&#39;ve just [re]discovered Vim&#39;s tabs. Which are awesome. What isn&#39;t so awesome
+is the movement between tabs... &lt;tt class=&#34;docutils literal&#34;&gt;:tabnew&lt;/tt&gt; &lt;tt class=&#34;docutils literal&#34;&gt;:tabn&lt;/tt&gt; &lt;tt class=&#34;docutils literal&#34;&gt;:tabp&lt;/tt&gt;. Of course, the
+beauty of vim is customization -- it&#39;s trivial to make your own keybindings.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -967,13 +1155,37 @@ I&#39;ve just [re]discovered Vim&#39;s tabs. Which are awesome. What isn&#39;t s
                 <updated>2010-07-09T09:49:05Z</updated>
                 <published>2010-07-09T09:49:05Z</published>
                 <id>/blog/2010-jul-09-announcing-vim-phpdebug.html</id>
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
+                                <category   scheme="/blog/tags"
+                            term="vim"
+                            label="Vim" />
+                                <category   scheme="/blog/tags"
+                            term="php"
+                            label="Php" />
+                                <category   scheme="/blog/tags"
+                            term="debug"
+                            label="Debug" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="pdb"
+                            label="Pdb" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
+                                <category   scheme="/blog/tags"
+                            term="vim-debug"
+                            label="Vim-Debug" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/projects/logo.png&#34; src=&#34;http://jaredforsyth.com/media/projects/logo.png&#34; /&gt;
-&lt;p&gt;I&#39;ve just taken over maintenance of a &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/vim-phpdebug/&#34;&gt;really sweet plugin&lt;/a&gt; for integrated PHP debugging in VIM (written in python!). It&#39;s &lt;a class=&#34;reference external&#34; href=&#34;http://www.vim.org/scripts/script.php?script_id=1929&#34;&gt;been dead for 3 years&lt;/a&gt;, so I figure the air is clear...&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;I&#39;ve just taken over maintenance of a &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/vim-phpdebug/&#34;&gt;really sweet plugin&lt;/a&gt; for integrated PHP debugging
+in VIM (written in python!). It&#39;s &lt;a class=&#34;reference external&#34; href=&#34;http://www.vim.org/scripts/script.php?script_id=1929&#34;&gt;been dead for 3 years&lt;/a&gt;, so I figure the air
+is clear...&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -984,11 +1196,26 @@ I&#39;ve just [re]discovered Vim&#39;s tabs. Which are awesome. What isn&#39;t s
                 <updated>2010-07-08T12:00:00Z</updated>
                 <published>2010-07-08T12:00:00Z</published>
                 <id>/blog/2010-jul-08-json-parsing-python.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="parser"
+                            label="Parser" />
+                                <category   scheme="/blog/tags"
+                            term="json"
+                            label="Json" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="benchmark"
+                            label="Benchmark" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I&#39;ve done some benchmarks on JSON parsing, and I thought I&#39;d share the results.&lt;/blockquote&gt;
+&lt;img alt=&#34;http://jaredforsyth.com/media/uploads/Selection_018.jpeg&#34; class=&#34;align-left&#34; src=&#34;http://jaredforsyth.com/media/uploads/Selection_018.jpeg&#34; /&gt;
+&lt;p&gt;I&#39;ve done some benchmarks on JSON parsing, and I thought I&#39;d share the results.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -999,20 +1226,40 @@ I&#39;ve done some benchmarks on JSON parsing, and I thought I&#39;d share the r
                 <updated>2010-07-08T01:38:08Z</updated>
                 <published>2010-07-08T01:38:08Z</published>
                 <id>/blog/2010-jul-08-announcing-codetalker.html</id>
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="parser"
+                            label="Parser" />
+                                <category   scheme="/blog/tags"
+                            term="lexer"
+                            label="Lexer" />
+                                <category   scheme="/blog/tags"
+                            term="compiler"
+                            label="Compiler" />
+                                <category   scheme="/blog/tags"
+                            term="translation"
+                            label="Translation" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; src=&#34;http://jaredforsyth.com/media/projects/navajo.gif&#34; /&gt;
-&lt;p&gt;Introduction&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 4)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;hr class=&#34;docutils&#34; /&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 4)&lt;/p&gt;
-Document may not end with a transition.&lt;/div&gt;
+&lt;p&gt;Well, I&#39;ve done it again. I&#39;ve put off blogging about a project for so long
+that it is impossible for me to do justice to all the cool things that have
+been going on; so I&#39;ll skip most of it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Codetalker&lt;/strong&gt; is a project that has actually been bubbling away on my back
+burner for probably over a year now, and which has seen its share of complete
+overhauls, but which I think is now ready to come into the light.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1023,11 +1270,18 @@ Document may not end with a transition.&lt;/div&gt;
                 <updated>2010-06-26T18:16:03Z</updated>
                 <published>2010-06-26T18:16:03Z</published>
                 <id>/blog/2010-jun-26-string-concatenation-kills-babies.html</id>
+                                <category   scheme="/blog/tags"
+                            term="performance"
+                            label="Performance" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Or at least your performance. I know I&#39;ve heard a couple of times about the inefficiencies of CPython&#39;s string concatenation, but now I have real-world experience...&lt;/blockquote&gt;
+&lt;p&gt;Or at least your performance. I know I&#39;ve heard a couple of times about the
+inefficiencies of CPython&#39;s string concatenation, but now I have real-world
+experience...&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1038,11 +1292,28 @@ Or at least your performance. I know I&#39;ve heard a couple of times about the 
                 <updated>2010-06-22T11:13:57Z</updated>
                 <published>2010-06-22T11:13:57Z</published>
                 <id>/blog/2010-jun-22-exceptions-for-failure-reporting.html</id>
+                                <category   scheme="/blog/tags"
+                            term="benchmark"
+                            label="Benchmark" />
+                                <category   scheme="/blog/tags"
+                            term="exceptions"
+                            label="Exceptions" />
+                                <category   scheme="/blog/tags"
+                            term="error handling"
+                            label="Error Handling" />
+                                <category   scheme="/blog/tags"
+                            term="performance"
+                            label="Performance" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I was wondering how much (if any) of a hit performance would take were I to make excessive use of exceptions, not merely for error reporting, but also for reporting failure (in place of, say, returning None to indicate failure).&lt;/blockquote&gt;
+&lt;p&gt;I was wondering how much (if any) of a hit performance would take were I to
+make excessive use of exceptions, not merely for error reporting, but also for
+reporting failure (in place of, say, returning None to indicate failure).&lt;/p&gt;
+&lt;p&gt;The results were pretty conclusive.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1053,13 +1324,32 @@ I was wondering how much (if any) of a hit performance would take were I to make
                 <updated>2010-06-17T07:32:47Z</updated>
                 <published>2010-06-17T07:32:47Z</published>
                 <id>/blog/2010-jun-17-clevercss-reloaded.html</id>
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
+                                <category   scheme="/blog/tags"
+                            term="clevercss"
+                            label="Clevercss" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="codetalker"
+                            label="Codetalker" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;/media/uploads/ccss.png&#34; src=&#34;/media/uploads/ccss.png&#34; /&gt;
-&lt;p&gt;I&#39;ve been meaning to jump into the wonderful world of CSS meta-languages, but I was turned off by their propensity to be &lt;a class=&#34;reference external&#34; href=&#34;http://sass-lang.com/&#34;&gt;in&lt;/a&gt; &lt;a class=&#34;reference external&#34; href=&#34;http://lesscss.org/&#34;&gt;ruby&lt;/a&gt; (into which I don&#39;t particularly want to jump); then I found &lt;a class=&#34;reference external&#34; href=&#34;http://sandbox.pocoo.org/clevercss/&#34;&gt;CleverCSS&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;I&#39;ve been meaning to jump into the wonderful world of CSS meta-languages, but
+I was turned off by their propensity to be &lt;a class=&#34;reference external&#34; href=&#34;http://sass-lang.com/&#34;&gt;in&lt;/a&gt; &lt;a class=&#34;reference external&#34; href=&#34;http://lesscss.org/&#34;&gt;ruby&lt;/a&gt; (into which I don&#39;t particularly want to jump); then I
+found &lt;a class=&#34;reference external&#34; href=&#34;http://sandbox.pocoo.org/clevercss/&#34;&gt;CleverCSS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Diving into the code I was a little put off by the &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/dziegler/clevercss/blob/master/clevercss.py&#34;&gt;1600+ line(!) monolithic
+approach&lt;/a&gt; —
+fortunately, it&#39;s hosted on github and open source :) so I &lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/clevercss&#34;&gt;forked it&lt;/a&gt;, split it into (primarily) seven
+different files, and generally reorganized it.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1070,11 +1360,21 @@ I was wondering how much (if any) of a hit performance would take were I to make
                 <updated>2010-06-16T18:28:44Z</updated>
                 <published>2010-06-16T18:28:44Z</published>
                 <id>/blog/2010-jun-16-what-does-setuptools-test-do.html</id>
+                                <category   scheme="/blog/tags"
+                            term="setuptools"
+                            label="Setuptools" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="question"
+                            label="Question" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I remember reading a post on planet python about package testing, and that many people use &amp;quot;setup.py test&amp;quot;. The thing is, I can&#39;t seem to find anywhere that documents just what &amp;quot;setup.py test&amp;quot; does -- it&#39;s some setuptools magic.&lt;/blockquote&gt;
+&lt;p&gt;I remember reading a post on planet python about package testing, and that
+many people use &amp;quot;setup.py test&amp;quot;. The thing is, I can&#39;t seem to find anywhere
+that documents just what &amp;quot;setup.py test&amp;quot; does -- it&#39;s some setuptools magic.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1085,13 +1385,33 @@ I remember reading a post on planet python about package testing, and that many 
                 <updated>2010-06-02T09:29:59Z</updated>
                 <published>2010-06-02T09:29:59Z</published>
                 <id>/blog/2010-jun-02-announcing-django-restive.html</id>
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
+                                <category   scheme="/blog/tags"
+                            term="django"
+                            label="Django" />
+                                <category   scheme="/blog/tags"
+                            term="rest"
+                            label="Rest" />
+                                <category   scheme="/blog/tags"
+                            term="django-restive"
+                            label="Django-Restive" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/projects/djanfo-restive.png&#34; src=&#34;http://jaredforsyth.com/media/projects/djanfo-restive.png&#34; /&gt;
 &lt;p&gt;&lt;strong&gt;res·tive&lt;/strong&gt;: &lt;em&gt;marked by impatience or uneasiness&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/django-restive/&#34;&gt;django-restive&lt;/a&gt; is a
+short and sweet library for setting up RESTful services in django - both the
+django backend and, if you want the javascript frontend.&lt;/p&gt;
+&lt;p&gt;It was created for the AJAX webapp I&#39;m currently devving -- or rather, spun
+off of it. As with many apps, restive was originally built into another
+project (&lt;a class=&#34;reference external&#34; href=&#34;http://github.com/jabapyth/GameCC&#34;&gt;GameCC&lt;/a&gt;) until I realized it
+deserved an app of its own.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1102,13 +1422,27 @@ I remember reading a post on planet python about package testing, and that many 
                 <updated>2010-05-30T00:39:05Z</updated>
                 <published>2010-05-30T00:39:05Z</published>
                 <id>/blog/2010-may-30-easy-zsh-auto-completion.html</id>
+                                <category   scheme="/blog/tags"
+                            term="zsh"
+                            label="Zsh" />
+                                <category   scheme="/blog/tags"
+                            term="terminal"
+                            label="Terminal" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
+                                <category   scheme="/blog/tags"
+                            term="completion"
+                            label="Completion" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;http://jaredforsyth.com/media/uploads/zsh-completion.png&#34; src=&#34;http://jaredforsyth.com/media/uploads/zsh-completion.png&#34; /&gt;
 &lt;p&gt;It took a surprising amount of looking to figure out how to create a custom zsh completion rule...so I&#39;ll share my findings.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;For a static list:&lt;/p&gt;
+&lt;pre class=&#34;code bash literal-block&#34;&gt;
+compctl -k &lt;span class=&#34;literal string double&#34;&gt;&amp;quot;(one two other possibility)&amp;quot;&lt;/span&gt; &lt;span class=&#34;name builtin&#34;&gt;command&lt;/span&gt;-name
+&lt;/pre&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1119,11 +1453,20 @@ I remember reading a post on planet python about package testing, and that many 
                 <updated>2010-05-26T10:19:35Z</updated>
                 <published>2010-05-26T10:19:35Z</published>
                 <id>/blog/2010-may-26-just-wasted-hour-thanks-rhino.html</id>
+                                <category   scheme="/blog/tags"
+                            term="rhino"
+                            label="Rhino" />
+                                <category   scheme="/blog/tags"
+                            term="javascript"
+                            label="Javascript" />
+                                <category   scheme="/blog/tags"
+                            term="troubleshooting"
+                            label="Troubleshooting" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Was running the tests for PJs, when I suddenly got hit w/ a total meltdown on the Rhino end -- Java exceptions and all.&lt;/blockquote&gt;
+&lt;p&gt;Was running the tests for PJs, when I suddenly got hit w/ a total meltdown on
+the Rhino end -- Java exceptions and all.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1134,15 +1477,17 @@ Was running the tests for PJs, when I suddenly got hit w/ a total meltdown on th
                 <updated>2010-05-25T07:38:08Z</updated>
                 <published>2010-05-25T07:38:08Z</published>
                 <id>/blog/2010-may-25-python-deepsort.html</id>
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="deepsort"
+                            label="Deepsort" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-There are times when you want a sequence of items sorted, but regular&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;&lt;tt class=&#34;docutils literal&#34;&gt;sort()&lt;/tt&gt; doesn&#39;t cut it; in normal sorting algorithms, it is assumed that if
+&lt;p&gt;There are times when you want a sequence of items sorted, but regular
+&lt;tt class=&#34;docutils literal&#34;&gt;sort()&lt;/tt&gt; doesn&#39;t cut it; in normal sorting algorithms, it is assumed that if
 &lt;tt class=&#34;docutils literal&#34;&gt;cmp(a, b) == 0&lt;/tt&gt; and &lt;tt class=&#34;docutils literal&#34;&gt;cmp(b, c) == 0&lt;/tt&gt;, then &lt;tt class=&#34;docutils literal&#34;&gt;cmp(a, c) == 0&lt;/tt&gt;. I ran into
 a problem here when trying to sort classes by inheritance; sort order is not
 necessarily commutative.&lt;/p&gt;
@@ -1156,11 +1501,16 @@ necessarily commutative.&lt;/p&gt;
                 <updated>2010-05-21T07:20:45Z</updated>
                 <published>2010-05-21T07:20:45Z</published>
                 <id>/blog/2010-may-21-python-operator-magic.html</id>
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Take a look at the following boolean expression:&lt;/blockquote&gt;
+&lt;p&gt;Take a look at the following boolean expression:&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1171,15 +1521,17 @@ Take a look at the following boolean expression:&lt;/blockquote&gt;
                 <updated>2010-05-20T22:20:09Z</updated>
                 <published>2010-05-20T22:20:09Z</published>
                 <id>/blog/2010-may-20-javascript-type-maddness.html</id>
+                                <category   scheme="/blog/tags"
+                            term="javascript"
+                            label="Javascript" />
+                                <category   scheme="/blog/tags"
+                            term="editorial"
+                            label="Editorial" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-It truly amazes me the extent to which the javascript interpreter &lt;em&gt;inhibits&lt;/em&gt;&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;productivity. It seems extraordinary that the language could have gotten this
+&lt;p&gt;It truly amazes me the extent to which the javascript interpreter &lt;em&gt;inhibits&lt;/em&gt;
+productivity. It seems extraordinary that the language could have gotten this
 far while still &lt;em&gt;by design&lt;/em&gt; causing no end of headaches for developers.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
@@ -1191,11 +1543,21 @@ far while still &lt;em&gt;by design&lt;/em&gt; causing no end of headaches for d
                 <updated>2010-05-14T13:37:17Z</updated>
                 <published>2010-05-14T13:37:17Z</published>
                 <id>/blog/2010-may-14-manually-enable-clean-urls-drupal.html</id>
+                                <category   scheme="/blog/tags"
+                            term="drupan"
+                            label="Drupan" />
+                                <category   scheme="/blog/tags"
+                            term="clean urls"
+                            label="Clean Urls" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-For various reasons I wasn&#39;t able to use the regular interface for checking for clean urls, and at the time I installed drupal I hadn&#39;t configured apache correctly, so drupal thought (rightly) that clean urls were not supported.&lt;/blockquote&gt;
+&lt;p&gt;For various reasons I wasn&#39;t able to use the regular interface for checking for
+clean urls, and at the time I installed drupal I hadn&#39;t configured apache
+correctly, so drupal thought (rightly) that clean urls were not supported.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1206,43 +1568,30 @@ For various reasons I wasn&#39;t able to use the regular interface for checking 
                 <updated>2010-05-06T11:30:31Z</updated>
                 <published>2010-05-06T11:30:31Z</published>
                 <id>/blog/2010-may-06-birthday-release-pjs-019.html</id>
+                                <category   scheme="/blog/tags"
+                            term="release"
+                            label="Release" />
+                                <category   scheme="/blog/tags"
+                            term="pjs"
+                            label="Pjs" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="javascript"
+                            label="Javascript" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;img alt=&#34;http://jaredforsyth.com/media/projects/pjs_logo125x125.png&#34; src=&#34;http://jaredforsyth.com/media/projects/pjs_logo125x125.png&#34; /&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 2)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;table class=&#34;docutils field-list&#34; frame=&#34;void&#34; rules=&#34;none&#34;&gt;
-&lt;col class=&#34;field-name&#34; /&gt;
-&lt;col class=&#34;field-body&#34; /&gt;
-&lt;tbody valign=&#34;top&#34;&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;align:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;left&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;class:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;first&lt;/p&gt;
-&lt;p class=&#34;last&#34;&gt;So today&#39;s my birthday, and I thought I&#39;d celebrate by releasing the first&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 6)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;version of &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;PJs_&lt;/span&gt;&lt;/a&gt;...actually, it&#39;s pretty much a coincidence, but i just got PJs
+&lt;img alt=&#34;http://jaredforsyth.com/media/projects/pjs_logo125x125.png&#34; class=&#34;first align-left&#34; src=&#34;http://jaredforsyth.com/media/projects/pjs_logo125x125.png&#34; /&gt;
+&lt;p&gt;So today&#39;s my birthday, and I thought I&#39;d celebrate by releasing the first
+version of &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/pjs/&#34;&gt;PJs&lt;/a&gt;...actually, it&#39;s pretty much a coincidence, but i just got PJs
 into a state that I&#39;m comfortable letting other people hack away at it, and
 it&#39;s my birthday. Why 0.19? Because today, in 1991, I was born. So I am now
 19. I think the number-play is interesting.&lt;/p&gt;
-&lt;div class=&#34;system-messages section&#34;&gt;
-&lt;h1&gt;Docutils System Messages&lt;/h1&gt;
-&lt;div class=&#34;system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: ERROR/3 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 6); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-Unknown target name: &amp;quot;pjs&amp;quot;.&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1253,39 +1602,37 @@ Unknown target name: &amp;quot;pjs&amp;quot;.&lt;/div&gt;
                 <updated>2010-05-04T21:41:29Z</updated>
                 <published>2010-05-04T21:41:29Z</published>
                 <id>/blog/2010-may-04-disqus-comments-django.html</id>
+                                <category   scheme="/blog/tags"
+                            term="disqus"
+                            label="Disqus" />
+                                <category   scheme="/blog/tags"
+                            term="django"
+                            label="Django" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="blog"
+                            label="Blog" />
+                                <category   scheme="/blog/tags"
+                            term="webdev"
+                            label="Webdev" />
+                                <category   scheme="/blog/tags"
+                            term="comments"
+                            label="Comments" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;img alt=&#34;http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg&#34; src=&#34;http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg&#34; /&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 2)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;table class=&#34;docutils field-list&#34; frame=&#34;void&#34; rules=&#34;none&#34;&gt;
-&lt;col class=&#34;field-name&#34; /&gt;
-&lt;col class=&#34;field-body&#34; /&gt;
-&lt;tbody valign=&#34;top&#34;&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;class:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;first&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;width:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;190px&lt;/p&gt;
-&lt;p&gt;Recently I finally got around to adding comments to this blog; &lt;a href=&#34;#id1&#34;&gt;&lt;span class=&#34;problematic&#34; id=&#34;id2&#34;&gt;`&lt;/span&gt;&lt;/a&gt;disqus&lt;/p&gt;
-&lt;div class=&#34;last system-message&#34; id=&#34;id1&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 5); &lt;em&gt;&lt;a href=&#34;#id2&#34;&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Inline interpreted text or phrase reference start-string without end-string.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 6)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;&amp;lt;&lt;a class=&#34;reference external&#34; href=&#34;http://disqus.com&#34;&gt;http://disqus.com&lt;/a&gt;&amp;gt;`_ made it so easy that I didn&#39;t really have an excuse to
+&lt;img alt=&#34;http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg&#34; class=&#34;first&#34; src=&#34;http://www.clickonf5.org/wp-content/uploads/2009/08/disqus.jpg&#34; style=&#34;width: 190px;&#34; /&gt;
+&lt;p&gt;Recently I finally got around to adding comments to this blog; &lt;a class=&#34;reference external&#34; href=&#34;http://disqus.com&#34;&gt;disqus&lt;/a&gt; made it so easy that I didn&#39;t really have an excuse to
 keep putting it off ;)&lt;/p&gt;
+&lt;p&gt;When I first made this blog...a few months ago, I was simultaneously
+discovering &lt;a class=&#34;reference external&#34; href=&#34;http://djangoproject.com&#34;&gt;django&lt;/a&gt; (they say the way to learn
+the ropes in django is to create a blogging engine) and wasn&#39;t quite satisfied
+with the readily available comments solutions.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1296,11 +1643,35 @@ keep putting it off ;)&lt;/p&gt;
                 <updated>2010-05-04T20:38:37Z</updated>
                 <published>2010-05-04T20:38:37Z</published>
                 <id>/blog/2010-may-04-announcing-pjs.html</id>
+                                <category   scheme="/blog/tags"
+                            term="announcement"
+                            label="Announcement" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="project"
+                            label="Project" />
+                                <category   scheme="/blog/tags"
+                            term="pjs"
+                            label="Pjs" />
+                                <category   scheme="/blog/tags"
+                            term="javascript"
+                            label="Javascript" />
+                                <category   scheme="/blog/tags"
+                            term="translator"
+                            label="Translator" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-My new project: &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/pjs/&#34;&gt;PJs&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;My new project: &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/pjs/&#34;&gt;PJs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I&#39;ve been keeping an eye on the &lt;a class=&#34;reference external&#34; href=&#34;http://pyjs.org&#34;&gt;pyjamas project&lt;/a&gt; for some
+time now (it&#39;s been around for a few years at least), but unfortunately It has
+never from what I can see lived up to it&#39;s potential.&lt;/p&gt;
+&lt;p&gt;In the mean time, I&#39;ve been doing a good deal of javascript programming (it&#39;s
+one of my favorite languages), and been looking for ways to  make that more
+friendly -- one issue I have with javascript is the way it tries to handle
+Object Oriented design; IMO javascript&#39;s solution is a very poor one...&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1311,11 +1682,21 @@ My new project: &lt;a class=&#34;reference external&#34; href=&#34;http://jaredf
                 <updated>2010-04-30T06:30:26Z</updated>
                 <published>2010-04-30T06:30:26Z</published>
                 <id>/blog/2010-apr-30-embed-youtube-videos-restructuredtext.html</id>
+                                <category   scheme="/blog/tags"
+                            term="youtube"
+                            label="Youtube" />
+                                <category   scheme="/blog/tags"
+                            term="restructuredtext"
+                            label="Restructuredtext" />
+                                <category   scheme="/blog/tags"
+                            term="restructuredtext extensions"
+                            label="Restructuredtext Extensions" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I write this blog almost exclusively in &lt;a class=&#34;reference external&#34; href=&#34;http://docutils.sourceforge.net/docs/user/rst/quickstart.html&#34;&gt;RestructuredText&lt;/a&gt; and I recently wanted to embed a youtube video on the &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/baby-tux/&#34;&gt;Baby Tux project page&lt;/a&gt;. Fortunately someone&#39;s already done the work of making a directive, so you can just save the code &lt;a class=&#34;reference external&#34; href=&#34;http://countergram.com/articles/youtube-in-rst/&#34;&gt;here&lt;/a&gt; to &lt;tt class=&#34;docutils literal&#34;&gt;youtube_rst.py&lt;/tt&gt; and put&lt;/blockquote&gt;
+&lt;p&gt;I write this blog almost exclusively in &lt;a class=&#34;reference external&#34; href=&#34;http://docutils.sourceforge.net/docs/user/rst/quickstart.html&#34;&gt;RestructuredText&lt;/a&gt; and I
+recently wanted to embed a youtube video on the &lt;a class=&#34;reference external&#34; href=&#34;http://jaredforsyth.com/projects/baby-tux/&#34;&gt;Baby Tux project page&lt;/a&gt;. Fortunately someone&#39;s already
+done the work of making a directive&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1326,11 +1707,24 @@ I write this blog almost exclusively in &lt;a class=&#34;reference external&#34;
                 <updated>2010-04-29T16:49:12Z</updated>
                 <published>2010-04-29T16:49:12Z</published>
                 <id>/blog/2010-apr-29-django-uml.html</id>
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
+                                <category   scheme="/blog/tags"
+                            term="django"
+                            label="Django" />
+                                <category   scheme="/blog/tags"
+                            term="graphviz"
+                            label="Graphviz" />
+                                <category   scheme="/blog/tags"
+                            term="bash"
+                            label="Bash" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I was looking around for a django models to UML converter and took a bit of doing, but I found one nestled in the app &lt;a class=&#34;reference external&#34; href=&#34;http://code.google.com/p/django-command-extensions/&#34;&gt;django-extensions&lt;/a&gt;. As it took a while, I thought I&#39;d spare the next guy a search.&lt;/blockquote&gt;
+&lt;p&gt;I was looking around for a django models to UML converter and took a bit of
+doing, but I found one nestled in the app &lt;a class=&#34;reference external&#34; href=&#34;http://code.google.com/p/django-command-extensions/&#34;&gt;django-extensions&lt;/a&gt;. As it took a while, I
+thought I&#39;d spare the next guy a search.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1341,11 +1735,25 @@ I was looking around for a django models to UML converter and took a bit of doin
                 <updated>2010-04-28T11:43:54Z</updated>
                 <published>2010-04-28T11:43:54Z</published>
                 <id>/blog/2010-apr-28-accessinit-hash-collision-3-both-1-and-1.html</id>
+                                <category   scheme="/blog/tags"
+                            term="troubleshooting"
+                            label="Troubleshooting" />
+                                <category   scheme="/blog/tags"
+                            term="PIL"
+                            label="Pil" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="import"
+                            label="Import" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I recently ran into a problem, which didn&#39;t immediately make itself clear (this is one of the troubles that django causes me -- too often the error reporting is just &lt;em&gt;not there&lt;/em&gt;, and forces me to do a good deal of debugging to even determine where the error is occurring).&lt;/blockquote&gt;
+&lt;p&gt;I recently ran into a problem, which didn&#39;t immediately make itself clear
+(this is one of the troubles that django causes me -- too often the error
+reporting is just &lt;em&gt;not there&lt;/em&gt;, and forces me to do a good deal of debugging to
+even determine where the error is occurring).&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1356,11 +1764,20 @@ I recently ran into a problem, which didn&#39;t immediately make itself clear (t
                 <updated>2010-04-17T13:05:07Z</updated>
                 <published>2010-04-17T13:05:07Z</published>
                 <id>/blog/2010-apr-17-vim-tip-day-copy-current-file-name.html</id>
+                                <category   scheme="/blog/tags"
+                            term="vim"
+                            label="Vim" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-If you want to copy/paste the current filename, the magic register &amp;quot;%&amp;quot; is just what you need.&lt;/blockquote&gt;
+&lt;p&gt;If you want to copy/paste the current filename, the magic register &amp;quot;%&amp;quot; is just what you need.&lt;/p&gt;
+&lt;p&gt;It&#39;s as simple as &amp;quot;%p (which means p[aste] from the register %)&lt;/p&gt;
+&lt;pre class=&#34;literal-block&#34;&gt;
+&amp;quot;%p
+&lt;/pre&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1371,11 +1788,19 @@ If you want to copy/paste the current filename, the magic register &amp;quot;%&a
                 <updated>2010-04-09T12:02:01Z</updated>
                 <published>2010-04-09T12:02:01Z</published>
                 <id>/blog/2010-apr-09-vim-crash-recovery.html</id>
+                                <category   scheme="/blog/tags"
+                            term="vim"
+                            label="Vim" />
+                                <category   scheme="/blog/tags"
+                            term="sessions"
+                            label="Sessions" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Currently the host I use (bluehost) likes to SIGKILL my processes if they run too long (in an ssh session). This makes perfect sense from their point of view -- it&#39;s a shared hosting situation, so they don&#39;t want processes hogging resources -- but it can get pretty annoying, especially as I usually have several buffers open in split windows.&lt;/blockquote&gt;
+&lt;p&gt;Currently the host I use (bluehost) likes to SIGKILL my processes if they run too long (in an ssh session). This makes perfect sense from their point of view -- it&#39;s a shared hosting situation, so they don&#39;t want processes hogging resources -- but it can get pretty annoying, especially as I usually have several buffers open in split windows.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1389,8 +1814,11 @@ Currently the host I use (bluehost) likes to SIGKILL my processes if they run to
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I&#39;m a power-user in the browser, and I usually have a large amount of tabs open; often it is the case that I can only see the favicon (I use chromium, which shrinks the tabs indefinitely). As such, I make use of favicons to distinguish sites, and this works well for me as most sites have jumped on the favicon bus.&lt;/blockquote&gt;
+&lt;p&gt;I&#39;m a power-user in the browser, and I usually have a large amount of tabs
+open; often it is the case that I can only see the favicon (I use chromium,
+which shrinks the tabs indefinitely). As such, I make use of favicons to
+distinguish sites, and this works well for me as most sites have jumped on the
+favicon bus.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1419,8 +1847,13 @@ I&#39;m a power-user in the browser, and I usually have a large amount of tabs o
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Ok, so it&#39;s technically more than one line -- but all the logic/execution is on one line =)&lt;/blockquote&gt;
+&lt;p&gt;Ok, so it&#39;s technically more than one line -- but all the logic/execution is on one line =)&lt;/p&gt;
+&lt;p&gt;This is the install script I just whipped up to get django-mingus up and
+running. It&#39;s fairly simple, but the script does a good job of telling you
+what went wrong (if anything happens to go wrong). What I really hate is
+copy/pasting ~15 lines of commands into bash, only to have the 3rd one fail
+for some reason, and the remaining 12 still execute, usually to no effect
+(lots of errors), but to potentially dangerous effect.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1446,14 +1879,13 @@ Ok, so it&#39;s technically more than one line -- but all the logic/execution is
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-So I just spent the last little while going back to the &lt;a class=&#34;reference external&#34; href=&#34;http://code.djangoproject.com/changeset/392&#34;&gt;dawn of time&lt;/a&gt; and svn revision 392 of django core-- the current revision is nearly 13 &lt;strong&gt;thousand&lt;/strong&gt;) to find the answer to a surprisingly elusive question: why is there a&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 6)&lt;/p&gt;
-Literal block expected; none found.&lt;/div&gt;
+&lt;p&gt;So I just spent the last little while going back to the &lt;a class=&#34;reference external&#34; href=&#34;http://code.djangoproject.com/changeset/392&#34;&gt;dawn of time&lt;/a&gt; and svn revision 392 of django
+core-- the current revision is nearly 13 &lt;strong&gt;thousand&lt;/strong&gt;) to find the answer to a
+surprisingly elusive question: why is there a&lt;/p&gt;
+&lt;pre class=&#34;literal-block&#34;&gt;
+^templates/(?P&amp;lt;template&amp;gt;.*)/$
+&lt;/pre&gt;
+&lt;p&gt;pattern in admindocs URLconf, and a corresponding template_detail view?&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1479,23 +1911,41 @@ Literal block expected; none found.&lt;/div&gt;
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-One thing that (it looks like) is missing in the django tradition is a generally adopted method for making user-friendly application-specific settings. And this feature is extremely key if we want to appeal to a broader audience; your average person &lt;em&gt;does not&lt;/em&gt; want to have to edit a settings.py file in order to change [most] things. Yes, settings that would require a server restart should go there, but there are a vast number of settings which are UI/display related, and should be dynamically modifiable.&lt;/blockquote&gt;
+&lt;p&gt;One thing that (it looks like) is missing in the django tradition is a
+generally adopted method for making user-friendly application-specific
+settings. And this feature is extremely key if we want to appeal to a broader
+audience; your average person &lt;em&gt;does not&lt;/em&gt; want to have to edit a settings.py
+file in order to change [most] things. Yes, settings that would require a
+server restart should go there, but there are a vast number of settings which
+are UI/display related, and should be dynamically modifiable.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
                                 <entry>
-                <title type="html">Flatpages crazy 404</title>
+                <title type="html">Django Flatpages crazy 404</title>
                 <author><name>Jared Forsyth</name></author>
                 <link href="/blog/2010-feb-25-flatpages-crazy-404.html"/>
                 <updated>2010-02-25T00:52:53Z</updated>
                 <published>2010-02-25T00:52:53Z</published>
                 <id>/blog/2010-feb-25-flatpages-crazy-404.html</id>
+                                <category   scheme="/blog/tags"
+                            term="django"
+                            label="Django" />
+                                <category   scheme="/blog/tags"
+                            term="troubleshooting"
+                            label="Troubleshooting" />
+                                <category   scheme="/blog/tags"
+                            term="flatpages"
+                            label="Flatpages" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Wow, they&#39;re not kidding about &amp;quot;Make sure to have leading and trailing slashes&amp;quot;...Don&#39;t know what I&#39;m talking about?&lt;/blockquote&gt;
+&lt;p&gt;Wow, they&#39;re not kidding about &amp;quot;Make sure to have leading and trailing slashes&amp;quot;...Don&#39;t know what I&#39;m talking about?&lt;/p&gt;
+&lt;p&gt;That&#39;s the &#39;help text&#39; on the &amp;quot;Create flat page&amp;quot; form -- and boy, do they mean
+it. I just spent the last [longer than I care to admit] trying to figure out
+&lt;em&gt;why&lt;/em&gt; flatpages was giving me a 404! I had installed and configured everything
+correctly, and, &lt;em&gt;darn it&lt;/em&gt;, flatpages is about the simplest app out there.
+&lt;em&gt;What is wrong with me?&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1516,17 +1966,16 @@ Wow, they&#39;re not kidding about &amp;quot;Make sure to have leading and trail
                             term="drupal"
                             label="Drupal" />
                                 <category   scheme="/blog/tags"
-                            term="how-to"
-                            label="How-To" />
+                            term="tip"
+                            label="Tip" />
+                                <category   scheme="/blog/tags"
+                            term="migration"
+                            label="Migration" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Recently, I decided that my site needed an overhaul. Initially, I only&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;imagined a theme redesign, but as I examined my site, I realized that drupal
+&lt;p&gt;Recently, I decided that my site needed an overhaul. Initially, I only
+imagined a theme redesign, but as I examined my site, I realized that drupal
 &lt;em&gt;really&lt;/em&gt; wasn&#39;t doing it for me. Yes, it&#39;s leaps and bounds ahead of what I&#39;d
 done before. Yes, it&#39;s amazing, with incredible contributed themes and
 modules. But...it was just insufficient / wrong. For one thing, it&#39;s written
@@ -1543,47 +1992,52 @@ Python in particular.&lt;/p&gt;
                 <updated>2010-02-20T21:00:35Z</updated>
                 <published>2010-02-20T21:00:35Z</published>
                 <id>/blog/2010-feb-20-songbird-global-hotkeys-ubuntu-linux.html</id>
+                                <category   scheme="/blog/tags"
+                            term="songbird"
+                            label="Songbird" />
+                                <category   scheme="/blog/tags"
+                            term="ubuntu"
+                            label="Ubuntu" />
+                                <category   scheme="/blog/tags"
+                            term="hotkeys"
+                            label="Hotkeys" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-One thing that I have really missed in playing with songbird is Global Hotkeys for changing the song, etc. This functionality is available for &lt;a class=&#34;reference external&#34; href=&#34;http://wiki.songbirdnest.com/Getting_Started_with_Songbird/03_Basic_Controls#Hotkeys_.26_Keyboard_Shortcuts&#34;&gt;Windows&lt;/a&gt;, but Linux (and Mac) users still have to wait if we want official support. There is a workaround, though, thanks to GeekShadow&#39;s addon &lt;a class=&#34;reference external&#34; href=&#34;http://addons.songbirdnest.com/addons/1381&#34;&gt;Command Line Support&lt;/a&gt;. This allows for all kinds of clever hackery, including global Hotkeys.&lt;/blockquote&gt;
+&lt;img alt=&#34;/media/images/key1.png&#34; src=&#34;/media/images/key1.png&#34; /&gt;
+&lt;p&gt;One thing that I have really missed in playing with songbird is Global Hotkeys
+for changing the song, etc. This functionality is available for &lt;a class=&#34;reference external&#34; href=&#34;http://wiki.songbirdnest.com/Getting_Started_with_Songbird/03_Basic_Controls#Hotkeys_.26_Keyboard_Shortcuts&#34;&gt;Windows&lt;/a&gt;,
+but Linux (and Mac) users still have to wait if we want official support.
+There is a workaround, though, thanks to GeekShadow&#39;s addon &lt;a class=&#34;reference external&#34; href=&#34;http://addons.songbirdnest.com/addons/1381&#34;&gt;Command Line
+Support&lt;/a&gt;. This allows for all
+kinds of clever hackery, including global Hotkeys.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
-                                            <entry>
-                <title type="html">Event Bubbling example</title>
-                <author><name>Jared Forsyth</name></author>
-                <link href="/blog/2009-dec-28-event-bubbling-example.html"/>
-                <updated>2009-12-28T22:55:14Z</updated>
-                <published>2009-12-28T22:55:14Z</published>
-                <id>/blog/2009-dec-28-event-bubbling-example.html</id>
-                
-                <content type="html">
-                    &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Javascript events are handled in a very particular way...&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;a way that isn&#39;t always immediately intuitive. For an excellent description of just how this all works, check out &lt;a class=&#34;reference external&#34; href=&#34;http://www.quirksmode.org/js/events_order.html&#34;&gt;this article&lt;/a&gt; over on quirksmode.org. The purpose of this post is to give you a practical knowledge of how this actually works, as well as point out a few quirks.&lt;/p&gt;
-&lt;/div&gt;
-                </content>
-            </entry>
-                                                        <entry>
+                                                                                <entry>
                 <title type="html">UNetbootin failed to unmount /cdrom</title>
                 <author><name>Jared Forsyth</name></author>
                 <link href="/blog/2009-nov-01-unetbootin-failed-unmount-cdrom.html"/>
                 <updated>2009-11-01T13:49:56Z</updated>
                 <published>2009-11-01T13:49:56Z</published>
                 <id>/blog/2009-nov-01-unetbootin-failed-unmount-cdrom.html</id>
+                                <category   scheme="/blog/tags"
+                            term="troubleshooting"
+                            label="Troubleshooting" />
+                                <category   scheme="/blog/tags"
+                            term="ubuntu"
+                            label="Ubuntu" />
+                                <category   scheme="/blog/tags"
+                            term="install"
+                            label="Install" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;/media/images/ubuntu-error.png&#34; src=&#34;/media/images/ubuntu-error.png&#34; /&gt;
 &lt;p&gt;I used UNetBootin to install Karmic (Ubuntu 9.10) to my laptop, but I kept running into the error &amp;quot;Failed to unmount partitions&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1594,13 +2048,17 @@ Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
                 <updated>2009-10-11T19:51:50Z</updated>
                 <published>2009-10-11T19:51:50Z</published>
                 <id>/blog/2009-oct-11-svg-birds.html</id>
+                                <category   scheme="/blog/tags"
+                            term="graphics"
+                            label="Graphics" />
+                                <category   scheme="/blog/tags"
+                            term="art"
+                            label="Art" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
 &lt;img alt=&#34;/media/images/birds2.png&#34; src=&#34;/media/images/birds2.png&#34; /&gt;
 &lt;p&gt;I needed to create some svg birds for a game I&#39;m working on (i couldn&#39;t find any around) and I thought I&#39;d share them; feel free to use/abuse them in any way you want ;)&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1611,11 +2069,18 @@ Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
                 <updated>2009-08-15T17:18:17Z</updated>
                 <published>2009-08-15T17:18:17Z</published>
                 <id>/blog/2009-aug-15-error-installing-xdebug-phpize-not-found.html</id>
+                                <category   scheme="/blog/tags"
+                            term="troubleshooting"
+                            label="Troubleshooting" />
+                                <category   scheme="/blog/tags"
+                            term="xdebug"
+                            label="Xdebug" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-So I ran &amp;quot;sudo pecl install xdebug&amp;quot; like a good linux user, but was stymied when it threw the error &amp;quot;phpize not found&amp;quot;, especially when &amp;quot;sudo apt-get install phpize&amp;quot; yielded no friuts (darn it, that usually works!)&lt;/blockquote&gt;
+&lt;p&gt;So I ran &lt;tt class=&#34;docutils literal&#34;&gt;sudo pecl install xdebug&lt;/tt&gt; like a good linux user, but was stymied
+when it threw the error &lt;tt class=&#34;docutils literal&#34;&gt;phpize not found&lt;/tt&gt;, especially when &lt;tt class=&#34;docutils literal&#34;&gt;sudo &lt;span class=&#34;pre&#34;&gt;apt-get&lt;/span&gt;
+install phpize&lt;/tt&gt; yielded no friuts (darn it, that usually works!)&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1626,11 +2091,28 @@ So I ran &amp;quot;sudo pecl install xdebug&amp;quot; like a good linux user, bu
                 <updated>2009-05-27T08:07:24Z</updated>
                 <published>2009-05-27T08:07:24Z</published>
                 <id>/blog/2009-may-27-drupal-make-user-profile-urls-readable.html</id>
+                                <category   scheme="/blog/tags"
+                            term="drupal"
+                            label="Drupal" />
+                                <category   scheme="/blog/tags"
+                            term="pathauto"
+                            label="Pathauto" />
+                                <category   scheme="/blog/tags"
+                            term="pretty-urls"
+                            label="Pretty-Urls" />
+                                <category   scheme="/blog/tags"
+                            term="ux"
+                            label="Ux" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
+&lt;p&gt;Here&#39;s a tip for making you&#39;re community site that much more user friendly:&lt;/p&gt;
+&lt;p&gt;change this:&lt;/p&gt;
 &lt;blockquote&gt;
-Here&#39;s a tip for making you&#39;re community site that much more user friendly:&lt;/blockquote&gt;
+&lt;em&gt;http://example.com/user/5275&lt;/em&gt;&lt;/blockquote&gt;
+&lt;p&gt;to this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;em&gt;http://example.com/users/joe-shmo&lt;/em&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1641,11 +2123,17 @@ Here&#39;s a tip for making you&#39;re community site that much more user friend
                 <updated>2009-05-15T23:02:24Z</updated>
                 <published>2009-05-15T23:02:24Z</published>
                 <id>/blog/2009-may-15-all-screenshots-drupal-theme-garden-one-page.html</id>
+                                <category   scheme="/blog/tags"
+                            term="drupal"
+                            label="Drupal" />
+                                <category   scheme="/blog/tags"
+                            term="themes"
+                            label="Themes" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-I got annoyed with &lt;a class=&#34;reference external&#34; href=&#34;http://themegarden.org/&#34;&gt;drupal theme garden&lt;/a&gt; so I whipped up &lt;a class=&#34;reference external&#34; href=&#34;/prog/themegarden.cgi&#34;&gt;this page&lt;/a&gt;&lt;/blockquote&gt;
+&lt;img alt=&#34;/media/images/drupalthemegarden.png&#34; src=&#34;/media/images/drupalthemegarden.png&#34; /&gt;
+&lt;p&gt;I got annoyed with &lt;a class=&#34;reference external&#34; href=&#34;http://themegarden.org/&#34;&gt;drupal theme garden&lt;/a&gt; so I whipped up &lt;a class=&#34;reference external&#34; href=&#34;/prog/themegarden.cgi&#34;&gt;this page&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1656,15 +2144,17 @@ I got annoyed with &lt;a class=&#34;reference external&#34; href=&#34;http://the
                 <updated>2009-02-02T22:24:55Z</updated>
                 <published>2009-02-02T22:24:55Z</published>
                 <id>/blog/2009-feb-02-songbird-recipe-playlists.html</id>
+                                <category   scheme="/blog/tags"
+                            term="songbird"
+                            label="Songbird" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-Here&#39;s a quick javascript+XPCOM recipe on how to get a list of the user&#39;s&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;playlists in a songbird extension.&lt;/p&gt;
+&lt;p&gt;Here&#39;s a quick javascript+XPCOM recipe on how to get a list of the user&#39;s
+playlists in a songbird extension.&lt;/p&gt;
 &lt;/div&gt;
                 </content>
             </entry>
@@ -1675,15 +2165,26 @@ Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
                 <updated>2009-01-20T18:20:48Z</updated>
                 <published>2009-01-20T18:20:48Z</published>
                 <id>/blog/2009-jan-20-install-python-26-ubuntu.html</id>
+                                <category   scheme="/blog/tags"
+                            term="how-to"
+                            label="How-To" />
+                                <category   scheme="/blog/tags"
+                            term="tips"
+                            label="Tips" />
+                                <category   scheme="/blog/tags"
+                            term="troubleshooting"
+                            label="Troubleshooting" />
+                                <category   scheme="/blog/tags"
+                            term="python"
+                            label="Python" />
+                                <category   scheme="/blog/tags"
+                            term="ubuntu"
+                            label="Ubuntu" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-At first blush, it would seem that those wanting the latest stable python, 2.6,&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;would have to compile it themselves (or so &lt;a class=&#34;reference external&#34; href=&#34;http://www.python.org/download/releases/2.6.1/&#34;&gt;python.org&lt;/a&gt; would indicate). Fortunately
+&lt;p&gt;At first blush, it would seem that those wanting the latest stable python, 2.6,
+would have to compile it themselves (or so &lt;a class=&#34;reference external&#34; href=&#34;http://www.python.org/download/releases/2.6.1/&#34;&gt;python.org&lt;/a&gt; would indicate). Fortunately
 for us, that process, which is at best annoying, and at worst long and
 complicated, is spared us by our friends over at Launchpad, and their
 &lt;a class=&#34;reference external&#34; href=&#34;https://help.launchpad.net/Packaging/PPA#Installing%20software%20from%20a%20PPA&#34;&gt;&amp;quot;Personal Package Archives&amp;quot;&lt;/a&gt;.&lt;/p&gt;
@@ -1697,37 +2198,24 @@ complicated, is spared us by our friends over at Launchpad, and their
                 <updated>2009-01-06T14:07:58Z</updated>
                 <published>2009-01-06T14:07:58Z</published>
                 <id>/blog/2009-jan-06-convert-videos-ffmpeg.html</id>
+                                <category   scheme="/blog/tags"
+                            term="ffmpeg"
+                            label="Ffmpeg" />
+                                <category   scheme="/blog/tags"
+                            term="troubleshooting"
+                            label="Troubleshooting" />
+                                <category   scheme="/blog/tags"
+                            term="linux"
+                            label="Linux" />
+                                <category   scheme="/blog/tags"
+                            term="tip"
+                            label="Tip" />
                 
                 <content type="html">
                     &lt;div class=&#34;document&#34;&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;img alt=&#34;http://ffmpeg.mplayerhq.hu/ffmpeg-logo.png&#34; src=&#34;http://ffmpeg.mplayerhq.hu/ffmpeg-logo.png&#34; /&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 2)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;table class=&#34;docutils field-list&#34; frame=&#34;void&#34; rules=&#34;none&#34;&gt;
-&lt;col class=&#34;field-name&#34; /&gt;
-&lt;col class=&#34;field-body&#34; /&gt;
-&lt;tbody valign=&#34;top&#34;&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;width:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;306&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;height:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;84&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;field&#34;&gt;&lt;th class=&#34;field-name&#34;&gt;alt:&lt;/th&gt;&lt;td class=&#34;field-body&#34;&gt;&lt;p class=&#34;first&#34;&gt;FFmpeg logo&lt;/p&gt;
-&lt;p class=&#34;last&#34;&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://ffmpeg.mplayerhq.hu/&#34;&gt;FFmpeg&lt;/a&gt; is a wonderful   tool which every&lt;/p&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;system-message&#34;&gt;
-&lt;p class=&#34;system-message-title&#34;&gt;System Message: WARNING/2 (&lt;tt class=&#34;docutils&#34;&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 7)&lt;/p&gt;
-Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
-&lt;p&gt;aspiring linux guru should get familiar with. The thing it does, just about
+&lt;img alt=&#34;FFmpeg logo&#34; src=&#34;http://ffmpeg.mplayerhq.hu/ffmpeg-logo.png&#34; style=&#34;width: 306px; height: 84px;&#34; /&gt;
+&lt;p&gt;&lt;a class=&#34;reference external&#34; href=&#34;http://ffmpeg.mplayerhq.hu/&#34;&gt;FFmpeg&lt;/a&gt; is a wonderful   tool which every
+aspiring linux guru should get familiar with. The thing it does, just about
 better   than anything else, is handle media files. You can mux them, demux
 them, encode/decode, resize, compress  .....you name it.&lt;/p&gt;
 &lt;/div&gt;

@@ -38,14 +38,14 @@
                     {% refer to res.relative_path as article -%}
                     {% filter forceescape -%}
                     {% if resource.meta.excerpts_only -%}
-                        {% filter restructuredtext %}
-                        {{ article.image }}
-                        {{ article.excerpt }}
-                        {% endfilter %}
+{% filter restructuredtext %}
+{{ article.image }}
+{{ article.excerpt }}
+{% endfilter %}
                     {%- else %}
-                        {% filter restructuredtext %}
-                        {{ article.post }}
-                        {% endfilter %}
+{% filter restructuredtext %}
+{{ article.post }}
+{% endfilter %}
                     {%- endif %}
                     {%- endfilter %}
                 </content>

@@ -1,10 +1,16 @@
 {% extends "fluid-blocks.jade" %}
 {% from "macros.j2" import render_excerpt with context  %}
-{% block main_content %}
 
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" href="/media/css/blog-titles.css">
+{% endblock %}
+
+{% block main_content %}
 {% for res in resource.node.walk_resources_sorted_by_time() %}
 {% if not res.meta.status or res.meta.status == 'public' %}
-    {{ render_excerpt(res, "spanner", 'excerpt') }}
+    {{ render_excerpt(res, mode='titles') }}
 {% endif %}
 {% endfor %}
 {% endblock %}
+

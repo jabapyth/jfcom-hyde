@@ -34,6 +34,25 @@ context:
                 css_class: blog
                 type: node
                 url: blog
+                subnav:
+                    -
+                        name: blocks
+                        description: View posts as blocks
+                        css_class: blog-blocks
+                        type: node
+                        url: blog
+                    -
+                        name: full
+                        description: View full posts
+                        css_class: blog-full
+                        type: node
+                        url: blog/full.html
+                    -
+                        name: titles
+                        description: View post titles
+                        css_class: blog-titles
+                        type: node
+                        url: blog/titles.html
             -
                 name: about
                 description: About

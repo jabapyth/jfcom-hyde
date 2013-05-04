@@ -1,5 +1,32 @@
+@import "macros";
 
 #content {
-    margin: 20px 100px;
-    max-width: 1000px;
+    #main-content {
+        padding: 0 20px;
+
+        .post {
+            border-top: none;
+            width: 100%;
+            @include spanner;
+
+            nav {
+                a.next {
+                    float: right;
+                }
+                a.prev {
+                    float: left;
+                }
+            }
+
+            nav.post_nav {
+                text-align: center;
+            }
+
+            section.body {
+                font-family: "Georgia",georgia,serif;
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+    }
 }

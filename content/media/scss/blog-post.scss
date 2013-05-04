@@ -1,5 +1,77 @@
+@import "macros";
 
 #content {
-    margin: 20px 100px;
-    max-width: 1000px;
+    #main-content {
+        padding: 0 20px;
+
+        .post {
+            border-top: none;
+            width: 100%;
+            @include spanner;
+            margin: 0;
+
+            nav {
+                a.next {
+                    float: right;
+                }
+                a.prev {
+                    float: left;
+                }
+            }
+
+            nav.post_nav {
+                text-align: center;
+            }
+
+            section.body {
+                font-family: "Georgia",georgia,serif;
+                font-size: 24px;
+                line-height: 36px;
+
+                li {
+                    line-height: 27px;
+                }
+            }
+
+            @media (max-width: 980px) {
+                header .title {
+                    font-size: 30px;
+                }
+            }
+
+            @media (max-width: 650px) {
+                header .title {
+                    font-size: 20px;
+                }
+
+                section.body {
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+}
+@media (max-width: 450px) {
+    #content {
+        padding: 0 5px;
+        margin-top: 0;
+
+        #main-content {
+            padding: 0;
+
+            .post {
+                header .title {
+                    font-size: 18px;
+                }
+
+                section.body {
+                    font-size: 14px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
 }

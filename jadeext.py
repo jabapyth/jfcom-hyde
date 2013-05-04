@@ -4,9 +4,15 @@ import pyjade
 import pyjade.ext.jinja
 import re
 
+import metastrip
+
 class JadeExtension(jinja2.ext.Extension):
     tags = set(['jade'])
     tags_rx = re.compile('{%\s*jade\s*%}'), re.compile('{%\s*endjade\s*%}')
+
+    def __init__(self, env):
+        env.filters['strip_meta'] = metastrip.strip_meta
+        return super(JadeExtension, self).__init__(env)
 
     def preprocess(self, source, name, filename = None):
         if (name and name.endswith('.jade')) or (filename and filename.endswith('.jade')):

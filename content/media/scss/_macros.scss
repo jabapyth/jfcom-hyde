@@ -1,0 +1,43 @@
+
+@mixin span3 {
+    width: 23.076923076923077%;
+    *width: 23.023731587561375%;
+    
+    &:nth-child(4n+1) {
+        margin-left: 0;
+        clear: both;
+    }
+}
+
+@mixin span4 {
+    width: 31.623931623931625%;
+    *width: 31.570740134569924%;
+
+    &:nth-child(3n+1) {
+        margin-left: 0;
+        clear: both;
+    }
+}
+
+@mixin span6 {
+    width: 48.717948717948715%;
+    *width: 48.664757228587014%;
+
+    &:nth-child(2n+1) {
+        margin-left: 0;
+        clear: both;
+    }
+}
+
+@mixin spanner {
+    margin-left: 2.564102564102564%;
+    *margin-left: 2.5109110747408616%;
+    display: block;
+    float: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+

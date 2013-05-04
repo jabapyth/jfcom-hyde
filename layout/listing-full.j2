@@ -1,10 +1,17 @@
-{% extends "fluid-blocks.jade" %}
+{% extends "layout.jade" %}
 {% from "macros.j2" import render_excerpt with context  %}
+
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" href="/media/css/blog-full.css">
+{% endblock %}
+
 {% block main_content %}
 
 {% for res in resource.node.walk_resources_sorted_by_time() %}
 {% if not res.meta.status or res.meta.status == 'public' %}
-    {{ render_excerpt(res, "spanner", 'excerpt') }}
+    {{ render_excerpt(res, mode='full') }}
 {% endif %}
 {% endfor %}
 {% endblock %}
+

@@ -1,29 +1,52 @@
-{% macro render_excerpt(res, class=None) %}
+{% macro render_excerpt(res, class=None, mode="excerpt") %}
 {% refer to res.url as post %}
 <article class="post {{ class if class }}">
-    <a class="date" href="{{ content_url(res.url) }}">
-        <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
-            {{ res.meta.created.strftime('%d %b<br>%Y') }}
-        </time>
-    </a>
-    <h3 class="title"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
-    <ul class="tags">
-    {% if res.meta.tags %}
-        {% for tag in res.meta.tags %}
-            <li><a class="small" href="{{ content_url('blog/tags/'~tag~'.html') }}">
-                {{ tag }}
-            </a></li>
-        {% endfor %}
-    {% endif %}
-    </ul>
-    <a href="{{ content_url(res.url) }}">
+    <header>
+        <a class="date" href="{{ content_url(res.url) }}">
+            <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+                {{ res.meta.created.strftime('%d %b<br>%Y') }}
+            </time>
+        </a>
+        {% if mode == 'titles' %}{# put the tags first, so they float right #}
+            <ul class="tags">
+            {% if res.meta.tags %}
+                {% for tag in res.meta.tags %}
+                    <li><a class="small" href="{{ content_url('blog/tags/'~tag~'.html') }}">
+                        {{ tag }}
+                    </a></li>
+                {% endfor %}
+            {% endif %}
+            </ul>
+            <h3 class="title"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
+        {% else %}
+            <h3 class="title"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
+            <ul class="tags">
+            {% if res.meta.tags %}
+                {% for tag in res.meta.tags %}
+                    <li><a class="small" href="{{ content_url('blog/tags/'~tag~'.html') }}">
+                        {{ tag }}
+                    </a></li>
+                {% endfor %}
+            {% endif %}
+            </ul>
+        {% endif %}
+    </header>
+    <section class="body">
+        {% if mode == 'excerpt' %}
+        <a href="{{ content_url(res.url) }}">
 {% filter restructuredtext %}
 {{ post.image }}
 {% endfilter %}
-    </a>
+        </a>
 {% filter restructuredtext %}
 {{ post.excerpt }}
 {% endfilter %}
+        {% elif mode == 'full' %}
+{% filter restructuredtext %}
+{{ post.html|strip_meta }}
+{% endfilter %}
+        {% endif %}
+    </section>
 </article>
 {% endmacro %}
 

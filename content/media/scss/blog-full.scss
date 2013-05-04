@@ -1,0 +1,20 @@
+@import "macros";
+
+#content {
+    #main-content {
+
+        .post {
+            width: 100%;
+            @include spanner;
+
+            h3.title {
+                font-size: 2.1em;
+            }
+        }
+        @media (min-width: 1400px) {
+            .post {
+                @include span6;
+            }
+        }
+    }
+}
