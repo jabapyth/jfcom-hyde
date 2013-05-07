@@ -6,8 +6,169 @@
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <link rel="openid.server" href="http://www.myopenid.com/server"/>
     <link rel="openid.delegate" href="http://jabapyth.myopenid.com/"/>    <link rel="stylesheet" href="/media/bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="/media/css/general.css"/>  </head>
-  <body class="">  </body>
+    <link rel="stylesheet" href="/media/css/general.css"/>
+<link rel="stylesheet" href="/media/css/header.css"/>
+<link rel="stylesheet" href="/media/css/layout.css"/>  </head>
+  <body class=""><div id="header" class="clearfix">
+  <div class="title">Jared Forsyth
+  </div>
+  <div class="nav-internal"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                        <li>
+            <a title="Home Page"
+                class="button white home"
+                                                href="/index.html"
+                                >
+                home
+            </a>
+        </li>                <li>
+            <a title="Projects"
+                class="button white projects"
+                                                href="/projects"
+                                >
+                projects
+            </a>
+        </li>                <li>
+            <a title="Blog"
+                class="button white blog"
+                                                href="/blog"
+                                >
+                blog
+            </a>
+        </li>                <li>
+            <a title="About"
+                class="button white about"
+                                                href="/about.html"
+                                >
+                about
+            </a>
+        </li>    </ul>
+    </nav>
+  </div>
+  <div class="nav-external"><nav class=nav nav-pills>
+    <ul class="nav nav-pills">
+                        <li>
+            <a title="my github repositories"
+                class="button white github"
+                                target="_blank"
+                                                href="/http%3A//github.com/jabapyth"
+                                >
+                github
+            </a>
+        </li>                <li>
+            <a title="my twitter account"
+                class="button white twitter"
+                                target="_blank"
+                                                href="/http%3A//twitter.com/jabapyth"
+                                >
+                twitter
+            </a>
+        </li>                <li>
+            <a title="my linkedin profile"
+                class="button white linkedin"
+                                target="_blank"
+                                                href="/http%3A//www.linkedin.com/profile/view%3Fid%3D37203333"
+                                >
+                linkedin
+            </a>
+        </li>                <li>
+            <a title="my stackoverflow profile"
+                class="button white stackoverflow"
+                                target="_blank"
+                                                href="/http%3A//stackoverflow.com/users/290784/jared-forsyth"
+                                >
+                stackoverflow
+            </a>
+        </li>    </ul>
+    </nav>
+  </div>
+</div><div id="content" class="container-fluid clearfix">
+  <div class="row-fluid">
+    <div id="main-content" class="span9 clearfix"><section class="archives">
+<h1 class="tag title">mingus</h1>
+
+    <article class="post ">
+    <header>
+        <a class="date" href="/blog/2010-feb-27-one-liner-rule-them-all.html">
+            <time datetime="2010-02-27">
+                27 Feb<br>2010
+            </time>
+        </a>
+                    <h3 class="title"><a href="/blog/2010-feb-27-one-liner-rule-them-all.html">One-liner to rule them all: django mingus install script</a></h3>
+            <ul class="tags">
+                                                <li><a class="small" href="/blog/tags/mingus.html">
+                        mingus
+                    </a></li>
+                                    <li><a class="small" href="/blog/tags/django.html">
+                        django
+                    </a></li>
+                                    <li><a class="small" href="/blog/tags/install.html">
+                        install
+                    </a></li>
+                                    <li><a class="small" href="/blog/tags/script.html">
+                        script
+                    </a></li>
+                                    <li><a class="small" href="/blog/tags/dependencies.html">
+                        dependencies
+                    </a></li>
+                                        </ul>
+            </header>
+    <section class="body">
+        <div class="document">
+<p>Ok, so it's technically more than one line -- but all the logic/execution is on one line =)</p>
+<p>This is the install script I just whipped up to get django-mingus up and
+running. It's fairly simple, but the script does a good job of telling you
+what went wrong (if anything happens to go wrong). What I really hate is
+copy/pasting ~15 lines of commands into bash, only to have the 3rd one fail
+for some reason, and the remaining 12 still execute, usually to no effect
+(lots of errors), but to potentially dangerous effect.</p>
+<p>Thus, all the commands are dependant on one another! If one fails, it doesn't
+blindly execute the rest. I thought of doing an only mess of nested if-else
+blocks, but instead I took advantage of some bash-fu to join them all together
+with &amp;&amp; (and). Anyway, here's the script. Enjoy. -- it also manages all
+dependencies of mingus.</p>
+<pre class="code bash literal-block">
+<span class="comment">#mingus-install.sh
+</span><span class="name variable">projectname</span><span class="operator">=</span><span class="name variable">$1</span>
+<span class="keyword">if</span> <span class="operator">[</span> -z <span class="literal string double">&quot;$projectname&quot;</span> <span class="operator">]</span>;<span class="keyword">then
+    </span><span class="name builtin">echo</span> <span class="literal string double">&quot;No project name given. usage: mingus-install.sh [project_name]&quot;</span>
+    <span class="name builtin">exit
+</span><span class="keyword">fi</span>
+<span class="operator">(</span> sudo pip install virtualenv <span class="operator">&amp;&amp;</span> <span class="name builtin">echo</span> <span class="literal string double">&quot;got virtualenv...&quot;</span> <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;failed to install virtualenv. Is pip installed properly (try 'sudo easy_install pip' on ubuntu)&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">])</span> <span class="operator">)</span> <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="operator">(</span> sudo pip install virtualenvwrapper <span class="operator">&amp;&amp;</span> <span class="name builtin">echo</span> <span class="literal string double">&quot;got virtualenvwrapper...&quot;</span> <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;failed to install virtualenvwrapper. Is pip installed properly (try 'sudo easy_install pip' on ubuntu)&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">])</span> <span class="operator">)</span> <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="operator">(</span> <span class="operator">[</span> ! -d <span class="literal string double">&quot;$WORKON_HOME/$projectname&quot;</span> <span class="operator">]</span> <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;env exists ($WORKON_HOME/$projectname). clear?&quot;</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">read</span> -e ans <span class="operator">&amp;&amp;</span> <span class="operator">(([</span> <span class="literal string double">&quot;$ans&quot;</span> <span class="operator">==</span> <span class="literal string double">&quot;y&quot;</span> <span class="operator">]</span> <span class="operator">&amp;&amp;</span> rm -rf <span class="literal string double">&quot;$WORKON_HOME/$projectname&quot;</span><span class="operator">)</span> <span class="operator">||</span> <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;exiting $ans&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">]))))</span> <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="operator">(</span> <span class="name builtin">source</span> /usr/local/bin/virtualenvwrapper_bashrc <span class="operator">&amp;&amp;</span> mkvirtualenv <span class="name variable">$projectname</span> --no-site-packages <span class="operator">&amp;&amp;</span> <span class="name builtin">echo</span> <span class="literal string double">&quot;created virtual environment $projectname ...&quot;</span>  <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">])</span> <span class="operator">)</span> <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="operator">(</span> <span class="name builtin">source</span> /usr/local/bin/virtualenvwrapper_bashrc <span class="operator">&amp;&amp;</span> workon <span class="name variable">$projectname</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">cd</span> <span class="name variable">$WORKON_HOME</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">cd</span> <span class="name variable">$projectname</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">echo</span> <span class="literal string double">&quot;woking on $projectname&quot;</span> <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;Looks like you failed to create the virtual environment, or \$WORKON_HOME isn't set...&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">])</span> <span class="operator">)</span> <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="operator">(</span> <span class="name builtin">cd</span> <span class="name variable">$WORKON_HOME</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">cd</span> <span class="name variable">$projectname</span> <span class="operator">&amp;&amp;</span> ./bin/easy_install pip <span class="operator">&amp;&amp;</span> git clone git://github.com/montylounge/django-mingus.git  <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;failed to install pip or django-mingus&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">])</span> <span class="operator">)</span> <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="operator">(</span> <span class="name builtin">cd</span> <span class="name variable">$WORKON_HOME</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">cd</span> <span class="name variable">$projectname</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">cd </span>django-mingus/mingus <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;directory not created correctly&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">])</span> <span class="operator">)</span> <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="operator">(</span> <span class="name builtin">cd</span> <span class="name variable">$WORKON_HOME</span> <span class="operator">&amp;&amp;</span> <span class="name builtin">cd</span> <span class="name variable">$projectname</span> <span class="operator">&amp;&amp;</span> ./bin/pip install -r django-mingus/mingus/requirements.txt <span class="operator">&amp;&amp;</span> <span class="name builtin">echo</span> <span class="literal string double">&quot;installed all dependencies...&quot;</span> <span class="operator">||</span>
+    <span class="operator">(</span><span class="name builtin">echo</span> <span class="literal string double">&quot;installing all the sub apps...failed&quot;</span> <span class="operator">&amp;&amp;</span> <span class="operator">[</span> -n <span class="literal string double">&quot;&quot;</span> <span class="operator">])</span> <span class="operator">)</span>  <span class="operator">&amp;&amp;</span> <span class="literal string escape">\
+</span><span class="name builtin">echo</span> <span class="literal string double">&quot;Looks like everything installed correctly! If anything fails (in the way of package imports), try running 'pip install the_package --upgrade'. cheers!&quot;</span>
+
+<span class="name builtin">echo</span> <span class="literal string double">&quot;To check it out, \&quot;cd $WORKON_HOME/$projectname\&quot;.&quot;</span>
+<span class="name builtin">echo</span> <span class="literal string double">&quot;If everything went well, try \&quot;cd django-mingus/mingus &amp;&amp; mv local_settings.py.template local_settings.py &amp;&amp; ./manage.py syncdb &amp;&amp; ./manage.py runserver\&quot;&quot;</span>
+<span class="name builtin">echo</span> <span class="literal string double">&quot;That will start the server up for you w/ default settings&quot;</span>
+</pre>
+<p>To run, save this to a .sh file, and run it from the command line.</p>
+</div>
+            </section>
+</article>
+
+
+
+</section>
+    </div>
+    <div id="right-sidebar" class="span3">      <h3>All about me!!</h3>
+      <p>I'm just a poor boy nobody likes me (he's just a poor boy from a poor family)</p>    </div>
+  </div>
+</div>  </body>
 </html>
 <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

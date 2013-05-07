@@ -1,11 +1,21 @@
-{% extends "base.jade" %}
+{% extends "layout.jade" %}
+{% from "macros.j2" import render_excerpt with context  %}
 
-{% block main %}
+{% block main_content %}
 <section class="archives">
 <h1 class="tag title">{{ tag.name }}</h1>
+
+{% for res in walker() %}
+{% if not res.meta.status or res.meta.status == 'public' %}
+    {{ render_excerpt(res, mode='full') }}
+{% endif %}
+{% endfor %}
+
+
+{#
 <ul class="posts clear">
 {% for resource in walker() -%}
-{% if not res.meta.status or res.meta.status == 'public' %}
+{% if not resource.meta.status or resource.meta.status == 'public' %}
 <li class="post clear">
     <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
         {{ resource.meta.created.strftime('%a, %d %b %Y') }}
@@ -26,5 +36,6 @@
 {% endif %}
 {%- endfor %}
 </ul>
+#}
 </section>
 {% endblock %}
