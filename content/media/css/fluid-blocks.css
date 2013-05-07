@@ -1,36 +1,51 @@
 #content #main-content img {
-  width: 100%!important; }
+  width: 100% !important;
+}
 #content #main-content object {
-  width: 100%!important; }
+  width: 100% !important;
+}
 #content #main-content .post header {
-  margin-top: 6px; }
+  margin-top: 6px;
+}
 #content #main-content .post section.body {
   font-family: Georgia, serif;
   font-size: 14px;
-  line-height: 26px; }
+  line-height: 26px;
+}
 @media (min-width: 1281px) {
   #content #main-content .post {
     width: 23.076923076923077%;
-    *width: 23.023731587561375%; }
-    #content #main-content .post:nth-child(4n+1) {
-      margin-left: 0;
-      clear: both; } }
+    *width: 23.023731587561375%;
+  }
+  #content #main-content .post:nth-child(4n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+}
 @media (max-width: 1280px) and (min-width: 981px) {
   #content #main-content .post {
     width: 31.623931623931625%;
-    *width: 31.570740134569924%; }
-    #content #main-content .post:nth-child(3n+1) {
-      margin-left: 0;
-      clear: both; } }
+    *width: 31.570740134569924%;
+  }
+  #content #main-content .post:nth-child(3n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+}
 @media (max-width: 980px) and (min-width: 651px) {
   #content #main-content .post {
     width: 48.717948717948715%;
-    *width: 48.664757228587014%; }
-    #content #main-content .post:nth-child(2n+1) {
-      margin-left: 0;
-      clear: both; } }
+    *width: 48.664757228587014%;
+  }
+  #content #main-content .post:nth-child(2n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+}
 @media (max-width: 650px) {
   #content #main-content .post {
     width: 100%;
     margin-left: 0;
-    clear: both; } }
+    clear: both;
+  }
+}
