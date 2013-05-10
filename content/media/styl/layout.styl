@@ -31,9 +31,14 @@ ul.tags {
 
 #content {
     margin-top: 20px;
+    position: relative;
 
     #main-content {
-        padding: 20px;
+        padding: 0 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 290px;
 
         .post {
             float: left;
@@ -77,9 +82,17 @@ ul.tags {
     }
 
     #right-sidebar {
-        padding: 10px 0 0 20px;
+        padding: 20px 0 0 20px;
         box-sizing: border-box;
         border-left: 1px solid accent;
+        position: absolute;
+        right: 20px;
+        width: 250px;
+
+        img {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
 
         h3 {
             margin-top: 0;
@@ -89,16 +102,33 @@ ul.tags {
 
     @media (max-width: 768px) {
         #main-content {
-            width: 100%;
+            left: 0;
+            right: 0;
+            position: static;
         }
         #right-sidebar {
-            width: 100%;
+            width: auto;
             margin-bottom: 20px;
+            position: static;
+            padding-top: 20px;
+            border-left: none;
+            border-top: 1px solid accent;
+
+            img {
+                width: 200px;
+                margin-right: 20px;
+                float: left;
+            }
         }
     }
     @media (max-width: 650px) {
         #main-content {
             padding: 0;
+        }
+    }
+    @media (max-width: 480px) {
+        #right-sidebar img {
+            float: none;
         }
     }
 }

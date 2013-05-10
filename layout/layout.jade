@@ -4,10 +4,9 @@ append head_css
 block content
     #content.container-fluid.clearfix
         .row-fluid
-            .span9#main-content.clearfix
+            #main-content.clearfix
                 block main_content
-            .span3#right-sidebar
+            #right-sidebar
                 block right_sidebar
-                    h3 All about me!!
-                    p I'm just a poor boy nobody likes me (he's just a poor boy from a poor family)
+                    include about-sidebar.j2
 

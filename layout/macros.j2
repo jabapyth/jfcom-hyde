@@ -32,20 +32,25 @@
         {% endif %}
     </header>
     <section class="body">
-        {% if mode == 'excerpt' %}
-        <a href="{{ content_url(res.url) }}">
-{% filter restructuredtext %}
+        {% if mode == 'excerpt' or mode == 'all' %}
+        <div class='excerpt'>
+            <a href="{{ content_url(res.url) }}">
+{%- filter restructuredtext -%}
 {{ post.image }}
-{% endfilter %}
-        </a>
-{% filter restructuredtext %}
+{%- endfilter -%}
+            </a>
+{%- filter restructuredtext -%}
 {{ post.excerpt }}
-{% endfilter %}
-        {% elif mode == 'full' %}
-{% filter restructuredtext %}
+{%- endfilter -%}
+        </div>
+        {%- endif -%}
+        {%- if mode == 'full' or mode == 'all' -%}
+        <div class='full'>
+{%- filter restructuredtext -%}
 {{ post.html|strip_meta }}
-{% endfilter %}
-        {% endif %}
+{%- endfilter -%}
+        </div>
+        {%- endif -%}
     </section>
 </article>
 {% endmacro %}
@@ -65,6 +70,9 @@
             {% set active = (node ==
                 site.content.node_from_relative_path(item.url)) -%}
         {%- endif %}
+        {% if not active and item.type != 'external' %}
+            {% set active = resource.url[1:].startswith(item.url) %}
+        {% endif %}
         {% set classes = ['button', 'white'] -%}
         {% if active and item.subnav %}{% do subnav.extend(item.subnav) %}{% endif %}
         {% do classes.append('active') if active -%}
@@ -84,38 +92,59 @@
         </li>
         {%- endfor %}
     </ul>
-    {% if subnav %}
-    <ul class="nav nav-pills subnav">
-        <li><span class="pusher">&raquo;</span></li>
-        {% for item in subnav -%}
-        {% set active = False -%}
-        {% if item.type == 'page' -%}
-            {% set active = (resource.url ==
-                site.content.resource_from_relative_path(item.url).url) -%}
-        {% elif item.type == 'external' -%}
-        {% else -%}
-            {% set active = (node ==
-                site.content.node_from_relative_path(item.url)) -%}
-        {%- endif %}
-        {% set classes = ['button', 'white'] -%}
-        {% do classes.append('active') if active -%}
-        {% do classes.append(item.css_class) if item.css_class -%}
-        <li>
-            <a title="{{ item.description }}"
-                class="{{ classes|join(' ') }}"
-                {% if item.type == 'external' %}
-                target="_blank"
-                {% endif %}
-                {% if item.url != resource.url %}
-                href="{{ content_url(item.url) }}"
-                {% endif %}
-                >
-                {{ item.name }}
-            </a>
-        </li>
-        {%- endfor %}
-    </ul>
+</nav>
+{%- endif %}
+{%- endmacro %}
+
+{% macro render_subnav(menu, cls=None) -%}
+{% if menu -%}
+{% set subnav = [] -%}
+{% for item in menu -%}
+    {% set active = False -%}
+    {% if item.type == 'page' -%}
+        {% set active = (resource.url ==
+            site.content.resource_from_relative_path(item.url).url) -%}
+    {% elif item.type == 'external' -%}
+    {% else -%}
+        {% set active = (node ==
+            site.content.node_from_relative_path(item.url)) -%}
+    {%- endif %}
+    {% if not active and item.nav_prop %}
+        {% set active = resource.url.startswith(item.nav_prop) %}
+    {% else %}
     {% endif %}
+    {% if active and item.subnav %}{% do subnav.extend(item.subnav) %}{% endif %}
+{%- endfor %}
+{% if subnav %}
+<ul class="nav nav-pills subnav">
+    {% for item in subnav -%}
+    {% set active = False -%}
+    {% if item.type == 'page' -%}
+        {% set active = (resource.url ==
+            site.content.resource_from_relative_path(item.url).url) -%}
+    {% elif item.type == 'external' -%}
+    {% else -%}
+        {% set active = (node ==
+            site.content.node_from_relative_path(item.url)) -%}
+    {%- endif %}
+    {% set classes = ['button', 'white'] -%}
+    {% do classes.append('active') if active -%}
+    {% do classes.append(item.css_class) if item.css_class -%}
+    <li>
+        <a title="{{ item.description }}"
+            class="{{ classes|join(' ') }}"
+            {%- if item.type == 'external' -%}
+            target="_blank"
+            {%- endif -%}
+            {%- if item.url != resource.url -%}
+            href="{{ item.url }}"
+            {%- endif -%}>
+            {{ item.name }}
+        </a>
+    </li>
+    {%- endfor %}
+</ul>
+{% endif %}
 </nav>
 {%- endif %}
 {%- endmacro %}

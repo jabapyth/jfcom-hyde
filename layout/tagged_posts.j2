@@ -1,16 +1,29 @@
 {% extends "layout.jade" %}
 {% from "macros.j2" import render_excerpt with context  %}
 
-{% block main_content %}
-<section class="archives">
-<h1 class="tag title">{{ tag.name }}</h1>
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" href="/media/css/blog-all.css">
+<link rel="stylesheet" href="/media/css/tagged-posts.css">
+{% endblock %}
 
+{% block main_content %}
+<header>
+<h1 class="tag title">tag: {{ tag.name }}</h1>
+</header>
+
+<section class="archives">
 {% for res in walker() %}
 {% if not res.meta.status or res.meta.status == 'public' %}
-    {{ render_excerpt(res, mode='full') }}
+    {{ render_excerpt(res, mode='all') }}
 {% endif %}
 {% endfor %}
+</section>
 
+{% block end_js %}
+{{ super() }}
+<script type="text/javascript" src="/media/js/blog-index.js"></script>
+{% endblock %}
 
 {#
 <ul class="posts clear">

@@ -2,16 +2,21 @@ extends base
 append head_css
     link(rel='stylesheet', href='/media/css/header.css')
 block body
-    #header.clearfix
-        .title 
-            block content_title 
-                | Jared Forsyth
-        .nav-internal
-            block nav
-                | {% from "macros.j2" import render_nav with context %}
-                | {{ render_nav(menu, 'nav nav-pills') }}
-        .nav-external
-            block nav_external
-                | {% from "macros.j2" import render_nav with context %}
-                | {{ render_nav(external_nav, 'nav nav-pills') }}
+    header#header.clearfix
+        .main.clearfix
+            .title 
+                block content_title 
+                    | Jared Forsyth
+            .nav-internal
+                block nav
+                    | {% from "macros.j2" import render_nav with context %}
+                    | {{ render_nav(menu, 'nav nav-pills') }}
+            .nav-external
+                block nav_external
+                    | {% from "macros.j2" import render_nav with context %}
+                    | {{ render_nav(external_nav, 'nav nav-pills') }}
+        .bottom-bar
+            block subnav
+                | {% from "macros.j2" import render_subnav with context %}
+                | {{ render_subnav(menu, 'nav nav-pills') }}
     block content

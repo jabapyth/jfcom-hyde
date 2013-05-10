@@ -24,9 +24,14 @@ ul.tags li a:hover {
 }
 #content {
   margin-top: 20px;
+  position: relative;
 }
 #content #main-content {
-  padding: 20px;
+  padding: 0 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 290px;
 }
 #content #main-content .post {
   float: left;
@@ -62,9 +67,16 @@ ul.tags li a:hover {
   line-height: 12px;
 }
 #content #right-sidebar {
-  padding: 10px 0 0 20px;
+  padding: 20px 0 0 20px;
   box-sizing: border-box;
   border-left: 1px solid #ff7a00;
+  position: absolute;
+  right: 20px;
+  width: 250px;
+}
+#content #right-sidebar img {
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 #content #right-sidebar h3 {
   margin-top: 0;
@@ -72,15 +84,31 @@ ul.tags li a:hover {
 }
 @media (max-width: 768px) {
   #content #main-content {
-    width: 100%;
+    left: 0;
+    right: 0;
+    position: static;
   }
   #content #right-sidebar {
-    width: 100%;
+    width: auto;
     margin-bottom: 20px;
+    position: static;
+    padding-top: 20px;
+    border-left: none;
+    border-top: 1px solid #ff7a00;
+  }
+  #content #right-sidebar img {
+    width: 200px;
+    margin-right: 20px;
+    float: left;
   }
 }
 @media (max-width: 650px) {
   #content #main-content {
     padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  #content #right-sidebar img {
+    float: none;
   }
 }

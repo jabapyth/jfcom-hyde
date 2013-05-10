@@ -11,80 +11,86 @@
 }
 
 #header {
-    background-color: base;
-    padding: 20px 20px 0;
-    color: $text;
-    text-decoration: none;
-    border-bottom: 20px solid darker;
-    position: relative;
-
-    a {
-        text-decoration: none;
-        color: text;
-    }
-
-    .title {
-        margin: 50px 20px 20px;
-        font-size: 2.4em;
-        font-weight: bold;
-        font-family: /* 'junction', 'junction-fallback', */ "Helvetica";
-    }
-
-    .nav-internal, .nav-external {
-        ul {
+    .bottom-bar {
+        background-color: darker;
+        padding-left: 30px;
+        min-height: 20px
+        
+        ul.nav {
             margin-bottom: 0;
-            li a:hover, li a.active {
-                background-color: transparent;
-                border-radius: 0;
-                border-bottom: 1px solid text-active;
-            }
-            li a.active {
-                color: text-active;
-            }
+
             li a {
-                border-bottom: 1px solid white;
-            }
-        }
-        .subnav {
-            li span.pusher {
-                padding: 8px 0 8px 20px;
-                line-height: 35px;
-            }
-            li a {
-                border-top: 1px solid white;
+                border: none;
+                color: white;
+                
 
                 &:hover, &.active {
-                    border-bottom: 1px solid off_accent;
-                }
-                &.active {
-                    color: off_accent;
+                    color: text-active;
+                    background-color: transparent;
                 }
             }
         }
     }
-    .nav-internal {
-        float: left;
-        margin-left: 10px;
-    }
-    .nav-external {
-        position: absolute;
-        bottom: 0;
-        right: 20px;
-    }
 
-    @media (max-width: 650px) {
-        .nav-external {
-            display: none;
+    .main {
+        background-color: base;
+        padding: 20px 20px 0;
+        color: $text;
+        text-decoration: none;
+        // border-bottom: 20px solid darker;
+        position: relative;
+
+        a {
+            text-decoration: none;
+            color: text;
+        }
+
+        .title {
+            margin: 50px 20px 20px;
+            font-size: 2.4em;
+            font-weight: bold;
+            font-family: /* 'junction', 'junction-fallback', */ "Helvetica";
+        }
+
+        .nav-internal, .nav-external {
+            ul {
+                margin-bottom: 0;
+                li a:hover, li a.active {
+                    background-color: transparent;
+                    border-radius: 0;
+                    border-bottom: 1px solid text-active;
+                }
+                li a.active {
+                    color: text-active;
+                }
+                li a {
+                    border-bottom: 1px solid white;
+                }
+            }
         }
         .nav-internal {
-            margin-left: none;
+            float: left;
+            margin-left: 10px;
         }
-        .title {
-            font-size: 1.4em;
-            margin: 0 0 10px;
-            text-align: center;
+        .nav-external {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+        }
+
+        @media (max-width: 650px) {
+            .nav-external {
+                display: none;
+            }
+            .nav-internal {
+                margin-left: none;
+            }
+            .title {
+                font-size: 1.4em;
+                margin: 0 0 10px;
+                text-align: center;
+            }
         }
     }
 }
-
 
