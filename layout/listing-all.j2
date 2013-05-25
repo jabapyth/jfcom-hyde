@@ -1,0 +1,24 @@
+{% extends "layout.jade" %}
+{% from "macros.j2" import render_excerpt with context  %}
+
+{% block body_class %}blocks{% endblock %}
+
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" href="/media/css/blog-all.css">
+{% endblock %}
+
+{% block end_js %}
+{{ super() }}
+<script type="text/javascript" src="/media/js/blog-index.js"></script>
+{% endblock %}
+
+{% block main_content %}
+
+{% for res in resource.node.walk_resources_sorted_by_time() %}
+{% if not res.meta.status or res.meta.status == 'public' %}
+    {{ render_excerpt(res, mode='all') }}
+{% endif %}
+{% endfor %}
+{% endblock %}
+
