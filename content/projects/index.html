@@ -1,0 +1,8 @@
+---
+extends: projects-listing.jade
+listable: false
+---
+{% block end_js %}
+{{ super() }}
+<script src="/media/js/projects.js"></script>
+{% endblock %}

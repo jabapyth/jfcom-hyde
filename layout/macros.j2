@@ -82,8 +82,8 @@
                 class="{{ classes|join(' ') }}"
                 {% if item.type == 'external' %}
                 target="_blank"
-                {% endif %}
-                {% if item.url != resource.url %}
+                href="{{ item.url }}"
+                {% elif item.url != resource.url %}
                 href="{{ content_url(item.url) }}"
                 {% endif %}
                 >

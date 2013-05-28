@@ -1,0 +1,14 @@
+extends layout.jade
+
+- set project = resource.meta.project
+block main_content
+  header
+    h1= project.name
+    .github= project.html_url
+    .stars= project.watchers_count
+    .forks= project.forks_count
+    .issues= project.issues_count
+    .size= str(project.size) + 'kb'
+    .logo(style="background-image:url('#{project.logo_path}')")
+  section.body
+    block readme

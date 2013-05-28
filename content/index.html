@@ -1,20 +1,44 @@
 ---
-extends: with-header.jade
-default_block: content
+extends: layout.jade
+default_block: main_content
 title: Jared | Forsyth
 description: Home page
 ---
 
+{% block head_css %}
+{{ super() }}
+<link rel="stylesheet" href="/media/css/home.css">
+{% endblock %}
+
 {% from "macros.j2" import render_excerpt with context %}
-<section class="blog_excerpt">
-{% set latest = site.content.walk_resources_sorted_by_time()|first %}
+{% from "jade-mixins.jade" import project_header with context %}
 
-{% if latest -%}
-{{ render_excerpt(latest, 'post') }}
+{% set posts = site.content.node_from_relative_path('blog').walk_resources_sorted_by_time() %}
+{% set latest = posts[0] %}
+{% set recent = posts[1:9] %}
+{% set projs = site.content.node_from_relative_path('projects/_hidden').walk_resources_sorted_by_updated() %}
 
-<a class="button white medium"
-    href="{{ content_url(latest.url) }}">Read more&hellip;</a>
+<section class="blog-posts clearfix">
+  <section class="latest clearfix">
+    {{ render_excerpt(latest, None, 'excerpt') }}
+  </section>
+  <section class="recent clearfix">
+    {% set i = 0 %}
+    {% for post in recent %}
+    {% set i = i + 1 %}
+    {{ render_excerpt(post, 'post-%d' % i, 'titles') }}
+    {% endfor %}
+  </section>
+</section>
 
-{%- endif %}
-
+<section class="projects">
+  {% jade %}
+each project in projs[:12]
+  - set meta = project.meta.project
+  div(class="project lang-#{(meta.language or '').lower()} #{('forked' if meta.forked else '')}")
+    header
+      mixin project_header(meta)
+    section.body
+      p.description= meta.description
+  {% endjade %}
 </section>

@@ -1,0 +1,11 @@
+extends layout.jade
+{% from "jade-mixins.jade" import project_header with context %}
+- set projects = site.content.node_from_relative_path('projects/_hidden').walk_resources_sorted_by_updated()
+block main_content
+  each project in projects
+    - set meta = project.meta.project
+    div(class="project lang-#{(meta.language or '').lower()} #{('forked' if meta.forked else '')}")
+      header
+        mixin project_header(meta)
+      section.body
+        p.description= meta.description

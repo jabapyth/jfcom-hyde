@@ -1,0 +1,22 @@
+mixin project_header(meta)
+  a(href=meta.html_url, target='_blank')
+    .logo(style="background-image:url('#{meta.logo_path}')")
+      if not meta.logo_path
+        .background-name= meta.name
+      if meta.watchers_count
+        .stars
+          != meta.watchers_count
+          i.icon-star
+      if meta.forks_count
+        .forks
+          != meta.forks_count
+          i.icon-random
+      if meta.issues_count
+        .issues
+          != meta.issues_count
+          i.icon-flag
+      .size= str(meta.size) + ' kb'
+      .name= meta.name
+      if meta.language
+        .lang= meta.language or ''
+      // .contributors= len(project.contributors)

@@ -1,12 +1,18 @@
 extends with-header
 append head_css
-    link(rel="stylesheet", href='/media/css/layout.css')
+  link(rel="stylesheet", href='/media/css/layout.css')
 block content
-    #content.container-fluid.clearfix
-        .row-fluid
-            #main-content.clearfix
-                block main_content
-            #right-sidebar
-                block right_sidebar
-                    include about-sidebar.j2
+  #content.container-fluid.clearfix
+    .row-fluid
+      #main-content.clearfix
+        block main_content
+      #right-sidebar
+        block right_sidebar
+          include about-sidebar.j2
+          if content_url(resource.url).startswith('/projects')
+            include blog-sidebar.jade
+          else
+            if resource.url != '/index.html'
+              include projects-sidebar.jade
+
 

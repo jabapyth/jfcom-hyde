@@ -13,3 +13,128 @@ section {
     margin-top: 10px;
 }
 
+#header {
+  .bottom-bar {
+    height: 34px;
+
+    div {
+      cursor: pointer;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 12px;
+      padding-left: 12px;
+      border: none;
+      color: #fff;
+      line-height: 14px;
+      display: inline-block;
+
+      &:hover {
+        color: #fdb813;
+      }
+    }
+  }
+}
+
+#right-sidebar .project {
+  height: auto;
+}
+
+.project.hidden {
+  display: none;
+}
+
+.project {
+  width: 229px;
+  height: 242px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  padding-w = 4px
+  padding-h = 2px
+  padding-b = 24 + padding-h
+  block-h = 150px
+
+  a {
+    display: block;
+    height: block-h;
+    width: 100%;
+    position: relative;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #555;
+
+    a, .logo {
+      display: block;
+      height: block-h;
+      width: 229px;
+    }
+
+    .logo {
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .background-name {
+      color: black;
+      font-size: 93px;
+      font-weight: bold;
+      left: 0;
+      line-height: 93px;
+      opacity: .1;
+      padding: 2px 4px;
+      position: absolute;
+      right: 0;
+      white-space: nowrap;
+    }
+
+    .name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: padding-h padding-w;
+      font-size: 17px;
+      color: white;
+      background-color: rgba(0,0,0,.3);
+    }
+    .size, .forks, .stars, .issues, .lang {
+      position: absolute;
+      color: #555;
+      text-shadow: 1px 1px 0px white;
+
+      i {
+        margin-left: 2px;
+      }
+    }
+    .stars {
+      left: padding-w;
+      bottom: padding-b;
+    }
+    .size {
+      top: padding-h;
+      left: padding-w;
+    }
+    .forks {
+      top: padding-h;
+      right: padding-w;
+    }
+    .issues {
+      display: none;
+      bottom: padding-b;
+      right: padding-w;
+    }
+    .lang {
+      bottom: padding-b;
+      right: padding-w;
+
+      &:hover {
+        color: #999;
+      }
+    }
+      
+  }
+}
+

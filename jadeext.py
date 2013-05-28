@@ -3,8 +3,16 @@ import jinja2.ext
 import pyjade
 import pyjade.ext.jinja
 import re
+from jinja2.runtime import Undefined
 
+from pyjade.runtime import attrs as _attrs, iteration
 import metastrip
+
+ATTRS_FUNC = '__pyjade_attrs'
+ITER_FUNC = '__pyjade_iter'
+
+def attrs(attrs, terse=False):
+    return _attrs(attrs, terse)
 
 class JadeExtension(jinja2.ext.Extension):
     tags = set(['jade'])
@@ -12,6 +20,9 @@ class JadeExtension(jinja2.ext.Extension):
 
     def __init__(self, env):
         env.filters['strip_meta'] = metastrip.strip_meta
+        env.globals[ATTRS_FUNC] = attrs
+        env.globals[ITER_FUNC] = iteration
+        env.globals['str'] = str
         return super(JadeExtension, self).__init__(env)
 
     def preprocess(self, source, name, filename = None):

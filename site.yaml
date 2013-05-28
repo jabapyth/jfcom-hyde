@@ -34,7 +34,7 @@ context:
                 css_class: blog
                 type: node
                 url: blog/
-                nav_prop: /blog/tags/
+                nav_prop: blog/tags/
                 subnav:
                     -
                         name: blocks
@@ -93,6 +93,13 @@ sorter:
     time:
         attr:
             - meta.created
+        reverse: true
+        filters:
+            source.kind: html
+            meta.listable: true
+    updated:
+        attr:
+            - meta.updated
         reverse: true
         filters:
             source.kind: html

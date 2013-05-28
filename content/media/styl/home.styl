@@ -1,0 +1,122 @@
+@import "colors";
+@import "macros";
+
+top-height = 300px;
+
+section.blog-posts {
+  margin-bottom: 18px;
+}
+
+section.latest {
+  width: 50%;
+  float: left;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: top-height;
+  border-bottom: 1px solid darker;
+  border-right: 1px solid darker;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 15px;
+
+  .post {
+    border: none!important;
+    max-height: 100%;
+    overflow: hidden;
+
+    header h3.title a {
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    img {
+      display: none;
+      max-height: 150px;
+      width: auto!important;
+      float: left;
+      margin: 0 20px 0 0;
+    }
+
+    .document p {
+      font-size: 22px;
+      line-height: 38px;
+      max-height: 230px;
+      font-family: georgia;
+      padding-right: 10px;
+    }
+  }
+}
+
+section.recent {
+  width: 50%;
+  float: left;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 15px;
+
+  .post {
+    width: 50%;
+    height: top-height * .25;
+
+    header h3.title a {
+      font-size: 20px;
+    }
+  }
+}
+
+#main-content section {
+  margin-top: 0;
+}
+
+#content #main-content .post {
+  min-height: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+// responsive greatness
+
+@media (max-width: 1500px) {
+  section.latest {
+    width: 70%;
+  }
+  section.recent {
+    width: 30%;
+    overflow: hidden;
+
+    .post {
+      width: 100%;
+      margin: 0;
+    }
+    .post-5, .post-6, .post-7, .post-8 {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #content {
+    #right-sidebar {
+      width: 200px;
+    }
+    #main-content {
+      right: 240px;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  section.latest, section.recent {
+    width: 100%;
+  }
+  section.latest {
+    border: none!important;
+  }
+  section.recent {
+    .post {
+      height: 60px;
+    }
+  }
+}

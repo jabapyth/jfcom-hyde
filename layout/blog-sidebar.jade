@@ -1,0 +1,4 @@
+{% from "macros.j2" import render_excerpt with context %}
+each post in site.content.node_from_relative_path('blog').walk_resources_sorted_by_time()[:5]
+  if not post.meta.status or post.meta.status == 'public'
+    != render_excerpt(post, mode='excerpt')

@@ -1,0 +1,3 @@
+extends: project-page.jade
+default_block: readme
+listable: true

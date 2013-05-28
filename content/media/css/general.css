@@ -9,3 +9,116 @@ ul.tags li {
 section {
   margin-top: 10px;
 }
+#header .bottom-bar {
+  height: 34px;
+}
+#header .bottom-bar div {
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border: none;
+  color: #fff;
+  line-height: 14px;
+  display: inline-block;
+}
+#header .bottom-bar div:hover {
+  color: #fdb813;
+}
+#right-sidebar .project {
+  height: auto;
+}
+.project.hidden {
+  display: none;
+}
+.project {
+  width: 229px;
+  height: 242px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.project a {
+  display: block;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #555;
+}
+.project a a,
+.project a .logo {
+  display: block;
+  height: 150px;
+  width: 229px;
+}
+.project a .logo {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.project a .background-name {
+  color: #000;
+  font-size: 93px;
+  font-weight: bold;
+  left: 0;
+  line-height: 93px;
+  opacity: 0.1;
+  padding: 2px 4px;
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+}
+.project a .name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2px 4px;
+  font-size: 17px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.3);
+}
+.project a .size,
+.project a .forks,
+.project a .stars,
+.project a .issues,
+.project a .lang {
+  position: absolute;
+  color: #555;
+  text-shadow: 1px 1px 0px #fff;
+}
+.project a .size i,
+.project a .forks i,
+.project a .stars i,
+.project a .issues i,
+.project a .lang i {
+  margin-left: 2px;
+}
+.project a .stars {
+  left: 4px;
+  bottom: 26px;
+}
+.project a .size {
+  top: 2px;
+  left: 4px;
+}
+.project a .forks {
+  top: 2px;
+  right: 4px;
+}
+.project a .issues {
+  display: none;
+  bottom: 26px;
+  right: 4px;
+}
+.project a .lang {
+  bottom: 26px;
+  right: 4px;
+}
+.project a .lang:hover {
+  color: #999;
+}

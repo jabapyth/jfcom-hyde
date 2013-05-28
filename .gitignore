@@ -6,3 +6,5 @@ deploy
 *.pyc
 .sass-cache
 *.vim.sess
+*~
+projects.json
