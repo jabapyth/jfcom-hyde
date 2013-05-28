@@ -22,18 +22,7 @@ ul.tags li a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#content {
-  margin-top: 20px;
-  position: relative;
-}
-#content #main-content {
-  padding: 0 20px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 290px;
-}
-#content #main-content .post {
+.post {
   float: left;
 /* width: 300px; */
   min-height: 200px;
@@ -45,19 +34,19 @@ ul.tags li a:hover {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-#content #main-content .post header h3.title {
+.post header h3.title {
   font-size: 1.1em;
 }
-#content #main-content .post header .title {
+.post header .title {
   font-weight: bold;
   margin-bottom: 5px;
   margin-top: 0;
   line-height: 1.5em;
 }
-#content #main-content .post header .title a {
+.post header .title a {
   color: #777;
 }
-#content #main-content .post header time {
+.post header time {
   text-align: right;
   color: #ff7a00;
   font-weight: bold;
@@ -68,16 +57,28 @@ ul.tags li a:hover {
   float: right;
   line-height: 12px;
 }
+.post section.body {
+  font-family: georgia;
+}
+#content {
+  margin-top: 20px;
+  position: relative;
+}
+#content #main-content {
+  padding: 0 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 290px;
+}
 #content #right-sidebar {
   padding: 20px 0 0 20px;
-  box-sizing: border-box;
   border-left: 1px solid #ff7a00;
   position: absolute;
   right: 20px;
   width: 250px;
 }
-#content #right-sidebar img {
-  margin-bottom: 20px;
+#content #right-sidebar .about > img {
   border-radius: 10px;
 }
 #content #right-sidebar h3 {

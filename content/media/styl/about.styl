@@ -1,0 +1,80 @@
+@import colors;
+
+#main-content {
+  font-family: "Georgia", georgia, serif;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.kicker {
+  font-size: 40px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.kicker-more {
+  width: 50%;
+  float: left;
+}
+
+@media (max-width: 1530px) {
+  .kicker {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1320px) {
+  .kicker {
+    font-size: 30px;
+  }
+  #main-content {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .kicker, .kicker-more {
+    width: 100%;
+  }
+  .kicker {
+    font-size: 40px;
+  }
+  #content {
+    #right-sidebar {
+      width: 200px;
+    }
+    #main-content {
+      right: 240px;
+    }
+  }
+}
+
+section.ideologies {
+  border-top: 1px solid darker;
+}
+
+section.ideologies > section {
+  float: left;
+  width: 50%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:nth-child(2n+1) {
+    clear: both;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .kicker {
+    font-size: 30px;
+  }
+  section.ideologies > section {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}

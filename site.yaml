@@ -20,7 +20,7 @@ context:
                 name: home
                 description: Home Page
                 css_class: home
-                type: page
+                type: node
                 url: /
             -
                 name: projects
@@ -33,6 +33,7 @@ context:
                 description: Blog
                 css_class: blog
                 type: node
+                just_root: true
                 url: blog/
                 nav_prop: blog/tags/
                 subnav:
@@ -97,6 +98,8 @@ sorter:
         filters:
             source.kind: html
             meta.listable: true
+            meta.status: public
+        path: blog
     updated:
         attr:
             - meta.updated
@@ -104,6 +107,7 @@ sorter:
         filters:
             source.kind: html
             meta.listable: true
+        path: projects/_hidden
 tagger:
     sorter: time
     archives:

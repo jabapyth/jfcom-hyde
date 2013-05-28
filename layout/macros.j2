@@ -62,7 +62,9 @@
     <ul class="nav nav-pills">
         {% for item in menu -%}
         {% set active = False -%}
-        {% if item.type == 'page' -%}
+        {% if item.url == '/' and resource.url == '/index.html' %}
+           {% set active = True %}
+        {% elif item.type == 'page' -%}
             {% set active = (resource.url ==
                 site.content.resource_from_relative_path(item.url).url) -%}
         {% elif item.type == 'external' -%}
@@ -106,8 +108,7 @@
             site.content.resource_from_relative_path(item.url).url) -%}
     {% elif item.type == 'external' -%}
     {% else -%}
-        {% set active = (node ==
-            site.content.node_from_relative_path(item.url)) -%}
+        {% set active = (resource.url == '/' + item.url + 'index.html') -%}
     {%- endif %}
     {% if not active and item.nav_prop %}
         {% set active = resource.url.startswith(item.nav_prop) %}

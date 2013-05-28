@@ -10,9 +10,11 @@ block content
         block right_sidebar
           include about-sidebar.j2
           if content_url(resource.url).startswith('/projects')
+            h4 Recent blog posts
             include blog-sidebar.jade
           else
             if resource.url != '/index.html'
+              h4 Recent Projects
               include projects-sidebar.jade
 
 
