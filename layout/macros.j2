@@ -1,8 +1,9 @@
 {% macro render_excerpt(res, class=None, mode="excerpt") %}
 {% refer to res.url as post %}
+{% set pretty = content_url(res.url) %}
 <article class="post {{ class if class }}">
     <header>
-        <a class="date" href="{{ content_url(res.url) }}">
+        <a class="date" href="{{ pretty }}">
             <time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
                 {{ res.meta.created.strftime('%d %b<br>%Y') }}
             </time>
@@ -17,9 +18,9 @@
                 {% endfor %}
             {% endif %}
             </ul>
-            <h3 class="title"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
+            <h3 class="title"><a href="{{ pretty }}">{{ res.meta.title }}</a></h3>
         {% else %}
-            <h3 class="title"><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
+            <h3 class="title"><a href="{{ pretty }}">{{ res.meta.title }}</a></h3>
             <ul class="tags">
             {% if res.meta.tags %}
                 {% for tag in res.meta.tags %}
@@ -34,7 +35,7 @@
     <section class="body">
         {% if mode == 'excerpt' or mode == 'all' %}
         <div class='excerpt'>
-            <a href="{{ content_url(res.url) }}">
+            <a href="{{ pretty }}">
 {%- filter restructuredtext -%}
 {{ post.image }}
 {%- endfilter -%}

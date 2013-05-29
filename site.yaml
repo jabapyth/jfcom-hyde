@@ -108,6 +108,13 @@ sorter:
             source.kind: html
             meta.listable: true
         path: projects/_hidden
+rewrite:
+    -
+        match: ^/blog/(\d+)-(\w+)-(\d+)-([^/]+?)\.html$
+        dest: /blog/\1/\2/\3/\4/
+    -
+        match: ^/(.+?)\.html
+        dest: /\1/
 tagger:
     sorter: time
     archives:
