@@ -10,6 +10,7 @@ RewriteRule ^ - [L]
 
 # rewrite the blog posts
 RewriteRule ^(blog)/(\d+)/(\w+)/(\d+)/([^/]+)/?$  $1/$2-$3-$4-$5.html [L]
+RewriteRule ^(project)/([\w-]+)/$  $1/$2 [R]
 
 # if all you need is a .html, go for it
 RewriteCond %{REQUEST_URI} !\.html$
