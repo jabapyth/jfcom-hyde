@@ -113,8 +113,11 @@ rewrite:
         match: ^/blog/(\d+)-(\w+)-(\d+)-([^/]+?)\.html$
         dest: /blog/\1/\2/\3/\4/
     -
+        match: ^(.*?)/index.html
+        dest: \1/
+    -
         match: ^/(.+?)\.html
-        dest: /\1/
+        dest: /\1
 tagger:
     sorter: time
     archives:
