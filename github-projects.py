@@ -77,7 +77,7 @@ def get_all_projects(username, max=None):
     return map(partial(process_project, username), data)
 
 def process_project(username, data):
-    logging.debug('Processing {}'.format(data['name']))
+    logging.debug('Processing {0}'.format(data['name']))
     keep_keys = ['id', 'name', 'full_name', 'html_url', 'description', 'fork',
         'created_at', 'updated_at', 'pushed_at', 'size', 'owner',
         'watchers_count', 'forks_count', 'issues_count', 'language',
@@ -87,7 +87,7 @@ def process_project(username, data):
         if k not in keep_keys:
             del data[k]
     if data['owner']['login'] != username:
-        print 'Skipping {}; not owner'.format(data['name'])
+        print 'Skipping {0}; not owner'.format(data['name'])
         return False
     # get contributors
     contributors = get_json(username, data['contributors_url'])
@@ -108,7 +108,7 @@ def process_project(username, data):
                  'logo-229x150.jpg', 'logo-229x150.jpeg']
     for file in contents:
         if data['readme'] is None and file['name'].lower() in ['readme.rst', 'readme.md', 'readme']:
-            data['readme'] = get_json(username, file['url'])
+            pass #data['readme'] = get_json(username, file['url'])
         elif data['logo'] is None and\
                 file['name'].lower() in fb_logos:
             data['logo'] = file
