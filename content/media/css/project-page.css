@@ -1,0 +1,9 @@
+#main-content li,
+#main-content section.body {
+  font-family: "Georgia", georgia, serif;
+  font-size: 24px;
+  line-height: 36px;
+}
+#main-content .centered {
+  margin: 20px 50px;
+}

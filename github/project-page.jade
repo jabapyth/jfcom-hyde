@@ -1,14 +1,33 @@
 extends layout.jade
 
-- set project = resource.meta.project
+append head_css
+  link(rel='stylesheet', href='/media/css/project-page.css')
+
 block main_content
-  header
-    h1= project.name
-    .github= project.html_url
-    .stars= project.watchers_count
-    .forks= project.forks_count
-    .issues= project.issues_count
-    .size= str(project.size) + 'kb'
-    .logo(style="background-image:url('#{project.logo_path}')")
-  section.body
-    block readme
+  .centered
+    header
+      h1= resource.meta.title
+      a(href=resource.meta.url) github page
+    section.body
+      block readme
+    section.post-comments
+      a(name='comments')
+        script
+          var disqus_identifier = "project-{{ resource.meta.slug }}";
+        #disqus_thread
+        script(type='text/javascript')
+          /**
+          * var disqus_identifier; [Optional but recommended: Define a unique
+          * identifier (e.g. post id or slug) for this thread]
+          */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://jaredforsyth.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        noscript
+          | Please enable JavaScript to view the
+          a(href='http://disqus.com/?ref_noscript=jaredforsyth') comments powered by Disqus.
+        a.dsq-brlink(href='http://disqus.com')
+          | blog comments powered by
+        span.logo-disqus Disqus
