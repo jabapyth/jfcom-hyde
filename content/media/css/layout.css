@@ -78,6 +78,9 @@ ul.tags li a:hover {
   right: 20px;
   width: 250px;
 }
+#content #right-sidebar .about p {
+  text-align: center;
+}
 #content #right-sidebar .about > img {
   border-radius: 10px;
 }
