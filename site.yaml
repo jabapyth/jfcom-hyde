@@ -14,7 +14,7 @@ jinja2:
         - jadeext.JadeExtension
 context:
     data:
-        tweet_via: jabapyth
+        tweet_via: jaredforsyth
         menu:
             -
                 name: home
@@ -67,7 +67,7 @@ context:
                 description: my github repositories
                 css_class: github
                 type: external
-                url: http://github.com/jabapyth
+                url: http://github.com/jaredly
             -
                 name: twitter
                 description: my twitter account
