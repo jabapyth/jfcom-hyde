@@ -73,7 +73,7 @@ context:
                 description: my twitter account
                 css_class: twitter
                 type: external
-                url: http://twitter.com/jabapyth
+                url: http://twitter.com/jaredforsyth
             -
                 name: linkedin
                 description: my linkedin profile
