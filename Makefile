@@ -14,7 +14,7 @@ watch-style:
 	stylus --watch content/media/styl -o content/media/css
 
 get-projects:
-	python github-projects.py jabapyth projects.json
+	python github-projects.py jaredly projects.json
 
 process-projects:
 	/usr/bin/python github/gh-hyde.py projects.json content/projects/_hidden

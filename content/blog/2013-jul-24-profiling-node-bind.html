@@ -1,0 +1,65 @@
+---
+title: 'Profiling .bind() in Nodejs'
+slug: profiling-node-bind
+created: !!timestamp '2013-7-24 0:33:58'
+extends: blog-rst.j2
+status: public
+tags:
+- nodejs
+- profiling
+- tip
+---
+
+{% mark excerpt %}
+I was curious today, and I wanted to know whether it was faster to use
+`.bind()` to preserve this, or to use a variable like `self`. Granted,
+these things are of the nature that, if you're using node, performance
+isn't probably your first concern. But my situation was such that I
+was using the local variable method, and wanted to know if `bind()`
+was faster.
+{% endmark %}
+
+Short answer: `bind()` is a ton slower.
+
+The code:
+
+.. code-block:: js
+
+    function Scoper () {
+      var self = this
+      this.a = function () {
+        self.b = 5
+      }
+    }
+
+    var s = new Scoper()
+    for (var i=0; i<100000000; i++) {
+      s.a()
+    }
+
+vs
+ 
+.. code-block:: js
+
+    function Binder () {
+      this.a = function () {
+        this.b = 5
+      }.bind(this)
+    }
+
+    var b = new Binder()
+    for (var i=0; i<100000000; i++) {
+      b.a()
+    }
+ 
+Realize that I had to go up to over 1 million iterations to get even a
+noticable difference.
+
+.. code-block:: bash
+
+    jared@Nintendo ~/tmp » time node binder.js 
+    node binder.js  23.56s user 0.07s system 100% cpu 23.503 total
+    jared@Nintendo ~/tmp » time node scoper.js
+    node scoper.js  0.17s user 0.01s system 98% cpu 0.182 total
+
+See that? That's ~140 times faster. Huh.
