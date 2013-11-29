@@ -50,7 +50,7 @@ body.blocks #content #main-content .post header {
   margin-top: 6px;
 }
 body.blocks #content #main-content .post section.body {
-  font-family: Georgia, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 28px;
 }
@@ -101,7 +101,7 @@ body.full #content #main-content .post header {
   margin-top: 6px;
 }
 body.full #content #main-content .post section.body {
-  font-family: Georgia, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 28px;
 }
