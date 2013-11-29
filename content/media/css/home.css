@@ -33,7 +33,7 @@ section.latest .post .document p {
   font-size: 22px;
   line-height: 38px;
   max-height: 230px;
-  font-family: georgia;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-right: 10px;
 }
 section.recent {
